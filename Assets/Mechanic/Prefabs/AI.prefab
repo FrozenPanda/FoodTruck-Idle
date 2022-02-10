@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4204388912034228645
 Transform:
   m_ObjectHideFlags: 0
@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4204388912034229850}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -128,6 +128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4204388912034228645}
+  - {fileID: 4856373880937248062}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,7 +147,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4204388913821018138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -189,7 +190,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4204388913821018138}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -221,3 +222,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ievent: 0
+--- !u!1001 &7495014308205084417
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4204388913821018209}
+    m_Modifications:
+    - target: {fileID: 389699497077313140, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_Name
+      value: Dahlia_Hairstyle1_Outfit4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+--- !u!4 &4856373880937248062 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3127448250202147391, guid: 0a5342f98e302434c8a565f2876f749b, type: 3}
+  m_PrefabInstance: {fileID: 7495014308205084417}
+  m_PrefabAsset: {fileID: 0}
