@@ -759,7 +759,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 09ce76e94b7fa86478bbde65d2d6b34d, type: 2}
     - target: {fileID: 8496173010296431044, guid: 3ef90c575a2e75f4a9c84385aee4c255, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8496173010582988117, guid: 3ef90c575a2e75f4a9c84385aee4c255, type: 3}
       propertyPath: m_IsActive
@@ -860,6 +860,10 @@ PrefabInstance:
     - target: {fileID: 8496173011944043484, guid: 3ef90c575a2e75f4a9c84385aee4c255, type: 3}
       propertyPath: m_Name
       value: TableHolder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496173011944043484, guid: 3ef90c575a2e75f4a9c84385aee4c255, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8496173011944043487, guid: 3ef90c575a2e75f4a9c84385aee4c255, type: 3}
       propertyPath: tableID
@@ -1013,7 +1017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1019164323
 BoxCollider:
   m_ObjectHideFlags: 0
