@@ -1218,10 +1218,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4461170925568185738}
     m_Modifications:
-    - target: {fileID: 2276681694984811079, guid: b3af8cd774bad3a48a69af8ba4bd6588, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4770325241588724359, guid: b3af8cd774bad3a48a69af8ba4bd6588, type: 3}
       propertyPath: m_Name
       value: MainCharacter
@@ -1229,18 +1225,6 @@ PrefabInstance:
     - target: {fileID: 5294061785056929853, guid: b3af8cd774bad3a48a69af8ba4bd6588, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5294061785056929853, guid: b3af8cd774bad3a48a69af8ba4bd6588, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5294061785056929853, guid: b3af8cd774bad3a48a69af8ba4bd6588, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5294061785056929853, guid: b3af8cd774bad3a48a69af8ba4bd6588, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5294061785056929853, guid: b3af8cd774bad3a48a69af8ba4bd6588, type: 3}
       propertyPath: m_LocalPosition.x
