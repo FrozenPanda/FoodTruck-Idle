@@ -140,7 +140,10 @@ public class CharacterStackManager : MonoBehaviour
             }
         }
 
-        carryingBool = false;
+        if (currentStack == 0)
+        {
+            carryingBool = false;
+        }
     }
 
     private bool carryingBool;

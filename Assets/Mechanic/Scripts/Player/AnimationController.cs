@@ -21,25 +21,21 @@ public class AnimationController : MonoBehaviour
     {
         if (_id == 0)
         {
-            if (_characterStackManager.isCharacterCarrying())
-            {
-                currentAnim = "idleC";
-            }
-            else
-            {
-                currentAnim = "idle";
-            }
+            currentAnim = "idle";
         }
         else
         {
-            if (_characterStackManager.isCharacterCarrying())
-            {
-                currentAnim = "walkC";
-            }
-            else
-            {
-                currentAnim = "walk";
-            }
+            currentAnim = "walk";
+            
+        }
+        
+        if (_characterStackManager.isCharacterCarrying())
+        {
+            anim.SetLayerWeight(1,1);
+        }
+        else
+        {
+            anim.SetLayerWeight(1,0);
         }
         
         playAnimWithName(currentAnim);
