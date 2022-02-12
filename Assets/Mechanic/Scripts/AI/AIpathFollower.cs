@@ -21,9 +21,18 @@ public class AIpathFollower : MonoBehaviour
 
     public Action afterPathTarget;
     public Action afterPathCompleted;
-    
+
+    private AIanimController _aIanimController;
+
+    private void Awake()
+    {
+        _aIanimController = GetComponent<AIanimController>();
+    }
+
     private void Start()
     {
+        
+        
         if (test)
         {
             SetPathAndMove(test);
@@ -47,6 +56,8 @@ public class AIpathFollower : MonoBehaviour
         transform.LookAt(pathes[currentPathIndex]);
 
         entranceBool = entrance;
+        
+        _aIanimController.playAnimWithName("walk");
     }
 
     private void Update()
@@ -85,6 +96,7 @@ public class AIpathFollower : MonoBehaviour
             if (entranceBool)
             {
                 GetComponent<AIcontroller>().AIarrivedDestination();
+                _aIanimController.playAnimWithName("sit");
             }
             else
             {

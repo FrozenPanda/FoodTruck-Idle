@@ -6,9 +6,10 @@ public class CharacterMover : MonoBehaviour
 {
     public Joystick _joystick;
     public float moveSpeed;
+    private AnimationController _animationController;
     void Start()
     {
-        
+        _animationController = GetComponent<AnimationController>();
     }
 
     // Update is called once per frame
@@ -18,6 +19,11 @@ public class CharacterMover : MonoBehaviour
         {
             JoystickMove(_joystick.Horizontal , _joystick.Vertical , transform , moveSpeed); 
             JoystickRotate(_joystick.Horizontal , _joystick.Vertical , transform );
+            _animationController.playAnim(1);
+        }
+        else
+        {
+            _animationController.playAnim(0);
         }
     }
     

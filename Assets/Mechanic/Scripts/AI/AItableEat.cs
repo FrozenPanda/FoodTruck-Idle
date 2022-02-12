@@ -24,7 +24,7 @@ public class AItableEat : MonoBehaviour
 
     private ICreatableAI _creatableAI;
 
-    private float eatTime = 2f; //todo bunu save load systemden çek
+    private float eatTime = 5f; //todo bunu save load systemden çek
     
     public void SetParameters(Transform lookPlace , ICreatableAI _creatableAI)
     {
@@ -36,7 +36,15 @@ public class AItableEat : MonoBehaviour
 
     public void StartEating()
     {
+        StartCoroutine(StartEatingDelay());
+    }
+
+    IEnumerator StartEatingDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        
         _tableEvent = TableEvent.Eating;
+        GetComponent<AIanimController>().playAnimWithName("eat");
     }
     
     private void Update()

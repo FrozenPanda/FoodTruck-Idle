@@ -55,6 +55,8 @@ public class CharacterStackManager : MonoBehaviour
                     if (currentStack < totalStack)
                     {
                         _stackable.giveOnetoPlayer(this, currentStack , StackPlaces[currentStack]);
+
+                        carryingBool = true;
                     }
                 }
                 
@@ -137,6 +139,13 @@ public class CharacterStackManager : MonoBehaviour
                 break;
             }
         }
-        
+
+        carryingBool = false;
+    }
+
+    private bool carryingBool;
+    public bool isCharacterCarrying()
+    {
+        return carryingBool;
     }
 }

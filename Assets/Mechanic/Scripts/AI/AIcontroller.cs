@@ -9,6 +9,10 @@ public class AIcontroller : MonoBehaviour
     private Transform exitPath;
     private Transform sandwichPos;
     private ICreatableAI _creatableAI;
+
+    private AItableEat _aItableEat;
+    private AItruckEat _aItruckEat;
+    
     public enum AIevent
     {
         TableEat,
@@ -34,7 +38,7 @@ public class AIcontroller : MonoBehaviour
 
         if (_ievent == AIevent.TableEat)
         {
-            gameObject.AddComponent<AItableEat>();
+           _aItableEat = gameObject.AddComponent<AItableEat>();
         }
     }
 
@@ -52,7 +56,16 @@ public class AIcontroller : MonoBehaviour
 
     public void AIarrivedDestination()
     {
-        GetComponent<AItableEat>().SetParameters(sandwichPos , _creatableAI);
+        if (_aItableEat)
+        {
+            //GetComponent<AItableEat>().SetParameters(sandwichPos , _creatableAI);
+            _aItableEat.SetParameters(sandwichPos , _creatableAI);
+        }
+
+        if (_aItruckEat)
+        {
+            
+        }
     }
 
     public void AIfinished()
