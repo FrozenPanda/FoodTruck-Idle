@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TableUnlock : MonoBehaviour , IUnlockable
 {
@@ -11,6 +12,9 @@ public class TableUnlock : MonoBehaviour , IUnlockable
     private int currentMoneyTaken;
     private float moneyRequestTimer = 0.05f;
     public GameObject realTable;
+
+    public GameObject MoneyNeedUI;
+    public Text MoneyNeedText;
     
     public enum MoneyState
     {
@@ -24,10 +28,13 @@ public class TableUnlock : MonoBehaviour , IUnlockable
     {
         SaveLoadSystem.Load();
 
+        MoneyNeedText.text = "$" + moneyToUnlock;
+
         if (SaveLoadSystem.instance.TableUnlock[tableID] == 1)
         {
             realTable.SetActive(true);
             GetComponent<BoxCollider>().enabled = false;
+            MoneyNeedUI.SetActive(false);
         }
     }
 
@@ -40,6 +47,11 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                 break;
             case MoneyState.MoneyRequesting:
 
+                if (moneyRequest >= moneyToUnlock)
+                {
+                    return;
+                }                
+                
                 if (moneyRequestTimer > 0f)
                 {
                     moneyRequestTimer -= Time.deltaTime;
@@ -73,6 +85,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
     public void moneyReached()
     {
         currentMoneyTaken++;
+        MoneyNeedText.text = "$" + (moneyToUnlock-currentMoneyTaken);
 
         if (currentMoneyTaken >= moneyToUnlock)
         {
@@ -80,6 +93,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
             realTable.SetActive(true);
             SaveLoadSystem.instance.TableUnlock[tableID] = 1;
             SaveLoadSystem.Save();
+            MoneyNeedUI.SetActive(false);
         }
     }
 }

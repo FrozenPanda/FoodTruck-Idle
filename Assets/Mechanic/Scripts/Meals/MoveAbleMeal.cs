@@ -43,7 +43,7 @@ public class MoveAbleMeal : MonoBehaviour
     {
         if (MoveAble)
         {
-            MoveTimer += Time.deltaTime * 3f;
+            MoveTimer += Time.deltaTime * 10f;
             transform.localPosition = Vector3.Lerp(defaultPos , Vector3.zero , MoveTimer );
 
             if (MoveTimer > 1f)
