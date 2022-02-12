@@ -68,7 +68,7 @@ public class AIpathFollower : MonoBehaviour
                 break;
             case pathEvent.Walking:
                 
-                transform.position = Vector3.MoveTowards(transform.position , pathes[currentPathIndex].position , 5f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position , pathes[currentPathIndex].position , 3f * Time.deltaTime);
 
                 if (Vector3.Distance(transform.position , pathes[currentPathIndex].position) < 0.1f)
                 {
