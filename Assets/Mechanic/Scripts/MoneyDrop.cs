@@ -27,10 +27,11 @@ public class MoneyDrop : MonoBehaviour
     private LayerMask groundMask;
     void Update()
     {
-        if (Physics.Raycast(transform.position , Vector3.down , out hit , 0.2f,groundMask))
+        if (Physics.Raycast(transform.position + Vector3.up , Vector3.down , out hit , 1.2f,groundMask))
         {
             if (hit.transform)
             {
+                transform.position = hit.transform.position + Vector3.up * 0.2f;
                 rb.velocity = Vector3.zero;
                 rb.useGravity = false;
             }
