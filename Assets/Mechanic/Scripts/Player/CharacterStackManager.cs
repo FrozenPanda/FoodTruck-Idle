@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterStackManager : MonoBehaviour
 {
@@ -43,15 +44,17 @@ public class CharacterStackManager : MonoBehaviour
                     _stackable = null;
                     IStackTransform = null;
                     _stackEvent = StackEvent.Idle;
+                    hotDogTakeCanvas.SetActive(false);
                 }
                 
                 if (collectTimer > 0f)
                 {
                     collectTimer -= Time.deltaTime;
+                    SetCanvasFillBar(collectTimer);
                 }
                 else
                 {
-                    collectTimer = 0.2f;
+                    collectTimer = defaultHotDogTime;
                     if (currentStack < totalStack)
                     {
                         _stackable.giveOnetoPlayer(this, currentStack , StackPlaces[currentStack]);
@@ -104,9 +107,11 @@ public class CharacterStackManager : MonoBehaviour
         if (other.GetComponent<IStackable>() != null)
         {
             _stackable = other.GetComponent<IStackable>();
+            collectTimer = defaultHotDogTime;
             _stackEvent = StackEvent.Collecting;
             Debug.Log("Stackable var");
             IStackTransform = _stackable.sayMyTransform();
+            hotDogTakeCanvas.SetActive(true);
         }
 
         if (other.GetComponent<IDropable>() != null)
@@ -150,5 +155,16 @@ public class CharacterStackManager : MonoBehaviour
     public bool isCharacterCarrying()
     {
         return carryingBool;
+    }
+
+    //hotdog take canvas
+    public GameObject hotDogTakeCanvas;
+    public Image hotDogTakeFillImage;
+    private float defaultHotDogTime = 1f;
+    private float currentHotDogTimer;
+
+    private void SetCanvasFillBar(float currentTime)
+    {
+        hotDogTakeFillImage.fillAmount = 1 -(currentTime / defaultHotDogTime);
     }
 }

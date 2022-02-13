@@ -32,10 +32,12 @@ public class AItableEat : MonoBehaviour
         defaultRot = transform.rotation;
         lookAt = Quaternion.LookRotation(new Vector3(lookPlace.position.x , transform.position.y , lookPlace.position.z) - transform.position);
         _tableEvent = TableEvent.Placing;
+        GetComponent<AIcontroller>().wantedCanvas.SetActive(false);
     }
 
     public void StartEating()
     {
+        GetComponent<AIcontroller>().wantedCanvas.SetActive(false);
         StartCoroutine(StartEatingDelay());
     }
 

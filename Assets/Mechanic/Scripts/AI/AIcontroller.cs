@@ -46,6 +46,11 @@ public class AIcontroller : MonoBehaviour
     {
         _aIpathFollower.SetPathAndMove(exitPath , false);
         _creatableAI.CustomerEatAlready();
+
+        if (_aItableEat)
+        {
+            GetComponent<AImoneyDrop>().StartMoneyDrop();
+        }
     }
 
     // Update is called once per frame
@@ -54,12 +59,14 @@ public class AIcontroller : MonoBehaviour
         
     }
 
+    public GameObject wantedCanvas;
     public void AIarrivedDestination()
     {
         if (_aItableEat)
         {
             //GetComponent<AItableEat>().SetParameters(sandwichPos , _creatableAI);
             _aItableEat.SetParameters(sandwichPos , _creatableAI);
+            wantedCanvas.SetActive(true);
         }
 
         if (_aItruckEat)
