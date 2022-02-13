@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 4679335872370606495}
   - component: {fileID: 4679335872370606494}
   - component: {fileID: 4679335872370606493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4679335872370606480
 Transform:
   m_ObjectHideFlags: 0
