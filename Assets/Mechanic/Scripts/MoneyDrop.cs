@@ -31,7 +31,7 @@ public class MoneyDrop : MonoBehaviour
         {
             if (hit.transform)
             {
-                transform.position = hit.transform.position + Vector3.up * 0.2f;
+                transform.position = hit.point + Vector3.up * 0.2f;
                 rb.velocity = Vector3.zero;
                 rb.useGravity = false;
             }
