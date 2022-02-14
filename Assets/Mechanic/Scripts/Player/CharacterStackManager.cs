@@ -15,7 +15,14 @@ public class CharacterStackManager : MonoBehaviour
     public IStackable _stackable;
     private IDropable _dropable;
     private float collectTimer;
-    
+
+    private CharacterMover _characterMover;
+
+    private void Start()
+    {
+        _characterMover = GetComponent<CharacterMover>();
+    }
+
     public enum StackEvent
     {
         Idle,
@@ -39,12 +46,31 @@ public class CharacterStackManager : MonoBehaviour
                     return;
                 }
                 
-                if (Vector3.Distance(transform.position , IStackTransform.position) > 3f)
+                if (Vector3.Distance(transform.position , IStackTransform.position) > 2f)
                 {
                     _stackable = null;
                     IStackTransform = null;
                     _stackEvent = StackEvent.Idle;
                     hotDogTakeCanvas.SetActive(false);
+                }
+
+                if (_characterMover.isMoving)
+                {
+                    collectTimer = defaultHotDogTime;
+                    hotDogTakeCanvas.SetActive(false);
+                    return;
+                }
+                else
+                {
+                    hotDogTakeCanvas.SetActive(true);
+                }
+
+                if (currentStack >= totalStack)
+                {
+                    CommonFunctions.instance.CreateAnyUI(SceneReferences.instance.HandFullImage , transform , SceneReferences.instance.moneyMoveCanvas);
+                    _stackEvent = StackEvent.Idle;
+                    hotDogTakeCanvas.SetActive(false);
+                    return;
                 }
                 
                 if (collectTimer > 0f)

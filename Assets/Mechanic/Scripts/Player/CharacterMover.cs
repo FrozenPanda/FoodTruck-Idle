@@ -12,7 +12,13 @@ public class CharacterMover : MonoBehaviour
         _animationController = GetComponent<AnimationController>();
     }
 
-    // Update is called once per frame
+    private bool _isMoving;
+
+    public bool isMoving
+    {
+        get { return _isMoving; }
+    }
+    
     void Update()
     {
         if (Mathf.Abs(_joystick.Horizontal) > 0.1f || Mathf.Abs(_joystick.Vertical) > 0.1f)
@@ -20,10 +26,12 @@ public class CharacterMover : MonoBehaviour
             JoystickMove(_joystick.Horizontal , _joystick.Vertical , transform , moveSpeed); 
             JoystickRotate(_joystick.Horizontal , _joystick.Vertical , transform );
             _animationController.playAnim(1);
+            _isMoving = true;
         }
         else
         {
             _animationController.playAnim(0);
+            _isMoving = false;
         }
     }
     

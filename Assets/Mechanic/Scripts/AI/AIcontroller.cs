@@ -27,7 +27,7 @@ public class AIcontroller : MonoBehaviour
         //_aIpathFollower.afterPath = ActionTest;
     }
 
-    public void SetAIAgent(Transform enterPath , Transform exitPath , AIevent _ievent ,ICreatableAI _creatableAI , Transform sandwichPlace = null)
+    public void SetAIAgent(Transform enterPath , Transform exitPath , AIevent _ievent ,ICreatableAI _creatableAI = null , Transform sandwichPlace = null)
     {
         this._creatableAI = _creatableAI;
         _aIpathFollower = GetComponent<AIpathFollower>();
@@ -42,15 +42,30 @@ public class AIcontroller : MonoBehaviour
         }
     }
 
+    public void SetAIAgent(Transform enterPath, Transform exitPath, AIevent _aIevent)
+    {
+        _aIpathFollower = GetComponent<AIpathFollower>();
+        this.enterPath = enterPath;
+        this.exitPath = exitPath;
+        _aIpathFollower.SetPathAndMove(this.enterPath);
+        _aItruckEat = gameObject.AddComponent<AItruckEat>();
+        this._ievent = _aIevent;
+    }
+
     public void SendAItoFinish()
     {
+        Debug.Log("SendAItoFinish");
+        
         _aIpathFollower.SetPathAndMove(exitPath , false);
-        _creatableAI.CustomerEatAlready();
+        
 
         if (_aItableEat)
         {
             GetComponent<AImoneyDrop>().StartMoneyDrop();
+            _creatableAI.CustomerEatAlready();
         }
+        
+        
     }
 
     // Update is called once per frame
@@ -67,11 +82,12 @@ public class AIcontroller : MonoBehaviour
             //GetComponent<AItableEat>().SetParameters(sandwichPos , _creatableAI);
             _aItableEat.SetParameters(sandwichPos , _creatableAI);
             wantedCanvas.SetActive(true);
+            GetComponent<AIanimController>().playAnimWithName("sit");
         }
 
         if (_aItruckEat)
         {
-            
+            _aItruckEat.SetParamatersAndGo();
         }
     }
 

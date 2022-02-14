@@ -47,6 +47,19 @@ public class AIcreator : MonoBehaviour
         }
     }
 
+    private void createAIforTruck()
+    {
+        
+    }
+
+    public void CreateTruckQueuAI(Transform enterPath , Transform exitPath)
+    {
+        GameObject go = Instantiate(pickRandomAI(), AIstartPos[0].position, Quaternion.identity);
+        AIcontroller _aIcontroller = go.GetComponent<AIcontroller>();
+        _aIcontroller.SetAIAgent(enterPath , exitPath , AIcontroller.AIevent.StandEat);
+        
+    }
+
     public void CreateTableAI(Transform enterPath, Transform exitPath , Transform sandwichPlace , ICreatableAI _creatableAI , SeatData _seatData)
     {
         GameObject go = Instantiate(pickRandomAI(), AIstartPos[0].position, Quaternion.identity);

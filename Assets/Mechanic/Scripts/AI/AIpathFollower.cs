@@ -96,7 +96,7 @@ public class AIpathFollower : MonoBehaviour
             if (entranceBool)
             {
                 GetComponent<AIcontroller>().AIarrivedDestination();
-                _aIanimController.playAnimWithName("sit");
+                
             }
             else
             {

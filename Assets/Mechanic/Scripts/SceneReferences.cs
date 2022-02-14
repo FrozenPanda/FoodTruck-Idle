@@ -18,6 +18,8 @@ public class SceneReferences : MonoBehaviour
     public GameObject moneyMoveImage;
     public Text TotalMoneyText;
     public int CurrentMoneyAmount;
+
+    public GameObject HandFullImage;
     
     void Start()
     {

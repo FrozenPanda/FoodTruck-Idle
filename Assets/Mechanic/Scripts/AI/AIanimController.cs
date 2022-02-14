@@ -17,7 +17,7 @@ public class AIanimController : MonoBehaviour
 
         playingAnim = _animName;
         
-        Debug.Log("AnimPlaying");
+//        Debug.Log("AnimPlaying");
         
         anim.Play(playingAnim);
     }
