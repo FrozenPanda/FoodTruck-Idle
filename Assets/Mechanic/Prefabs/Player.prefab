@@ -216,6 +216,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joystick: {fileID: 5515630555198957419}
   moveSpeed: 5
+  groundAndObstacles:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &4461170925568185739
 MonoBehaviour:
   m_ObjectHideFlags: 0

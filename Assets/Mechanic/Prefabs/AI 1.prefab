@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyToDrop: {fileID: 1632014603661826707, guid: 63f6971f271f760408dac84266ad2b04, type: 3}
-  dropAmount: 3
+  dropAmount: 2
 --- !u!1001 &2388853712742434401
 PrefabInstance:
   m_ObjectHideFlags: 0
