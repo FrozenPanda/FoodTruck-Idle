@@ -94,7 +94,7 @@ public class AIpathFollower : MonoBehaviour
         }
         else
         {
-            Debug.Log("End Of The Path");
+//            Debug.Log("End Of The Path");
             if (entranceBool)
             {
                 GetComponent<AIcontroller>().AIarrivedDestination();

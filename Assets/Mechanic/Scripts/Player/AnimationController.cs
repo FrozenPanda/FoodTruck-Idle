@@ -50,7 +50,6 @@ public class AnimationController : MonoBehaviour
 
         playingAnim = _animName;
         
-        Debug.Log("AnimPlaying");
         
         anim.Play(playingAnim);
     }

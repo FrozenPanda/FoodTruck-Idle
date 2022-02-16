@@ -6,9 +6,11 @@ public class CharacterMover : MonoBehaviour
 {
     public Joystick _joystick;
     public float moveSpeed;
+    private float moveSpeedDefault;
     private AnimationController _animationController;
     void Start()
     {
+        moveSpeedDefault = moveSpeed;
         _animationController = GetComponent<AnimationController>();
     }
 
@@ -32,6 +34,36 @@ public class CharacterMover : MonoBehaviour
         {
             _animationController.playAnim(0);
             _isMoving = false;
+        }
+        
+        Debug.DrawRay(transform.position + transform.forward / 2f + Vector3.up *2f , Vector3.down *3f , Color.blue);
+        
+        RayForGround();
+    }
+
+    private RaycastHit Hit;
+    public LayerMask groundAndObstacles;
+    private void RayForGround()
+    {
+        
+        if (Physics.Raycast(transform.position+ transform.forward / 2f + Vector3.up* 3f , Vector3.down , out Hit , 5f , groundAndObstacles))
+        {
+            Debug.Log("RH + " + Hit.transform.name);
+            
+            if (Hit.transform.gameObject.layer == 6)
+            {
+                moveSpeed = moveSpeedDefault;
+            }
+            else
+            {
+                moveSpeed = 0f;
+            }
+        }
+        else
+        {
+            Debug.Log("NoRH");
+            
+            moveSpeed = 0f;
         }
     }
     
