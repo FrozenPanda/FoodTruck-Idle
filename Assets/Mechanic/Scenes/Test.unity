@@ -1333,6 +1333,10 @@ PrefabInstance:
       propertyPath: moneyTargetMoveImage
       value: 
       objectReference: {fileID: 631159500}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: sittingEatMoneyDropAmount
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4130981878334747744, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: moneyMoveCanvas
       value: 

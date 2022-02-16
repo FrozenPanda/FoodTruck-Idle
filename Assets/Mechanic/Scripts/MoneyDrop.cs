@@ -10,14 +10,17 @@ public class MoneyDrop : MonoBehaviour
     private Rigidbody rb;
     public float throwSpeedForward = 100f;
     public float throwSpeedUp;
+    public float YdegreeMin;
+    public float YdegreeMax;
     void Start()
     {
+        
         transform.tag = "MoneyDrop";
         gameObject.AddComponent<BoxCollider>().isTrigger = true;
         
         rb = GetComponent<Rigidbody>();
         
-        transform.rotation = Quaternion.Euler(0f, Random.Range(110f,150f) ,0f);
+        transform.rotation = Quaternion.Euler(0f, Random.Range(YdegreeMin,YdegreeMax) ,0f);
         rb.AddForce(transform.forward * Random.Range(throwSpeedForward/2 , throwSpeedForward*1.5f) + transform.up * Random.Range(throwSpeedUp/2f , throwSpeedUp*1.5f));
         groundMask = LayerMask.GetMask("Ground");
     }

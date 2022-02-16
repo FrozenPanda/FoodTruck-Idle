@@ -5,6 +5,8 @@ using UnityEngine;
 public class MoneyMoveOnScreen : MonoBehaviour
 {
     private Transform target;
+
+    public float moveSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class MoneyMoveOnScreen : MonoBehaviour
     {
         if (Vector3.Distance(transform.position , target.position) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position , target.position , 1000f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position , target.position , moveSpeed * Time.deltaTime);
         }
         else
         {
