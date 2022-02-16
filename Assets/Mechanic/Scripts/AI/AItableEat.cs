@@ -28,6 +28,7 @@ public class AItableEat : MonoBehaviour
     
     public void SetParameters(Transform lookPlace , ICreatableAI _creatableAI)
     {
+        eatTime = SceneData.instance.tableEatTime;
         this._creatableAI = _creatableAI;
         defaultRot = transform.rotation;
         lookAt = Quaternion.LookRotation(new Vector3(lookPlace.position.x , transform.position.y , lookPlace.position.z) - transform.position);
@@ -47,6 +48,10 @@ public class AItableEat : MonoBehaviour
         
         _tableEvent = TableEvent.Eating;
         GetComponent<AIanimController>().playAnimWithName("eat");
+        GameObject go = Instantiate(SceneReferences.instance.eatingParticle, transform.position + transform.forward * 0.1f,
+            SceneReferences.instance.eatingParticle.transform.rotation);
+        go.transform.rotation = transform.rotation;
+        Destroy(go , eatTime);
     }
     
     private void Update()

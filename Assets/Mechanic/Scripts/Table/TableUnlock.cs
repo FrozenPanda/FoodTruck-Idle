@@ -15,6 +15,8 @@ public class TableUnlock : MonoBehaviour , IUnlockable
 
     public GameObject MoneyNeedUI;
     public Text MoneyNeedText;
+
+    private int moneyValue = 5;
     
     public enum MoneyState
     {
@@ -58,7 +60,8 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                 }
                 else
                 {
-                    moneyRequest++;
+                    moneyRequest += moneyValue;
+                    moneyRequestTimer = 0.05f;
                     MoneyController.instance.CreateMoneyToUnlock(transform , this);
                     if (moneyRequest >= moneyToUnlock)
                     {
@@ -84,7 +87,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
 
     public void moneyReached()
     {
-        currentMoneyTaken++;
+        currentMoneyTaken += moneyValue;
         MoneyNeedText.text = "$" + (moneyToUnlock-currentMoneyTaken);
 
         if (currentMoneyTaken >= moneyToUnlock)

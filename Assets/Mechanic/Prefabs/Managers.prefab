@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 4130981878334747758}
   - component: {fileID: 468536359}
   - component: {fileID: 468536360}
+  - component: {fileID: 597318777}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -180,6 +181,7 @@ MonoBehaviour:
   TotalMoneyText: {fileID: 0}
   CurrentMoneyAmount: 0
   HandFullImage: {fileID: 7598707057220197260, guid: a5207ee9f3aeeca4483c56dff9061636, type: 3}
+  eatingParticle: {fileID: 5626340963951939790, guid: 5058f7dee536b6f4890a32d6c7382e7e, type: 3}
 --- !u!114 &468536360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +194,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 180fabe8f3a2c6d4bb71015cd35ee76a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &597318777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130981878334747747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5c3e78db69f54ebf1c59fb5882446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hotDogQueuWaitTimer: 10
+  hotDogQueuMaxCount: 2
+  tableEatTime: 5
+  customerMoveSpeed: 3

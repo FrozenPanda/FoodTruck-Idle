@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AItruckEat : MonoBehaviour
 {
@@ -25,10 +26,13 @@ public class AItruckEat : MonoBehaviour
     
     private void Start()
     {
-        moveSpeed = 3f;
-        eatTime = 2f;
+        moveSpeed = SceneData.instance.customerMoveSpeed;
+        eatTime = SceneData.instance.hotDogQueuWaitTimer ;
         HotDogQueuManager.instance.AddMetoTruckList(this);
         eatTimeDefault = eatTime;
+        hotDogTakeCanvas = transform.Find("FillBarCanvas").gameObject;
+        hotDogTakeFillImage = hotDogTakeCanvas.transform.GetChild(0).GetComponent<Image>();
+        hotDogTakeCanvas.SetActive(false);
     }
 
     public int CurrentQueuIndex
@@ -64,12 +68,14 @@ public class AItruckEat : MonoBehaviour
                 if (eatTime > 0f)
                 {
                     eatTime -= Time.deltaTime;
+                    SetCanvasFillBar(eatTime);
                 }
                 else
                 {
                     GetComponent<AIcontroller>().SendAItoFinish();
                     _aItruckEatEvents = AItruckEatEvents.FollowExit;
                     FinishEatingMoveOthers();
+                    hotDogTakeCanvas.SetActive(false);
                 }
                 
                 break;
@@ -104,6 +110,7 @@ public class AItruckEat : MonoBehaviour
         if (currentQueuIndex == 0)
         {
             _aItruckEatEvents = AItruckEatEvents.Eating;
+            hotDogTakeCanvas.SetActive(true);
             GetComponent<AIanimController>().playAnimWithName("Idle");
         }
         else
@@ -111,5 +118,13 @@ public class AItruckEat : MonoBehaviour
             _aItruckEatEvents = AItruckEatEvents.Walkable;
             GetComponent<AIanimController>().playAnimWithName("Idle");
         }
+    }
+    
+    public GameObject hotDogTakeCanvas;
+    public Image hotDogTakeFillImage;
+    
+    private void SetCanvasFillBar(float currentTime)
+    {
+        hotDogTakeFillImage.fillAmount = 1 -(currentTime / eatTimeDefault);
     }
 }

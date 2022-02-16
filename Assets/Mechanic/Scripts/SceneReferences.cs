@@ -21,6 +21,8 @@ public class SceneReferences : MonoBehaviour
 
     public GameObject HandFullImage;
     
+    public GameObject eatingParticle;
+    
     void Start()
     {
         CurrentMoneyAmount = 500;

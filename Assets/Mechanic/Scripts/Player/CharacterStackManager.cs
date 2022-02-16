@@ -46,13 +46,13 @@ public class CharacterStackManager : MonoBehaviour
                     return;
                 }
                 
-                if (Vector3.Distance(transform.position , IStackTransform.position) > 2f)
+                /*if (Vector3.Distance(transform.position , IStackTransform.position) > 2f)
                 {
                     _stackable = null;
                     IStackTransform = null;
                     _stackEvent = StackEvent.Idle;
                     hotDogTakeCanvas.SetActive(false);
-                }
+                }*/
 
                 if (_characterMover.isMoving)
                 {
@@ -147,7 +147,18 @@ public class CharacterStackManager : MonoBehaviour
             IdropTransform = _dropable.sayMyTransform();
         }
     }
-    
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "CollectPlace")
+        {
+            _stackable = null;
+            IStackTransform = null;
+            _stackEvent = StackEvent.Idle;
+            hotDogTakeCanvas.SetActive(false);
+        }
+    }
+
 
     public void mealTaken(int index , MoveAbleMeal _moveAbleMeal)
     {

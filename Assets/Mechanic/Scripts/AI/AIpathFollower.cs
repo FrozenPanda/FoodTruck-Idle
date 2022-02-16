@@ -24,6 +24,8 @@ public class AIpathFollower : MonoBehaviour
 
     private AIanimController _aIanimController;
 
+    private float moveSpeed;
+    
     private void Awake()
     {
         _aIanimController = GetComponent<AIanimController>();
@@ -31,7 +33,7 @@ public class AIpathFollower : MonoBehaviour
 
     private void Start()
     {
-        
+        moveSpeed = SceneData.instance.customerMoveSpeed;
         
         if (test)
         {
@@ -68,7 +70,7 @@ public class AIpathFollower : MonoBehaviour
                 break;
             case pathEvent.Walking:
                 
-                transform.position = Vector3.MoveTowards(transform.position , pathes[currentPathIndex].position , 3f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position , pathes[currentPathIndex].position , moveSpeed * Time.deltaTime);
 
                 if (Vector3.Distance(transform.position , pathes[currentPathIndex].position) < 0.1f)
                 {

@@ -40,6 +40,8 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
     
     void Start()
     {
+        MaxQueu = SceneData.instance.hotDogQueuMaxCount;
+        
         queuPlaces = new Transform[queuPlaceHolder.childCount];
 
         for (int i = 0; i < queuPlaces.Length; i++)
