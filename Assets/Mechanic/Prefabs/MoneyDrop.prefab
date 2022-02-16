@@ -61,6 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwSpeedForward: 100
   throwSpeedUp: 150
+  YdegreeMin: 90
+  YdegreeMax: 100
 --- !u!54 &7671386877238405488
 Rigidbody:
   m_ObjectHideFlags: 0

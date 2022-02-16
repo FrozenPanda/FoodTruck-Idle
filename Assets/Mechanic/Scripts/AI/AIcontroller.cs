@@ -57,12 +57,15 @@ public class AIcontroller : MonoBehaviour
         Debug.Log("SendAItoFinish");
         
         _aIpathFollower.SetPathAndMove(exitPath , false);
-        
-        GetComponent<AImoneyDrop>().StartMoneyDrop();
+
+        if (_aItruckEat)
+        {
+            GetComponent<AImoneyDrop>().StartMoneyDrop(SceneData.instance.standEatMoneyDropAmount);
+        }
         
         if (_aItableEat)
         {
-            GetComponent<AImoneyDrop>().StartMoneyDrop();
+            GetComponent<AImoneyDrop>().StartMoneyDrop(SceneData.instance.sittingEatMoneyDropAmount);
             _creatableAI.CustomerEatAlready();
         }
         
