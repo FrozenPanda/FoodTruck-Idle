@@ -58,7 +58,8 @@ public class AIcontroller : MonoBehaviour
         
         _aIpathFollower.SetPathAndMove(exitPath , false);
         
-
+        GetComponent<AImoneyDrop>().StartMoneyDrop();
+        
         if (_aItableEat)
         {
             GetComponent<AImoneyDrop>().StartMoneyDrop();

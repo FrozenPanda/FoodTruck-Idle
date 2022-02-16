@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec0d365a72d4594f9989b191c5258d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nullImage: {fileID: 0}
 --- !u!114 &9059971335326011295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5598fa5a63bdd1e4e8e3911cc25baca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwSpeedForward: 100
+  throwSpeedUp: 150
 --- !u!54 &7671386877238405488
 Rigidbody:
   m_ObjectHideFlags: 0

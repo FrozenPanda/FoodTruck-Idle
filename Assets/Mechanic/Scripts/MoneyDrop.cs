@@ -8,7 +8,8 @@ using Random = UnityEngine.Random;
 public class MoneyDrop : MonoBehaviour
 {
     private Rigidbody rb;
-    private float throwSpeed = 100f;
+    public float throwSpeedForward = 100f;
+    public float throwSpeedUp;
     void Start()
     {
         transform.tag = "MoneyDrop";
@@ -16,10 +17,8 @@ public class MoneyDrop : MonoBehaviour
         
         rb = GetComponent<Rigidbody>();
         
-        
-        Vector3 randomVal = new Vector3(Random.Range(-throwSpeed , throwSpeed), 200f , Random.Range(-throwSpeed , throwSpeed));
-        transform.rotation = Quaternion.Euler(0f, Random.Range(0f,360f) ,0f);
-        rb.AddForce(randomVal);
+        transform.rotation = Quaternion.Euler(0f, Random.Range(110f,150f) ,0f);
+        rb.AddForce(transform.forward * Random.Range(throwSpeedForward/2 , throwSpeedForward*1.5f) + transform.up * Random.Range(throwSpeedUp/2f , throwSpeedUp*1.5f));
         groundMask = LayerMask.GetMask("Ground");
     }
 
