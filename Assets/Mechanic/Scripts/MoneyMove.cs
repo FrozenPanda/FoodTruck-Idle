@@ -14,6 +14,7 @@ public class MoneyMove : MonoBehaviour
     private Transform canvasTransform;
     public GameObject nullImage;
     private GameObject go;
+    public float movespeed;
     public void setParametersAndMove(Transform _target , IUnlockable _unlockable , Transform _canvasTransform)
     {
         transform.localScale *= 0.8f;
@@ -37,7 +38,7 @@ public class MoneyMove : MonoBehaviour
         Vector3 screenPos = _camera.WorldToScreenPoint(target.position);
         go.GetComponent<Image>().rectTransform.position = screenPos;
         
-        transform.position = Vector3.MoveTowards(transform.position , screenPos , 2000f * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position , screenPos , movespeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position , screenPos) < 0.1f)
         {
