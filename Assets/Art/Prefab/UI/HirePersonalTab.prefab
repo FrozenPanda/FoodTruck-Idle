@@ -606,8 +606,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -173.46326, y: 49.01}
-  m_SizeDelta: {x: 441.6177, y: 146.52}
+  m_AnchoredPosition: {x: -143.12234, y: 0.7536}
+  m_SizeDelta: {x: 319.5574, y: 168.9304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7535598186259685507
 CanvasRenderer:
@@ -859,7 +859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2896465146279537632
 RectTransform:
   m_ObjectHideFlags: 0
@@ -878,8 +878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -172.4422, y: -55.076}
-  m_SizeDelta: {x: 442.4005, y: 146.87}
+  m_AnchoredPosition: {x: -142.56366, y: -48.19343}
+  m_SizeDelta: {x: 362.7244, y: 128.5166}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3273503809781779093
 CanvasRenderer:
@@ -1237,7 +1237,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STAFF I
+  m_text: 'YOUR CAPACITY
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45be5f3a6532b6d40b248dacd8db3f62, type: 2}
   m_sharedMaterial: {fileID: -5680034864057964214, guid: 45be5f3a6532b6d40b248dacd8db3f62, type: 2}
@@ -1264,14 +1266,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 54.8
   m_fontSizeBase: 73.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 79.3
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1300,7 +1302,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -3.6278687, y: 16.76831, z: 5.9454346, w: 10.651611}
+  m_margin: {x: -0.42510986, y: 15.914551, z: -50.145874, w: 10.651611}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
