@@ -10,7 +10,7 @@ public class SaveTest : MonoBehaviour
     void Start()
     {
         SaveLoadSystem.Load();
-        
+        Debug.Log("Current Upgrade: " + SaveLoadSystem.instance.CharacterCarryCapacity);
     }
 
     // Update is called once per frame
@@ -22,12 +22,15 @@ public class SaveTest : MonoBehaviour
             SaveLoadSystem.Save();
         }
 
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SaveLoadSystem.instance.CharacterCarryCapacity = 2;
+            SaveLoadSystem.Save();
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
-            for (int i = 0; i < SaveLoadSystem.instance.UpgradeIndex.Length; i++)
-            {
-                Debug.Log(index + i + " =" + SaveLoadSystem.instance.UpgradeIndex[i]);
-            }
+            
         }
     }
 }

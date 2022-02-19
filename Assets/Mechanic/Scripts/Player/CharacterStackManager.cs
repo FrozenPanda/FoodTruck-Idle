@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CharacterStackManager : MonoBehaviour
 {
+    
     public List<Transform> StackPlaces = new List<Transform>();
     
     private int totalStack = 5; //todo bunu save load dan çekilmesi lazım
@@ -18,9 +19,13 @@ public class CharacterStackManager : MonoBehaviour
 
     private CharacterMover _characterMover;
 
+    public int[] carryCapacityPerUpgrade;
+    
     private void Start()
     {
         _characterMover = GetComponent<CharacterMover>();
+        SaveLoadSystem.Load();
+        CheckUpgrade();
     }
 
     public enum StackEvent
@@ -81,10 +86,10 @@ public class CharacterStackManager : MonoBehaviour
                 else
                 {
                     collectTimer = defaultHotDogTime;
-                    if (currentStack < totalStack)
+                    if (currentStack < totalStack + 1)
                     {
                         _stackable.giveOnetoPlayer(this, currentStack , StackPlaces[currentStack]);
-
+                        currentStack++;
                         carryingBool = true;
                     }
                 }
@@ -113,6 +118,11 @@ public class CharacterStackManager : MonoBehaviour
                     collectTimer = 0.1f;
                     if (currentStack > 0)
                     {
+                        if (_dropable == null)
+                        {
+                            return;
+                        }
+                        
                         if (_dropable.isMealNeed())
                         {
                             _dropable.VereyimAbime(this);
@@ -203,5 +213,12 @@ public class CharacterStackManager : MonoBehaviour
     private void SetCanvasFillBar(float currentTime)
     {
         hotDogTakeFillImage.fillAmount = 1 -(currentTime / defaultHotDogTime);
+    }
+
+    public void CheckUpgrade()
+    {
+        SaveLoadSystem.Load();
+        totalStack = carryCapacityPerUpgrade[SaveLoadSystem.instance.upgrades2[0]];
+        defaultHotDogTime = 1f - SaveLoadSystem.instance.upgrades2[1] * 0.1f;
     }
 }

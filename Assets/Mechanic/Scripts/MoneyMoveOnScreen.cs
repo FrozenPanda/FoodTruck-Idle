@@ -22,8 +22,7 @@ public class MoneyMoveOnScreen : MonoBehaviour
         }
         else
         {
-            SceneReferences.instance.CurrentMoneyAmount += 20;
-            SceneReferences.instance.TotalMoneyText.text = SceneReferences.instance.CurrentMoneyAmount.ToString();
+            PlayerMoneyData.instance.TotalMoney += 20;
             Destroy(gameObject);
         }
     }

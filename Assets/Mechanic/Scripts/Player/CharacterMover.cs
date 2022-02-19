@@ -48,7 +48,7 @@ public class CharacterMover : MonoBehaviour
         
         if (Physics.Raycast(transform.position+ transform.forward / 2f + Vector3.up* 3f , Vector3.down , out Hit , 5f , groundAndObstacles))
         {
-            Debug.Log("RH + " + Hit.transform.name);
+//            Debug.Log("RH + " + Hit.transform.name);
             
             if (Hit.transform.gameObject.layer == 6)
             {

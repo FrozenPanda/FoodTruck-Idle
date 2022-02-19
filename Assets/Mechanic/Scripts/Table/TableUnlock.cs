@@ -49,6 +49,11 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                 break;
             case MoneyState.MoneyRequesting:
 
+                if (PlayerMoneyData.instance.TotalMoney < moneyValue)
+                {
+                    return;
+                }
+                
                 if (moneyRequest >= moneyToUnlock)
                 {
                     return;
@@ -63,6 +68,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                     moneyRequest += moneyValue;
                     moneyRequestTimer = 0.05f;
                     MoneyController.instance.CreateMoneyToUnlock(transform , this);
+                    PlayerMoneyData.instance.TotalMoney -= moneyValue;
                     if (moneyRequest >= moneyToUnlock)
                     {
                         _moneyState = MoneyState.Idle;

@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 4025801818814153675}
   - component: {fileID: 4514762173481116310}
   - component: {fileID: 4461170925568185736}
+  - component: {fileID: 926527798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -258,6 +259,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentStack: 0
+  carryCapacityPerUpgrade: 030000000500000007000000090000000b0000000000000000000000000000000000000000000000
   _stackEvent: 0
   hotDogTakeCanvas: {fileID: 247907013755220926}
   hotDogTakeFillImage: {fileID: 7926396804048504315}
@@ -302,6 +304,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &926527798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4461170925568185729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268619d94ae88f849b63abbab9355ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4461170925594218287
 GameObject:
   m_ObjectHideFlags: 0

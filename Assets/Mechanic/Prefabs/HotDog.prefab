@@ -141,6 +141,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveEvent: 0
+  _animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.16011734
+      value: 0.32905605
+      inSlope: 1.9991474
+      outSlope: 1.9991474
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.38982874
+      value: 0.6807537
+      inSlope: 0.834394
+      outSlope: 0.834394
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99438477
+      value: 0.00050354004
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  realHotDog: {fileID: 2639379410098171017}
+  upDownPower: 2
+  MoveSpeed: 5
 --- !u!1001 &723875275705635064
 PrefabInstance:
   m_ObjectHideFlags: 0

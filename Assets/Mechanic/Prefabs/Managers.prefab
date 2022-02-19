@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 468536359}
   - component: {fileID: 468536360}
   - component: {fileID: 597318777}
+  - component: {fileID: 1759988110}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -210,10 +211,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hotDogQueuWaitTimer: 18
   hotDogQueuMaxCount: 1
+  tableEatTimePerUpgrade:
+  - 10
+  - 8
+  - 5
+  - 3
+  - 2
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
   tableEatTime: 10
+  customerMoveSpeedPerUpgrade:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 0
+  - 0
+  - 0
+  - 0
   customerMoveSpeed: 2
   sittingEatMoneyDropAmount: 2
   standEatMoneyDropAmount: 1
+--- !u!114 &1759988110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130981878334747747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8113aa6dd4707da4eb2da6c8213977f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalMoney: {fileID: 4749076828174262506}
 --- !u!1001 &3908184073851592932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -309,6 +345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8634724863608537102, guid: 306ae318eb2e207459162686f69bcede, type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 306ae318eb2e207459162686f69bcede, type: 3}
 --- !u!224 &4749076828911658295 stripped
@@ -342,6 +382,10 @@ PrefabInstance:
     - target: {fileID: 8634724863406376399, guid: 306ae318eb2e207459162686f69bcede, type: 3}
       propertyPath: m_Name
       value: GameplayCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634724863406376399, guid: 306ae318eb2e207459162686f69bcede, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8634724863406376403, guid: 306ae318eb2e207459162686f69bcede, type: 3}
       propertyPath: m_Pivot.x

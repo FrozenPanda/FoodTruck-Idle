@@ -17,9 +17,11 @@ public class SceneData : MonoBehaviour
     public int hotDogQueuMaxCount;
     
     //Table
+    public float[] tableEatTimePerUpgrade;
     public float tableEatTime;
     
     //Customers
+    public float[] customerMoveSpeedPerUpgrade;
     public float customerMoveSpeed;
     
     //MoneyDrop
@@ -31,6 +33,12 @@ public class SceneData : MonoBehaviour
         
     }
 
+    public void CheckUpgrades()
+    {
+        SaveLoadSystem.Load();
+        tableEatTime = tableEatTimePerUpgrade[SaveLoadSystem.instance.upgrades2[8]];
+        customerMoveSpeed = customerMoveSpeedPerUpgrade[SaveLoadSystem.instance.upgrades2[9]];
+    }
     // Update is called once per frame
     void Update()
     {

@@ -37,10 +37,13 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
         
         AIcreator.instance.AddMeTolist(this);
     }
-    
+
+    public int[] MaxQueuPerUpgrade;
     void Start()
     {
-        MaxQueu = SceneData.instance.hotDogQueuMaxCount;
+        SaveLoadSystem.Load();
+        
+        MaxQueu = MaxQueuPerUpgrade[SaveLoadSystem.instance.upgrades2[2]];
         
         queuPlaces = new Transform[queuPlaceHolder.childCount];
 
@@ -68,5 +71,10 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
     public void CustomerOrderRequested()
     {
         throw new NotImplementedException();
+    }
+
+    public void UpgradeOccured()
+    {
+        AIcreator.instance.AddMeTolist(this);
     }
 }

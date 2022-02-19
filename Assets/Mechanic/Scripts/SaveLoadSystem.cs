@@ -28,6 +28,24 @@ public class SaveLoadSystem
         set => tableSeatAmount = value;
     }
 
+    public int TotalMoney = 500;
+
+    #region Update2
+
+    public int CharacterCarryCapacity;
+    public int CollectChargeSpeed;
+    public int HotDogLineCapacity;
+    public int HamburgerLineCapacity;
+    public int PizzaLineCapacity;
+    public int HotDogTruckDecoration;
+    public int HamburgerTruckDecoration;
+    public int PizzaTruckDecoration;
+    public int CustomerEatSpeed;
+    public int CustomerMoveSpeed;
+    public int[] upgrades2 = new[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    
+    #endregion
+
     public static void Save()
     {
         string path = Application.persistentDataPath + "/save.dat";

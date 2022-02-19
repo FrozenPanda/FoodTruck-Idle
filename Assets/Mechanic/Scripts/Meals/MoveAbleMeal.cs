@@ -12,6 +12,7 @@ public class MoveAbleMeal : MonoBehaviour
     private Transform beChild;
     private bool MoveAble;
     
+    
     public enum MealType
     {
         Hotdog,
@@ -28,7 +29,12 @@ public class MoveAbleMeal : MonoBehaviour
     }
 
     public moveEvent _moveEvent;
-    
+
+    public AnimationCurve _animationCurve;
+    public Transform realHotDog;
+    public float upDownPower;
+    public float MoveSpeed;
+
     public void StartMove(Transform _parent , moveEvent _event)
     {
         transform.parent = _parent;
@@ -43,9 +49,10 @@ public class MoveAbleMeal : MonoBehaviour
     {
         if (MoveAble)
         {
-            MoveTimer += Time.deltaTime * 10f;
+            MoveTimer += Time.deltaTime * MoveSpeed;
             transform.localPosition = Vector3.Lerp(defaultPos , Vector3.zero , MoveTimer );
-
+            realHotDog.transform.localPosition = new Vector3(0f, _animationCurve.Evaluate(MoveTimer) * upDownPower, 0f);
+            
             if (MoveTimer > 1f)
             {
                 MoveAble = false;
