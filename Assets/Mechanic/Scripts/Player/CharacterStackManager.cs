@@ -20,7 +20,7 @@ public class CharacterStackManager : MonoBehaviour
     private CharacterMover _characterMover;
 
     public int[] carryCapacityPerUpgrade;
-    
+    public float[] chargeSpeedPerUpgrade;
     private void Start()
     {
         _characterMover = GetComponent<CharacterMover>();
@@ -219,6 +219,6 @@ public class CharacterStackManager : MonoBehaviour
     {
         SaveLoadSystem.Load();
         totalStack = carryCapacityPerUpgrade[SaveLoadSystem.instance.upgrades2[0]];
-        defaultHotDogTime = 1f - SaveLoadSystem.instance.upgrades2[1] * 0.1f;
+        defaultHotDogTime = chargeSpeedPerUpgrade[SaveLoadSystem.instance.upgrades2[1]];
     }
 }

@@ -1601,24 +1601,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469bffcfb3ca27745ab081afa30ed812, type: 3}
---- !u!1 &1759988103 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4130981878334747747, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-  m_PrefabInstance: {fileID: 4130981877988385638}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1759988110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759988103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8113aa6dd4707da4eb2da6c8213977f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalMoney: {fileID: 1903654879}
 --- !u!114 &1899585357 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6051957261221961250, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
@@ -1628,17 +1610,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1903654879 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4749076828174262506, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-  m_PrefabInstance: {fileID: 4130981877988385638}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1503238722138414504
@@ -1819,62 +1790,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: tableEatTimePerUpgrade.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: tableEatTimePerUpgrade.Array.data[0]
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: tableEatTimePerUpgrade.Array.data[1]
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: tableEatTimePerUpgrade.Array.data[2]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: tableEatTimePerUpgrade.Array.data[3]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: tableEatTimePerUpgrade.Array.data[4]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: tableEatTimePerUpgrade.Array.data[5]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: customerMoveSpeedPerUpgrade.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: customerMoveSpeedPerUpgrade.Array.data[0]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: customerMoveSpeedPerUpgrade.Array.data[1]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: customerMoveSpeedPerUpgrade.Array.data[2]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: customerMoveSpeedPerUpgrade.Array.data[3]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: customerMoveSpeedPerUpgrade.Array.data[4]
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: customerMoveSpeedPerUpgrade.Array.data[5]
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 4130981878334747745, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1922,14 +1837,6 @@ PrefabInstance:
     - target: {fileID: 4130981878334747747, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: m_Name
       value: Managers
-      objectReference: {fileID: 0}
-    - target: {fileID: 4749076828174262506, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: m_Text
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5656669164344190089, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}

@@ -260,6 +260,17 @@ MonoBehaviour:
   - {fileID: 0}
   currentStack: 0
   carryCapacityPerUpgrade: 030000000500000007000000090000000b0000000000000000000000000000000000000000000000
+  chargeSpeedPerUpgrade:
+  - 1
+  - 0.5
+  - 0.2
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   _stackEvent: 0
   hotDogTakeCanvas: {fileID: 247907013755220926}
   hotDogTakeFillImage: {fileID: 7926396804048504315}

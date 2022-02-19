@@ -166,4 +166,12 @@ public class UpgradeController2 : MonoBehaviour
             upgradeCanvas.SetActive(true);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            upgradeCanvas.SetActive(false);
+        }
+    }
 }
