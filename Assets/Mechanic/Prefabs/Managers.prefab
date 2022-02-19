@@ -208,11 +208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a5c3e78db69f54ebf1c59fb5882446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotDogQueuWaitTimer: 10
-  hotDogQueuMaxCount: 3
-  tableEatTime: 5
-  customerMoveSpeed: 1.5
-  sittingEatMoneyDropAmount: 3
+  hotDogQueuWaitTimer: 18
+  hotDogQueuMaxCount: 1
+  tableEatTime: 10
+  customerMoveSpeed: 2
+  sittingEatMoneyDropAmount: 2
   standEatMoneyDropAmount: 1
 --- !u!1001 &3908184073851592932
 PrefabInstance:
