@@ -51,13 +51,13 @@ public class CharacterStackManager : MonoBehaviour
                     return;
                 }
                 
-                /*if (Vector3.Distance(transform.position , IStackTransform.position) > 2f)
+                if(Vector3.Distance(transform.position , colliderHitPoint) > 1f)
                 {
                     _stackable = null;
                     IStackTransform = null;
                     _stackEvent = StackEvent.Idle;
                     hotDogTakeCanvas.SetActive(false);
-                }*/
+                }
 
                 if (_characterMover.isMoving)
                 {
@@ -72,6 +72,7 @@ public class CharacterStackManager : MonoBehaviour
 
                 if (currentStack >= totalStack)
                 {
+                    Debug.Log("Idle a döndü");
                     CommonFunctions.instance.CreateAnyUI(SceneReferences.instance.HandFullImage , transform , SceneReferences.instance.moneyMoveCanvas);
                     _stackEvent = StackEvent.Idle;
                     hotDogTakeCanvas.SetActive(false);
@@ -89,7 +90,7 @@ public class CharacterStackManager : MonoBehaviour
                     if (currentStack < totalStack + 1)
                     {
                         _stackable.giveOnetoPlayer(this, currentStack , StackPlaces[currentStack]);
-                        currentStack++;
+                        //currentStack++;
                         carryingBool = true;
                     }
                 }
@@ -138,10 +139,12 @@ public class CharacterStackManager : MonoBehaviour
 
     private Transform IStackTransform;
     private Transform IdropTransform;
+    private Vector3 colliderHitPoint;
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<IStackable>() != null)
         {
+            colliderHitPoint = transform.position;
             _stackable = other.GetComponent<IStackable>();
             collectTimer = defaultHotDogTime;
             _stackEvent = StackEvent.Collecting;
@@ -160,8 +163,10 @@ public class CharacterStackManager : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        return;
         if (other.tag == "CollectPlace")
         {
+            Debug.Log("Ontriggerexit");
             _stackable = null;
             IStackTransform = null;
             _stackEvent = StackEvent.Idle;

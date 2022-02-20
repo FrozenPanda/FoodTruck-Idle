@@ -81,6 +81,7 @@ public class HotDogCreator : MonoBehaviour , IStackable
         
         _characterStackManager.mealTaken(currentStack, waitingMeals[firstHotDog]);
         waitingMeals[firstHotDog].StartMove(target , MoveAbleMeal.moveEvent.ToPlayer);
+        _characterStackManager.currentStack++;
         HotDogPlaceInfo[firstHotDog] = 0;
     }
 
