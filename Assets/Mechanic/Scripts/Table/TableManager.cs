@@ -22,6 +22,7 @@ public class TableManager : MonoBehaviour , IDropable
     {
         SaveLoadSystem.Load();
         int unlockedSeat = SaveLoadSystem.instance.TableSeatAmount;
+        unlockedSeat = 10;
         for (int i = 0; i < Seats.Length; i++)
         {
             if (i < unlockedSeat)
