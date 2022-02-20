@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 3.058197, y: 1.7476}
+  m_SizeDelta: {x: -35.8257, y: -22.7187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3207736008863673892
 CanvasRenderer:
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23817307, g: 0.4811321, b: 0, a: 1}
+  m_Color: {r: 0.3508974, g: 0.7075472, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -69,10 +69,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c6b5bbdfd09f8834e931f65f8e719a2e, type: 3}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 0.74, y: -2.47}
+  m_EffectColor: {r: 0.051041294, g: 0.3490566, b: 0.30969608, a: 1}
+  m_EffectDistance: {x: 0, y: -5.24}
   m_UseGraphicAlpha: 1
 --- !u!114 &7671958183603944289
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
-  m_EffectDistance: {x: 1.58, y: -0.78}
+  m_EffectDistance: {x: -0.21, y: -0.53}
   m_UseGraphicAlpha: 1
 --- !u!1 &3207736010458397724
 GameObject:
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08f77d9164aa3ea40b8f4d8cc88f8f8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 407c05f08f9d9044d8dd6bf067c092d0, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

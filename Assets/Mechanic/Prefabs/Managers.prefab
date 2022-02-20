@@ -235,7 +235,7 @@ MonoBehaviour:
   - 0
   - 0
   customerMoveSpeed: 2
-  sittingEatMoneyDropAmount: 2
+  sittingEatMoneyDropAmount: 3
   standEatMoneyDropAmount: 1
 --- !u!114 &1759988110
 MonoBehaviour:
