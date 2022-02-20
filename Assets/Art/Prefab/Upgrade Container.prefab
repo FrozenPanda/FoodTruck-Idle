@@ -677,26 +677,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 39382873}
     m_Modifications:
-    - target: {fileID: 481059935004325764, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_Value
-      value: 0.9892742
-      objectReference: {fileID: 0}
-    - target: {fileID: 481059935140152433, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.99734485
-      objectReference: {fileID: 0}
-    - target: {fileID: 481059935140152433, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 481059935140152433, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.24488512
-      objectReference: {fileID: 0}
-    - target: {fileID: 481059935217735544, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 1634411382, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 39382872}
     - target: {fileID: 481059935217735545, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -785,150 +769,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upgrade 2 Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 481059935217735549, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 747710452937925686, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 747710452937925686, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 747710452937925686, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 39382872}
-    - target: {fileID: 747710452937925686, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 747710452937925686, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CharacterCarryCapacityIncrease
-      objectReference: {fileID: 0}
-    - target: {fileID: 747710452937925686, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UpgradeController2, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 747710452937925686, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2075463455516650699, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2075463455516650699, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2075463455516650699, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 39382872}
-    - target: {fileID: 2075463455516650699, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2075463455516650699, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CustomerMoveSpeedIncrease
-      objectReference: {fileID: 0}
-    - target: {fileID: 2075463455516650699, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UpgradeController2, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2075463455516650699, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3002878433279000596, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3002878433279000596, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3002878433279000596, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 39382872}
-    - target: {fileID: 3002878433279000596, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3002878433279000596, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HotDogLineCapacityIncrease
-      objectReference: {fileID: 0}
-    - target: {fileID: 3002878433279000596, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UpgradeController2, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3002878433279000596, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393537672880913142, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393537672880913142, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7393537672880913142, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 39382872}
-    - target: {fileID: 7393537672880913142, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393537672880913142, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CollectChargeSpeedIncrease
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393537672880913142, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UpgradeController2, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393537672880913142, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7862487525448223213, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7862487525448223213, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7862487525448223213, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 39382872}
-    - target: {fileID: 7862487525448223213, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7862487525448223213, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CustomerEatSpeedIncrease
-      objectReference: {fileID: 0}
-    - target: {fileID: 7862487525448223213, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UpgradeController2, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7862487525448223213, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
 --- !u!1 &3647678476606765367 stripped
@@ -996,75 +856,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7655839798232884321 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6777135627240507947, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-  m_PrefabInstance: {fileID: 3761131628104560202}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3157634084841642772 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2296855814625719646, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
-  m_PrefabInstance: {fileID: 3761131628104560202}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7655839798232884321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1634411382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7655839798232884321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 3157634084841642772}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 39382872}
-        m_TargetAssemblyTypeName: UpgradeController2, Assembly-CSharp
-        m_MethodName: CloseCanvas
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
