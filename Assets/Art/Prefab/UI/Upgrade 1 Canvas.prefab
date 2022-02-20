@@ -261,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7390985734089893836, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_fontSize
-      value: 66.55
+      value: 79.3
       objectReference: {fileID: 0}
     - target: {fileID: 7517311413593114093, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_Name
@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7390985734089893836, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_fontSize
-      value: 60.75
+      value: 73.35
       objectReference: {fileID: 0}
     - target: {fileID: 7517311413593114093, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_Name
@@ -617,6 +617,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3908307220888177933}
     m_Modifications:
+    - target: {fileID: 436757753250679038, guid: ad13a0177a980264ead623e84844f673, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 45be5f3a6532b6d40b248dacd8db3f62, type: 2}
+    - target: {fileID: 436757753250679038, guid: ad13a0177a980264ead623e84844f673, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 436757753250679038, guid: ad13a0177a980264ead623e84844f673, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 436757753250679038, guid: ad13a0177a980264ead623e84844f673, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 436757753250679038, guid: ad13a0177a980264ead623e84844f673, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5680034864057964214, guid: 45be5f3a6532b6d40b248dacd8db3f62, type: 2}
+    - target: {fileID: 436757753250679038, guid: ad13a0177a980264ead623e84844f673, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294879898
+      objectReference: {fileID: 0}
     - target: {fileID: 3935954505839428736, guid: ad13a0177a980264ead623e84844f673, type: 3}
       propertyPath: m_Name
       value: HRStaffPanel
@@ -831,7 +855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7390985734089893836, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_fontSize
-      value: 61.85
+      value: 74.65
       objectReference: {fileID: 0}
     - target: {fileID: 7517311413593114093, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_Name
