@@ -25,4 +25,9 @@ public class SeatData : MonoBehaviour , ICreatableAI
     {
         _tableManager.OrderRequested(SeatID);
     }
+
+    public MoneyCollectPlaces GiveMeMoneyCollectPlaceData()
+    {
+        return transform.parent.GetComponent<TableManager>()._moneyCollectPlaces;
+    }
 }

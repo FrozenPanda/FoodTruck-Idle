@@ -12,6 +12,7 @@ public class TableManager : MonoBehaviour , IDropable
 
     public Transform[] sandwichPlace;
 
+    public MoneyCollectPlaces _moneyCollectPlaces;
     private void OnEnable()
     {
         StartFromSaveLoadSystem();

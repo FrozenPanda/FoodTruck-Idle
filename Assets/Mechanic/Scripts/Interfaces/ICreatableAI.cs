@@ -9,4 +9,6 @@ public interface ICreatableAI
     public void CustomerEatAlready();
 
     public void CustomerOrderRequested();
+
+    public MoneyCollectPlaces GiveMeMoneyCollectPlaceData();
 }

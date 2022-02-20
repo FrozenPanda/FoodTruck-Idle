@@ -65,7 +65,7 @@ public class AIcontroller : MonoBehaviour
         
         if (_aItableEat)
         {
-            GetComponent<AImoneyDrop>().StartMoneyDrop(SceneData.instance.sittingEatMoneyDropAmount);
+            GetComponent<AImoneyDrop>().StartMoneyDrop(SceneData.instance.sittingEatMoneyDropAmount, true , this._creatableAI);
             _creatableAI.CustomerEatAlready();
         }
         

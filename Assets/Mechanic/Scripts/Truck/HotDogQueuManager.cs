@@ -77,4 +77,9 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
     {
         AIcreator.instance.AddMeTolist(this);
     }
+
+    public MoneyCollectPlaces GiveMeMoneyCollectPlaceData()
+    {
+        return null;
+    }
 }

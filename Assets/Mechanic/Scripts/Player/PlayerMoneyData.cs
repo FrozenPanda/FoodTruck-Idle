@@ -40,4 +40,12 @@ public class PlayerMoneyData : MonoBehaviour
     {
         totalMoney.text = _totalMoney.ToString();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            TotalMoney += 1000;
+        }
+    }
 }
