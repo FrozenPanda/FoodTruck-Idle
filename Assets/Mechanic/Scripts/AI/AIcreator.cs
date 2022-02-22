@@ -17,6 +17,9 @@ public class AIcreator : MonoBehaviour
     public GameObject[] allAI;
     public Transform[] AIstartPos;
 
+    public int VIPcustomerRatio;
+    private int currentVIPratio;
+
     public void AddMeTolist(ICreatableAI _creatableAI)
     {
         AIcreateWaitingList.Add(_creatableAI);
@@ -52,11 +55,11 @@ public class AIcreator : MonoBehaviour
         
     }
 
-    public void CreateTruckQueuAI(Transform enterPath , Transform exitPath)
+    public void CreateTruckQueuAI(Transform enterPath , Transform exitPath , ICreatableAI _creatableAI )
     {
         GameObject go = Instantiate(pickRandomAI(), AIstartPos[0].position, Quaternion.identity);
         AIcontroller _aIcontroller = go.GetComponent<AIcontroller>();
-        _aIcontroller.SetAIAgent(enterPath , exitPath , AIcontroller.AIevent.StandEat);
+        _aIcontroller.SetAIAgent(enterPath , exitPath  , AIcontroller.AIevent.StandEat, _creatableAI);
         
     }
 
@@ -70,6 +73,15 @@ public class AIcreator : MonoBehaviour
 
     private GameObject pickRandomAI()
     {
-        return allAI[Random.Range(0, allAI.Length)];
+        if (currentVIPratio < VIPcustomerRatio)
+        {
+            currentVIPratio++;
+            return allAI[0];
+        }
+        else
+        {
+            currentVIPratio = 0;
+            return allAI[1];   
+        }
     }
 }

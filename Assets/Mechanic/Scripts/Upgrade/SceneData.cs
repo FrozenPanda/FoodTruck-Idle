@@ -24,9 +24,15 @@ public class SceneData : MonoBehaviour
     public float[] customerMoveSpeedPerUpgrade;
     public float customerMoveSpeed;
     
+    //VIPcustomer
+    public int sittingEatMoneyDropAmountVIP;
+    public int standEatMoneyDropAmountVIP;
+    
     //MoneyDrop
     public int sittingEatMoneyDropAmount;
     public int standEatMoneyDropAmount;
+    
+    
 
     void Start()
     {

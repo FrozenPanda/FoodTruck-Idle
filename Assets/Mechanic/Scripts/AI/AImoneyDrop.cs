@@ -7,7 +7,7 @@ public class AImoneyDrop : MonoBehaviour
     public GameObject moneyToDrop;
     public GameObject moneyStackable;
     public int dropAmount = 3;
-
+    public bool VIP;
     public void StartMoneyDrop(int _amount , bool stackable = false , ICreatableAI _creatableAI = null)
     {
         if (!stackable)
@@ -32,5 +32,32 @@ public class AImoneyDrop : MonoBehaviour
             GameObject go = Instantiate(moneyStackable, transform.position + Vector3.up, Quaternion.identity);
             go.GetComponent<MoneyStackable>().StartMove(_creatableAI);
         }
+    }
+
+    
+    public int moneyAmount(bool sitting)
+    {
+        if (sitting)
+        {
+            if (VIP)
+            {
+                return SceneData.instance.sittingEatMoneyDropAmountVIP;
+            }
+            else
+            {
+                return SceneData.instance.sittingEatMoneyDropAmount;
+            }
+        }
+        else
+        {
+            if (VIP)
+            {
+                return SceneData.instance.standEatMoneyDropAmountVIP;
+            }
+            else
+            {
+                return SceneData.instance.standEatMoneyDropAmount;
+            }
+        }       
     }
 }

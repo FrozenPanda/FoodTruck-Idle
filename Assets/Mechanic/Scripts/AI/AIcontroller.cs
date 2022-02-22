@@ -42,8 +42,9 @@ public class AIcontroller : MonoBehaviour
         }
     }
 
-    public void SetAIAgent(Transform enterPath, Transform exitPath, AIevent _aIevent)
+    public void SetAIAgent(Transform enterPath, Transform exitPath, AIevent _aIevent , ICreatableAI _creatableAI)
     {
+        this._creatableAI = _creatableAI;
         _aIpathFollower = GetComponent<AIpathFollower>();
         this.enterPath = enterPath;
         this.exitPath = exitPath;
@@ -60,12 +61,14 @@ public class AIcontroller : MonoBehaviour
 
         if (_aItruckEat)
         {
-            GetComponent<AImoneyDrop>().StartMoneyDrop(SceneData.instance.standEatMoneyDropAmount);
+            AImoneyDrop _aImoneyDrop = GetComponent<AImoneyDrop>();
+            _aImoneyDrop.StartMoneyDrop(_aImoneyDrop.moneyAmount(false) , true , _creatableAI);
         }
         
         if (_aItableEat)
         {
-            GetComponent<AImoneyDrop>().StartMoneyDrop(SceneData.instance.sittingEatMoneyDropAmount, true , this._creatableAI);
+            AImoneyDrop _aImoneyDrop = GetComponent<AImoneyDrop>();
+            _aImoneyDrop.StartMoneyDrop(_aImoneyDrop.moneyAmount(true), true , this._creatableAI);
             _creatableAI.CustomerEatAlready();
         }
         
@@ -104,5 +107,10 @@ public class AIcontroller : MonoBehaviour
     public void OrderRequested()
     {
         
+    }
+
+    public string MyName()
+    {
+        return transform.name;
     }
 }

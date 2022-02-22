@@ -9,9 +9,14 @@ public class PlayerUpgradeController : MonoBehaviour
     public static PlayerUpgradeController instance;
 
     public Transform upgradeInstantiateCanvas;
-    
+    public bool playerAI;
     private void Awake()
     {
+        if (playerAI)
+        {
+            return;
+        }
+        
         instance = this;
     }
 

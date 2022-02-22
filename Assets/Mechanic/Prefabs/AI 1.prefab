@@ -313,9 +313,17 @@ PrefabInstance:
       value: tpose@T-Pose
       objectReference: {fileID: 0}
     - target: {fileID: 1859242088731683399, guid: 1e2bbd196df8ff84e80bb0bb8ddf619d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859242088731683399, guid: 1e2bbd196df8ff84e80bb0bb8ddf619d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c7fa3577606472641ad52296c776b77a, type: 2}
+    - target: {fileID: 1859242088731683399, guid: 1e2bbd196df8ff84e80bb0bb8ddf619d, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: db7abc74ba6c5fc40a7c6b75a46605c8, type: 2}
     - target: {fileID: 5866666021909216657, guid: 1e2bbd196df8ff84e80bb0bb8ddf619d, type: 3}
       propertyPath: m_Avatar
       value: 

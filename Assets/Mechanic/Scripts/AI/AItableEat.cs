@@ -25,11 +25,13 @@ public class AItableEat : MonoBehaviour
     private ICreatableAI _creatableAI;
 
     private float eatTime = 5f; //todo bunu save load systemden çek
+    private int MyTableID;
     
     public void SetParameters(Transform lookPlace , ICreatableAI _creatableAI)
     {
         eatTime = SceneData.instance.tableEatTime;
         this._creatableAI = _creatableAI;
+        MyTableID = _creatableAI.GetSeatID();
         defaultRot = transform.rotation;
         lookAt = Quaternion.LookRotation(new Vector3(lookPlace.position.x , transform.position.y , lookPlace.position.z) - transform.position);
         _tableEvent = TableEvent.Placing;
@@ -38,6 +40,7 @@ public class AItableEat : MonoBehaviour
 
     public void StartEating()
     {
+        PlayerAIMove.instance.DeleteMeFromDictionary(this);
         GetComponent<AIcontroller>().wantedCanvas.SetActive(false);
         StartCoroutine(StartEatingDelay());
     }
@@ -73,6 +76,7 @@ public class AItableEat : MonoBehaviour
                 break;
             case TableEvent.OrderRequested:
 
+                PlayerAIMove.instance.AddMeToDictionary(this , MySeatID());
                 _creatableAI.CustomerOrderRequested();
                 _tableEvent = TableEvent.Idle;
                 
@@ -93,6 +97,7 @@ public class AItableEat : MonoBehaviour
                 break;
             case TableEvent.FollowExit:
                 
+                
                 GetComponent<AIcontroller>().SendAItoFinish();
                 _tableEvent = TableEvent.End;
                 
@@ -102,5 +107,10 @@ public class AItableEat : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    public int MySeatID()
+    {
+        return MyTableID;
     }
 }

@@ -30,4 +30,9 @@ public class SeatData : MonoBehaviour , ICreatableAI
     {
         return transform.parent.GetComponent<TableManager>()._moneyCollectPlaces;
     }
+
+    public int GetSeatID()
+    {
+        return transform.parent.GetComponent<TableManager>().TableID;
+    }
 }

@@ -6,7 +6,8 @@ using UnityEngine;
 public class TableManager : MonoBehaviour , IDropable
 {
     public GameObject[] Seats;
-    
+
+    public int TableID;
     //-1 is not unlocked yet -- 0 is empty -- 1 is waiting to come -- 2 is customerCame -- 3meal given
     private int[] seatsCondition = new[] {-1, -1, -1};
 

@@ -16,11 +16,15 @@ public class CharacterStackManager : MonoBehaviour
     public IStackable _stackable;
     private IDropable _dropable;
     private float collectTimer;
+    private float givingTimer = 0.1f;
 
     private CharacterMover _characterMover;
 
     public int[] carryCapacityPerUpgrade;
     public float[] chargeSpeedPerUpgrade;
+
+    public bool RealPlayer;
+    
     private void Start()
     {
         _characterMover = GetComponent<CharacterMover>();
@@ -42,12 +46,14 @@ public class CharacterStackManager : MonoBehaviour
         switch (_stackEvent)
         {
             case StackEvent.Idle:
+                hotDogTakeCanvas.SetActive(false);
                 break;
             case StackEvent.Collecting:
                 
                 if (_stackable == null)
                 {
                     Debug.Log("Stackable yok");
+                    hotDogTakeCanvas.SetActive(false);
                     return;
                 }
                 
@@ -56,6 +62,7 @@ public class CharacterStackManager : MonoBehaviour
                     _stackable = null;
                     IStackTransform = null;
                     _stackEvent = StackEvent.Idle;
+                    
                     hotDogTakeCanvas.SetActive(false);
                 }
 
@@ -110,13 +117,13 @@ public class CharacterStackManager : MonoBehaviour
                     _stackEvent = StackEvent.Idle;
                 }
 
-                if (collectTimer > 0f)
+                if (givingTimer > 0f)
                 {
-                    collectTimer -= Time.deltaTime;
+                    givingTimer -= Time.deltaTime;
                 }
                 else
                 {
-                    collectTimer = 0.1f;
+                    givingTimer = 0.1f;
                     if (currentStack > 0)
                     {
                         if (_dropable == null)
@@ -127,6 +134,11 @@ public class CharacterStackManager : MonoBehaviour
                         if (_dropable.isMealNeed())
                         {
                             _dropable.VereyimAbime(this);
+
+                            if (RealPlayer)
+                            {
+                                PlayerAIMove.instance.CheckIfOrderStillNeed();
+                            }
                         }
                     }
                 }
@@ -149,6 +161,7 @@ public class CharacterStackManager : MonoBehaviour
             collectTimer = defaultHotDogTime;
             _stackEvent = StackEvent.Collecting;
             Debug.Log("Stackable var");
+            
             IStackTransform = _stackable.sayMyTransform();
             hotDogTakeCanvas.SetActive(true);
         }
@@ -158,6 +171,7 @@ public class CharacterStackManager : MonoBehaviour
             _dropable = other.GetComponent<IDropable>();
             _stackEvent = StackEvent.Giving;
             IdropTransform = _dropable.sayMyTransform();
+            Debug.Log("Droppable var");
         }
     }
 

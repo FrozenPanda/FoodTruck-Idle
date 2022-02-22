@@ -166,6 +166,7 @@ MonoBehaviour:
   - {fileID: 4204388913821018138, guid: 36299672aee1aa04390b81998c0db16a, type: 3}
   AIstartPos:
   - {fileID: 4130981877871464959}
+  VIPcustomerRatio: 5
 --- !u!114 &468536359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +236,8 @@ MonoBehaviour:
   - 0
   - 0
   customerMoveSpeed: 2
+  sittingEatMoneyDropAmountVIP: 0
+  standEatMoneyDropAmountVIP: 0
   sittingEatMoneyDropAmount: 3
   standEatMoneyDropAmount: 1
 --- !u!114 &1759988110

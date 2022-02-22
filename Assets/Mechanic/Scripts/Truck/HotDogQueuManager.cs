@@ -15,7 +15,7 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
     public Transform exitPath;
 
     private int MaxQueu = 5;
-    
+    public MoneyCollectPlaces _moneyCollectPlaces;
     private void Awake()
     {
         instance = this;
@@ -60,7 +60,7 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
 
     public void SendData()
     {
-        AIcreator.instance.CreateTruckQueuAI(this.enterPath , this.exitPath);
+        AIcreator.instance.CreateTruckQueuAI(this.enterPath , this.exitPath , this);
     }
 
     public void CustomerEatAlready()
@@ -80,6 +80,11 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
 
     public MoneyCollectPlaces GiveMeMoneyCollectPlaceData()
     {
-        return null;
+        return _moneyCollectPlaces;
+    }
+
+    public int GetSeatID()
+    {
+        return 18;
     }
 }

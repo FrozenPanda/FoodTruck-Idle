@@ -11,4 +11,6 @@ public interface ICreatableAI
     public void CustomerOrderRequested();
 
     public MoneyCollectPlaces GiveMeMoneyCollectPlaceData();
+
+    public int GetSeatID();
 }
