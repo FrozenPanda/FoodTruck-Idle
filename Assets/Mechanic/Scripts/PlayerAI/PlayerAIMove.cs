@@ -43,6 +43,10 @@ public class PlayerAIMove : MonoBehaviour
 
     public void DeleteMeFromDictionary(AItableEat _aItableEat)
     {
+        waitingCustomers.Remove(_aItableEat);
+        
+        return;
+        
         foreach (var AIinDic in waitingCustomers)
         {
             if (AIinDic.Key ==_aItableEat)
@@ -61,7 +65,8 @@ public class PlayerAIMove : MonoBehaviour
             case PlayerAIevents.GoingForTakingOrder:
                 break;
             case PlayerAIevents.WaitingCustomer:
-                _animationController.playAnim(0);
+                
+                Debug.Log("Waiting Customer");
                 if (waitingCustomers.Count > 0)
                 {
                     PickOneTable();
@@ -99,6 +104,11 @@ public class PlayerAIMove : MonoBehaviour
     private bool orderIsAvailable;
     public void CheckIfOrderStillNeed()
     {
+        if (GetComponent<PlayerAISendTable>()._sendTableEvent != PlayerAISendTable.SendTableEvent.MovingToTable)
+        {
+            return;
+        }
+        
         orderIsAvailable = false;
         
         foreach (var _var in waitingCustomers)
@@ -136,6 +146,7 @@ public class PlayerAIMove : MonoBehaviour
     public void CharacterReadyWithOrder()
     {
         _playerAIevents = PlayerAIevents.WaitingCustomer;
+        _animationController.playAnim(0);
     }
 
     public void SendCharacterToTakeOrder()
