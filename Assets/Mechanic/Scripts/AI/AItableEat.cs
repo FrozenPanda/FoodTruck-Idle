@@ -40,7 +40,10 @@ public class AItableEat : MonoBehaviour
 
     public void StartEating()
     {
-        PlayerAIMove.instance.DeleteMeFromDictionary(this);
+        if (PlayerAIMove.instance)
+        {
+            PlayerAIMove.instance.DeleteMeFromDictionary(this);
+        }
         GetComponent<AIcontroller>().wantedCanvas.SetActive(false);
         StartCoroutine(StartEatingDelay());
     }
@@ -76,7 +79,10 @@ public class AItableEat : MonoBehaviour
                 break;
             case TableEvent.OrderRequested:
 
-                PlayerAIMove.instance.AddMeToDictionary(this , MySeatID());
+                if (PlayerAIMove.instance)
+                {
+                    PlayerAIMove.instance.AddMeToDictionary(this , MySeatID());
+                }
                 _creatableAI.CustomerOrderRequested();
                 _tableEvent = TableEvent.Idle;
                 

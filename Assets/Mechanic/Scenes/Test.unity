@@ -128,8 +128,20 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1071955048}
     m_Modifications:
+    - target: {fileID: 1846913258825000748, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071955049}
+    - target: {fileID: 1846913258825000748, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnableHotDogAI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846913258825000748, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UpgradeController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3908307220888177929, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
       propertyPath: m_Name
       value: Upgrade 1 Canvas
@@ -148,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3908307220888177933, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3908307220888177933, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2518,6 +2530,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &815919556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3908307220888177929, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
+  m_PrefabInstance: {fileID: 152165169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &815919560 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3908307220888177933, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
+  m_PrefabInstance: {fileID: 152165169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &833816096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2990,6 +3012,84 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5087837238d5fcb4381dfc20c73a063e, type: 3}
+--- !u!1 &1071955045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071955048}
+  - component: {fileID: 1071955047}
+  - component: {fileID: 1071955046}
+  - component: {fileID: 1071955049}
+  m_Layer: 0
+  m_Name: UpgradeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1071955046
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071955045}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1071955047
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071955045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1071955048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071955045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.981, y: 0.48, z: 13.493}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 815919560}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1071955049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071955045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541259b44f59ba04aac544236f5a3f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradeCanvas: {fileID: 815919556}
+  HotDogAI: {fileID: 1961385375285595907}
 --- !u!4 &1087532333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1025728758549242674, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
@@ -6435,7 +6535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1961385374303063041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6885,6 +6985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathes: []
+  RealAI: {fileID: 6315023206853289070}
   _playerAIevents: 0
 --- !u!114 &1961385375285595909
 MonoBehaviour:
@@ -8033,13 +8134,17 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.24488516
       objectReference: {fileID: 0}
+    - target: {fileID: 3647678476606765367, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3761131627917708626, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
       propertyPath: m_Name
       value: Upgrade Container
       objectReference: {fileID: 0}
     - target: {fileID: 3761131627917708626, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3761131627917708653, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
       propertyPath: m_RootOrder
@@ -8084,6 +8189,10 @@ PrefabInstance:
     - target: {fileID: 3761131627917708653, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761131628481464606, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
@@ -9086,7 +9195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6350949684840299127
 Transform:
   m_ObjectHideFlags: 0

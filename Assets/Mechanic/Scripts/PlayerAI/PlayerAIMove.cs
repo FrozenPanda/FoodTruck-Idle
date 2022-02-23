@@ -10,6 +10,7 @@ public class PlayerAIMove : MonoBehaviour
     //0 middle, 1 table , 2 table , 3 table, 3 hotdog
     public Transform[] pathes;
     private AnimationController _animationController;
+    public GameObject RealAI;
     private void Awake()
     {
         instance = this;
@@ -32,8 +33,14 @@ public class PlayerAIMove : MonoBehaviour
 
     private void Start()
     {
+        
+    }
+
+    public void EnableAI()
+    {
         _animationController = GetComponent<AnimationController>();
         SendCharacterToTakeOrder();
+        RealAI.SetActive(true);
     }
 
     public void AddMeToDictionary(AItableEat _aItableEat , int TableID)

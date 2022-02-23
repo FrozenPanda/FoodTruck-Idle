@@ -137,7 +137,10 @@ public class CharacterStackManager : MonoBehaviour
 
                             if (RealPlayer)
                             {
-                                PlayerAIMove.instance.CheckIfOrderStillNeed();
+                                if (PlayerAIMove.instance)
+                                {
+                                    PlayerAIMove.instance.CheckIfOrderStillNeed();
+                                }
                             }
                         }
                     }
