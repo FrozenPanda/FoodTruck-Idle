@@ -1579,6 +1579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 456131557216259575, guid: 9403ec30994c90c4d841ad78351dc665, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5021174457030868995, guid: 9403ec30994c90c4d841ad78351dc665, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3104,6 +3108,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotDogPlace
       objectReference: {fileID: 0}
+    - target: {fileID: 4836977625412646699, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abc84d855bd433144a28fc35721d8427, type: 2}
+    - target: {fileID: 4956816976883105579, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956816976883105579, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956816976883105579, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.419
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956816976883105579, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.12766594
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956816976883105579, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.027160138
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956816976883105579, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9697429
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956816976883105579, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.20630686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956816976883105579, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -24.021
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13e856d3cfcbe3d47b75fd8655b58e4a, type: 3}
 --- !u!1 &2347815726199989952
@@ -3623,6 +3663,18 @@ PrefabInstance:
       propertyPath: HotDogAI
       value: 
       objectReference: {fileID: 1961385375285595907}
+    - target: {fileID: 3647678476441037371, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3647678476441037371, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3647678476441037371, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3761131627917708626, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
       propertyPath: m_Name
       value: Upgrade Container
@@ -3957,10 +4009,6 @@ PrefabInstance:
     - target: {fileID: 4461170925568185729, guid: b37056b68358f1145920c99867d54a30, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461170925568185737, guid: b37056b68358f1145920c99867d54a30, type: 3}
-      propertyPath: RealPlayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4461170925568185738, guid: b37056b68358f1145920c99867d54a30, type: 3}
       propertyPath: m_RootOrder

@@ -235,10 +235,12 @@ MonoBehaviour:
   - 0
   - 0
   customerMoveSpeed: 2
-  sittingEatMoneyDropAmountVIP: 0
-  standEatMoneyDropAmountVIP: 0
+  sittingEatMoneyDropAmountVIP: 8
+  standEatMoneyDropAmountVIP: 8
   sittingEatMoneyDropAmount: 3
   standEatMoneyDropAmount: 1
+  stuffMaxStack: 0
+  stuffMoveSpeed: 0
 --- !u!114 &1759988110
 MonoBehaviour:
   m_ObjectHideFlags: 0
