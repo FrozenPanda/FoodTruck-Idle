@@ -32,7 +32,9 @@ public class SceneData : MonoBehaviour
     public int sittingEatMoneyDropAmount;
     public int standEatMoneyDropAmount;
     
-    
+    //PlayerAI
+    public int stuffMaxStack;
+    public float stuffMoveSpeed;
 
     void Start()
     {

@@ -28,7 +28,7 @@ public class SaveLoadSystem
         set => tableSeatAmount = value;
     }
 
-    public int TotalMoney = 500;
+    public int TotalMoney = 100;
 
     #region Update1
 
