@@ -278,17 +278,21 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0.98927474
       objectReference: {fileID: 0}
+    - target: {fileID: 3674675339707577889, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3674675339969733933, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.9973451
       objectReference: {fileID: 0}
     - target: {fileID: 3674675339969733933, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3674675339969733933, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.24488524
       objectReference: {fileID: 0}
     - target: {fileID: 3674675340907144494, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -636,6 +640,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3761131627917708653}
     m_Modifications:
+    - target: {fileID: 1184507955738984388, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071955049}
+    - target: {fileID: 1184507955738984388, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseMoveSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184507955738984388, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UpgradeController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184507956688100995, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071955049}
+    - target: {fileID: 1184507956688100995, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncreaseMaxCapacity
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184507956688100995, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UpgradeController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535571, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: m_Name
       value: UpgradeController
@@ -688,6 +716,102 @@ PrefabInstance:
       propertyPath: notEnoughMoneyText
       value: 
       objectReference: {fileID: 336354033126814190, guid: bda4d01038eb37c449ab2d5e7cdcab2f, type: 3}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: allUpgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: HireStuffCosts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: allUpgrades.Array.data[0]
+      value: 
+      objectReference: {fileID: 8362917572160840836}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: allUpgrades.Array.data[1]
+      value: 
+      objectReference: {fileID: 8362917573211968481}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: allUpgrades.Array.data[2]
+      value: 
+      objectReference: {fileID: 8362917572091146918}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: MaxCapacityCost.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: HireStuffCosts.Array.data[0]
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: HireStuffCosts.Array.data[1]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: HireStuffCosts.Array.data[2]
+      value: 785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: MaxCapacityCost.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: MaxCapacityCost.Array.data[1]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: MaxCapacityCost.Array.data[2]
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: MaxCapacityCost.Array.data[3]
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: MaxCapacityCost.Array.data[4]
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: StuffMoveSpeedCost.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: StuffMoveSpeedCost.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: StuffMoveSpeedCost.Array.data[1]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: StuffMoveSpeedCost.Array.data[2]
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: StuffMoveSpeedCost.Array.data[3]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: StuffMoveSpeedCost.Array.data[4]
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448781448166655707, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_fontSize
+      value: 59.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846495765511666857, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071955049}
+    - target: {fileID: 6846495765511666857, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846495765511666857, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UpgradeController, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
 --- !u!4 &1071955048 stripped
@@ -695,3 +819,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4459552293276535582, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
   m_PrefabInstance: {fileID: 4459552293475481462}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1071955049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+  m_PrefabInstance: {fileID: 4459552293475481462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541259b44f59ba04aac544236f5a3f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8362917573211968481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5326788690868544663, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+  m_PrefabInstance: {fileID: 4459552293475481462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8362917572091146918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5326788692059030992, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+  m_PrefabInstance: {fileID: 4459552293475481462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8362917572160840836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5326788691986125810, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+  m_PrefabInstance: {fileID: 4459552293475481462}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

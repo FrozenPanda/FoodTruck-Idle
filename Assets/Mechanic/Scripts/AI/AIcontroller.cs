@@ -109,6 +109,8 @@ public class AIcontroller : MonoBehaviour
         
     }
 
+    
+
     public string MyName()
     {
         return transform.name;

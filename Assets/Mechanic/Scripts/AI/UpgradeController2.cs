@@ -316,6 +316,8 @@ public class UpgradeController2 : MonoBehaviour
         SceneData.instance.CheckUpgrades();
         updateText();
     }
+    
+    
 
     public void CloseCanvas()
     {

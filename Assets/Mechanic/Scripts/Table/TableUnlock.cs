@@ -11,6 +11,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
     private int moneyRequest;
     private int currentMoneyTaken;
     private float moneyRequestTimer = 0.05f;
+    private float moneyrequestTimerSave = 0.05f;
     public GameObject realTable;
 
     public GameObject MoneyNeedUI;
@@ -66,7 +67,8 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                 else
                 {
                     moneyRequest += moneyValue;
-                    moneyRequestTimer = 0.05f;
+                    moneyrequestTimerSave *= 0.9f;
+                    moneyRequestTimer = moneyrequestTimerSave;
                     MoneyController.instance.CreateMoneyToUnlock(transform , this);
                     PlayerMoneyData.instance.TotalMoney -= moneyValue;
                     if (moneyRequest >= moneyToUnlock)
@@ -89,6 +91,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
     public void stopMoneyDrop()
     {
         _moneyState = MoneyState.Idle;
+        moneyrequestTimerSave = 0.05f;
     }
 
     public void moneyReached()

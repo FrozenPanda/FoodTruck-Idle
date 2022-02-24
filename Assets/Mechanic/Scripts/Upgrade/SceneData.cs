@@ -33,12 +33,12 @@ public class SceneData : MonoBehaviour
     public int standEatMoneyDropAmount;
     
     //PlayerAI
-    public int stuffMaxStack;
-    public float stuffMoveSpeed;
+    public int[] stuffMaxStack;
+    public float[] stuffMoveSpeed;
 
     void Start()
     {
-        
+        CheckUpgrades();
     }
 
     public void CheckUpgrades()

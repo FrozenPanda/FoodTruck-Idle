@@ -41,6 +41,52 @@ public class UpgradeController : MonoBehaviour
             UpdateText();
         }
     }
+
+    public int[] MaxCapacityCost;
+    public void IncreaseMaxCapacity()
+    {
+        if (pressable[1])
+        {
+            return;
+        }
+        
+        SaveLoadSystem.Load();
+        int requiredMoney = MaxCapacityCost[SaveLoadSystem.instance.HireStaffUpgrades];
+        if (PlayerMoneyData.instance.TotalMoney < requiredMoney)
+        {
+            createDontEnoghMoneyText();
+            return;
+        }
+
+        SaveLoadSystem.instance.HireStaffCapacity++;
+        SaveLoadSystem.Save();
+        SceneData.instance.CheckUpgrades();
+        UpdateText();
+
+    }
+
+    public int[] StuffMoveSpeedCost;
+    public void IncreaseMoveSpeed()
+    {
+        if (pressable[2])
+        {
+            return;
+        }
+        
+        SaveLoadSystem.Load();
+        int requiredMoney = StuffMoveSpeedCost[SaveLoadSystem.instance.HireStaffUpgrades];
+        if (PlayerMoneyData.instance.TotalMoney < requiredMoney)
+        {
+            createDontEnoghMoneyText();
+            return;
+        }
+        
+        SaveLoadSystem.instance.HireStaffMoveSpeed++;
+        SaveLoadSystem.Save();
+        SceneData.instance.CheckUpgrades();
+        UpdateText();
+        PlayerAIMove.instance.CheckUpgrades();
+    }
     
     void Start()
     {
@@ -89,6 +135,28 @@ public class UpgradeController : MonoBehaviour
                     pressable[0] = false;
                 }
             }
+        }
+
+        if (MaxCapacityCost.Length < SaveLoadSystem.instance.HireStaffCapacity)
+        {
+            allUpgrades[1].text = "MAX";
+
+            pressable[1] = true;
+        }
+        else
+        {
+            allUpgrades[1].text = "$" + MaxCapacityCost[SaveLoadSystem.instance.HireStaffCapacity];
+        }
+
+        if (StuffMoveSpeedCost.Length < SaveLoadSystem.instance.HireStaffMoveSpeed)
+        {
+            allUpgrades[2].text = "MAX";
+
+            pressable[2] = true;
+        }
+        else
+        {
+            allUpgrades[2].text = "$" + StuffMoveSpeedCost[SaveLoadSystem.instance.HireStaffMoveSpeed];
         }
     }
 

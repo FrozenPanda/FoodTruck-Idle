@@ -33,6 +33,8 @@ public class SaveLoadSystem
     #region Update1
 
     public int HireStaffUpgrades;
+    public int HireStaffCapacity;
+    public int HireStaffMoveSpeed;
         
 
     #endregion

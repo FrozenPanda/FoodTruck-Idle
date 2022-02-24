@@ -3663,17 +3663,21 @@ PrefabInstance:
       propertyPath: HotDogAI
       value: 
       objectReference: {fileID: 1961385375285595907}
-    - target: {fileID: 3647678476441037371, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
+    - target: {fileID: 1071955049, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: HireStuffCosts.Array.size
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 3647678476441037371, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1071955049, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: HireStuffCosts.Array.data[3]
+      value: 785
       objectReference: {fileID: 0}
-    - target: {fileID: 3647678476441037371, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
+    - target: {fileID: 1071955049, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: HireStuffCosts.Array.data[4]
+      value: 785
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071955049, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
+      propertyPath: HireStuffCosts.Array.data[5]
+      value: 785
       objectReference: {fileID: 0}
     - target: {fileID: 3761131627917708626, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
       propertyPath: m_Name
@@ -3853,6 +3857,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMaxStack.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMaxStack.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMaxStack.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMaxStack.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMaxStack.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMaxStack.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[2]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[3]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[4]
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 4130981878334747745, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: m_RootOrder
       value: 6

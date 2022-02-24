@@ -167,4 +167,13 @@ public class PlayerAIMove : MonoBehaviour
         GetComponent<PlayerAISendTable>().GiveOrder(selectedTable);
         _playerAIevents = PlayerAIevents.Idle;
     }
+    
+    public void CheckUpgrades()
+    {
+        SaveLoadSystem.Load();
+        GetComponent<PlayerAISendTable>().moveSpeed =
+            SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
+        GetComponent<PlayerAITakeOrder>().moveSpeed =
+            SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
+    }
 }
