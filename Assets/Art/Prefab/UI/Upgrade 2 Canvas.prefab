@@ -392,7 +392,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 481059935140152430}
   m_HandleRect: {fileID: 481059935140152433}
   m_Direction: 0
-  m_Value: 0.98927397
+  m_Value: 0.9892738
   m_Size: 0.75245976
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1200,38 +1200,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 481059934202709106}
     m_Modifications:
-    - target: {fileID: 4665217651841773091, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4665217651841773091, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4665217651841773091, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4665217651841773091, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4665217651841773091, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4665217651841773091, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4665217651841773091, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6204214601939401318, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7517311413593114093, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_Name
       value: HirePersonalTab

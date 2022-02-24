@@ -868,11 +868,11 @@ PrefabInstance:
       objectReference: {fileID: 39382872}
     - target: {fileID: 481059935004325764, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_Size
-      value: 0.7524598
+      value: 0.75245976
       objectReference: {fileID: 0}
     - target: {fileID: 481059935004325764, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_Value
-      value: 0.9892744
+      value: 0.9892742
       objectReference: {fileID: 0}
     - target: {fileID: 481059935217735545, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_Pivot.x
@@ -962,6 +962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upgrade 2 Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 482568730817982348, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 734a4c6306cf7904cbcbfe7a8ff7c84c, type: 3}
     - target: {fileID: 747710452937925686, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -974,14 +978,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 39382872}
+    - target: {fileID: 3428792298850624174, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_fontSize
+      value: 44.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340571612022637489, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820822284218129777, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179814168951075987, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_fontSize
+      value: 48.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963344838768465996, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_fontSize
+      value: 49.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7393537672880913142, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 39382872}
+    - target: {fileID: 7658674981385220428, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 734a4c6306cf7904cbcbfe7a8ff7c84c, type: 3}
     - target: {fileID: 7862487525448223213, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 39382872}
+    - target: {fileID: 8786416992995035124, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
+      propertyPath: m_fontSize
+      value: 49
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d1ea74115353a4aa34703b77338810, type: 3}
 --- !u!1 &3647678476606765367 stripped
