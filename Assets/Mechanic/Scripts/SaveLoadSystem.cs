@@ -30,6 +30,13 @@ public class SaveLoadSystem
 
     public int TotalMoney = 500;
 
+    #region Update1
+
+    public int HireStaffUpgrades;
+        
+
+    #endregion
+
     #region Update2
 
     public int CharacterCarryCapacity;
@@ -53,7 +60,6 @@ public class SaveLoadSystem
         FileStream file = File.Open(path, FileMode.OpenOrCreate);
         bf.Serialize(file, instance);
         file.Close();
-        
     }
 
     public static void Load()

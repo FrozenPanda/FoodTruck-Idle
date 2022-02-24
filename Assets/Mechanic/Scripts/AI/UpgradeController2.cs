@@ -322,16 +322,33 @@ public class UpgradeController2 : MonoBehaviour
         upgradeCanvas.SetActive(false);
     }
 
+    private Transform player;
+    private void Update()
+    {
+        if (player == null)
+        {
+            return;
+        }
+        
+        if (Vector3.Distance(transform.position , player.position) > 1f)
+        {
+            upgradeCanvas.SetActive(false);
+            player = null;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             upgradeCanvas.SetActive(true);
+            player = other.transform;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        return;
         if (other.tag == "Player")
         {
             upgradeCanvas.SetActive(false);
