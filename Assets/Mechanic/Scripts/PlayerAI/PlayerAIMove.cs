@@ -11,6 +11,7 @@ public class PlayerAIMove : MonoBehaviour
     public Transform[] pathes;
     private AnimationController _animationController;
     public GameObject RealAI;
+    private CharacterStackManager _characterStackManager;
     private void Awake()
     {
         instance = this;
@@ -33,11 +34,13 @@ public class PlayerAIMove : MonoBehaviour
 
     private void Start()
     {
-        
+        CheckUpgrades();
+        _characterStackManager = GetComponent<CharacterStackManager>();
     }
 
     public void EnableAI()
     {
+        Debug.Log("AIEnabled");
         _animationController = GetComponent<AnimationController>();
         SendCharacterToTakeOrder();
         RealAI.SetActive(true);
@@ -77,6 +80,11 @@ public class PlayerAIMove : MonoBehaviour
                 if (waitingCustomers.Count > 0)
                 {
                     PickOneTable();
+                }
+
+                if (!_characterStackManager.isCharacterCarrying())
+                {
+                    SendCharacterToTakeOrder();
                 }
                 
                 break;
@@ -175,5 +183,8 @@ public class PlayerAIMove : MonoBehaviour
             SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
         GetComponent<PlayerAITakeOrder>().moveSpeed =
             SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
+        GetComponent<CharacterStackManager>().TotalStack =
+            SceneData.instance.stuffMaxStack[SaveLoadSystem.instance.HireStaffCapacity];
+        Debug.Log("<<" +SaveLoadSystem.instance.HireStaffCapacity );
     }
 }

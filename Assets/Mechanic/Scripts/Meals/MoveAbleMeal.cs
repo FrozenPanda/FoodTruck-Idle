@@ -16,8 +16,11 @@ public class MoveAbleMeal : MonoBehaviour
     public enum MealType
     {
         Hotdog,
-        Banana
+        Pizza,
+        Hamburger
     }
+
+    public MealType _mealType;
     
     public enum moveEvent
     {

@@ -7,6 +7,8 @@ public class SceneData : MonoBehaviour
 {
     public static SceneData instance;
 
+    public PlayerAIMove[] allPlayerAI;
+    
     private void Awake()
     {
         instance = this;

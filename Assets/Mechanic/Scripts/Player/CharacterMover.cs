@@ -27,7 +27,7 @@ public class CharacterMover : MonoBehaviour
         {
             JoystickMove(_joystick.Horizontal , _joystick.Vertical , transform , moveSpeed); 
             JoystickRotate(_joystick.Horizontal , _joystick.Vertical , transform );
-            _animationController.playAnim(1);
+            _animationController.playAnim(1 , Mathf.Pow(Mathf.Pow(_joystick.Horizontal,2)+ Mathf.Pow(_joystick.Vertical,2) ,0.5f ) * moveSpeed);
             _isMoving = true;
         }
         else

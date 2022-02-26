@@ -10,14 +10,16 @@ public class AnimationController : MonoBehaviour
     private CharacterStackManager _characterStackManager;
     private string currentAnim;
     private string playingAnim;
-    
+
+    private float beforeWalkingSpeed;
+
     private void Start()
     {
         _characterStackManager = GetComponent<CharacterStackManager>();
     }
 
     //0 for idle, 1 for walk , 2 carry idle
-    public void playAnim(int _id)
+    public void playAnim(int _id , float moveSpeed = 3f)
     {
         if (_id == 0)
         {
@@ -36,6 +38,12 @@ public class AnimationController : MonoBehaviour
         else
         {
             anim.SetLayerWeight(1,0);
+        }
+
+        if (moveSpeed != beforeWalkingSpeed)
+        {
+            beforeWalkingSpeed = moveSpeed;
+            anim.SetFloat("MoveSpeed" , moveSpeed / 3f);
         }
         
         playAnimWithName(currentAnim);

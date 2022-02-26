@@ -9,7 +9,15 @@ public class CharacterStackManager : MonoBehaviour
     
     public List<Transform> StackPlaces = new List<Transform>();
     
-    private int totalStack = 5; //todo bunu save load dan çekilmesi lazım
+    private int totalStack = 5;
+
+    public int TotalStack
+    {
+        get => totalStack;
+        set => totalStack = value;
+    }
+
+    //todo bunu save load dan çekilmesi lazım
     public List<MoveAbleMeal> stackMeals = new List<MoveAbleMeal>();
     public int currentStack;
 
@@ -226,6 +234,18 @@ public class CharacterStackManager : MonoBehaviour
         return carryingBool;
     }
 
+    public bool IsCharacterCarryAtMax()
+    {
+        if (currentStack >= totalStack)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     //hotdog take canvas
     public GameObject hotDogTakeCanvas;
     public Image hotDogTakeFillImage;
@@ -240,7 +260,10 @@ public class CharacterStackManager : MonoBehaviour
     public void CheckUpgrade()
     {
         SaveLoadSystem.Load();
-        totalStack = carryCapacityPerUpgrade[SaveLoadSystem.instance.upgrades2[0]];
+        if (RealPlayer)
+        {
+            totalStack = carryCapacityPerUpgrade[SaveLoadSystem.instance.upgrades2[0]];
+        }
         defaultHotDogTime = chargeSpeedPerUpgrade[SaveLoadSystem.instance.upgrades2[1]];
     }
 }

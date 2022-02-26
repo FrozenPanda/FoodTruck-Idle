@@ -62,6 +62,11 @@ public class UpgradeController : MonoBehaviour
         SaveLoadSystem.Save();
         SceneData.instance.CheckUpgrades();
         UpdateText();
+        SaveLoadSystem.Load();
+        for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades; i++)
+        {
+            SceneData.instance.allPlayerAI[i].CheckUpgrades();
+        }
 
     }
 
@@ -85,7 +90,11 @@ public class UpgradeController : MonoBehaviour
         SaveLoadSystem.Save();
         SceneData.instance.CheckUpgrades();
         UpdateText();
-        PlayerAIMove.instance.CheckUpgrades();
+        SaveLoadSystem.Load();
+        for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades; i++)
+        {
+            SceneData.instance.allPlayerAI[i].CheckUpgrades();
+        }
     }
     
     void Start()
@@ -97,9 +106,10 @@ public class UpgradeController : MonoBehaviour
     private void CheckUpgrades()
     {
         SaveLoadSystem.Load();
-        if (SaveLoadSystem.instance.HireStaffUpgrades == 1)
+
+        for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades; i++)
         {
-            PlayerAIMove.instance.EnableAI();
+            SceneData.instance.allPlayerAI[i].EnableAI();
         }
     }
 
