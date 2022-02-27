@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -89,5 +90,23 @@ public class HotDogCreator : MonoBehaviour , IStackable
     public Transform sayMyTransform()
     {
         return transform;
+    }
+
+    public int MealIndex()
+    {
+        switch (_mealType)
+        {
+            case MoveAbleMeal.MealType.Hotdog:
+                return 0;
+                break;
+            case MoveAbleMeal.MealType.Pizza:
+                return 2;
+                break;
+            case MoveAbleMeal.MealType.Hamburger:
+                return 1;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 }

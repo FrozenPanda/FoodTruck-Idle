@@ -55,11 +55,11 @@ public class AIcreator : MonoBehaviour
         
     }
 
-    public void CreateTruckQueuAI(Transform enterPath , Transform exitPath , ICreatableAI _creatableAI )
+    public void CreateTruckQueuAI(Transform enterPath , Transform exitPath , ICreatableAI _creatableAI , int customerWantsImageIndex = 0)
     {
         GameObject go = Instantiate(pickRandomAI(), AIstartPos[0].position, Quaternion.identity);
         AIcontroller _aIcontroller = go.GetComponent<AIcontroller>();
-        _aIcontroller.SetAIAgent(enterPath , exitPath  , AIcontroller.AIevent.StandEat, _creatableAI);
+        _aIcontroller.SetAIAgent(enterPath , exitPath  , AIcontroller.AIevent.StandEat, _creatableAI , customerWantsImageIndex);
         
     }
 

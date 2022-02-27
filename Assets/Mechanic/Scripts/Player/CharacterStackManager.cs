@@ -11,6 +11,8 @@ public class CharacterStackManager : MonoBehaviour
     
     private int totalStack = 5;
 
+    public GameObject[] FillBarInside;
+    
     public int TotalStack
     {
         get => totalStack;
@@ -57,6 +59,7 @@ public class CharacterStackManager : MonoBehaviour
         {
             case StackEvent.Idle:
                 hotDogTakeCanvas.SetActive(false);
+                CloseAllFillBar();
                 break;
             case StackEvent.Collecting:
 
@@ -192,6 +195,8 @@ public class CharacterStackManager : MonoBehaviour
             
             IStackTransform = _stackable.sayMyTransform();
             hotDogTakeCanvas.SetActive(true);
+
+            FillBarInside[_stackable.MealIndex()].SetActive(true);
         }
 
         if (other.GetComponent<IDropable>() != null)
@@ -213,6 +218,14 @@ public class CharacterStackManager : MonoBehaviour
             IStackTransform = null;
             _stackEvent = StackEvent.Idle;
             hotDogTakeCanvas.SetActive(false);
+        }
+    }
+
+    private void CloseAllFillBar()
+    {
+        for (int i = 0; i < FillBarInside.Length; i++)
+        {
+            FillBarInside[i].SetActive(false);
         }
     }
 

@@ -54,4 +54,11 @@ public class SeatData : MonoBehaviour , ICreatableAI
     {
         return transform.parent.GetComponent<TableManager>().TableID;
     }
+
+   
+
+    public HotDogQueuManager sendMeHotDogQueuManagerData()
+    {
+        return null;
+    }
 }

@@ -7,4 +7,6 @@ public interface IStackable
     public void giveOnetoPlayer(CharacterStackManager _characterStackManager , int index , Transform target);
 
     public Transform sayMyTransform();
+
+    public int MealIndex();
 }

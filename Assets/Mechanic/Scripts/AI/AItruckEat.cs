@@ -23,12 +23,17 @@ public class AItruckEat : MonoBehaviour
     public float moveSpeed;
     public float eatTime;
     private float eatTimeDefault;
+    private ICreatableAI _creatableAI;
+    private HotDogQueuManager _hotDogQueuManager;
     
-    private void Start()
+    public void StartAI(ICreatableAI _creatableAI)
     {
+        _hotDogQueuManager = _creatableAI.sendMeHotDogQueuManagerData();
         moveSpeed = SceneData.instance.customerMoveSpeed;
         eatTime = SceneData.instance.hotDogQueuWaitTimer ;
-        HotDogQueuManager.instance.AddMetoTruckList(this);
+        _hotDogQueuManager.AddMetoTruckList(this);
+        
+        this._creatableAI = _creatableAI;
         eatTimeDefault = eatTime;
         hotDogTakeCanvas = transform.Find("FillBarCanvas").gameObject;
         hotDogTakeFillImage = hotDogTakeCanvas.transform.GetChild(0).GetComponent<Image>();
@@ -43,7 +48,7 @@ public class AItruckEat : MonoBehaviour
     public void SetParamatersAndGo()
     {
         _aItruckEatEvents = AItruckEatEvents.Moving;
-        target = HotDogQueuManager.instance.queuPlaces[currentQueuIndex];
+        target = _hotDogQueuManager.queuPlaces[currentQueuIndex];
     }
 
     private void Update()
@@ -90,13 +95,13 @@ public class AItruckEat : MonoBehaviour
 
     private void FinishEatingMoveOthers()
     {
-        HotDogQueuManager.instance.NextOne();
+        _hotDogQueuManager.NextOne();
     }
 
     public void MoveNext()
     {
         currentQueuIndex--;
-        target = HotDogQueuManager.instance.queuPlaces[currentQueuIndex];
+        target = _hotDogQueuManager.queuPlaces[currentQueuIndex];
 
         if (_aItruckEatEvents == AItruckEatEvents.Walkable || _aItruckEatEvents == AItruckEatEvents.Moving)
         {

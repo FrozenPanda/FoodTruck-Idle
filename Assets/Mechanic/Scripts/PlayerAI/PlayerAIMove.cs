@@ -48,6 +48,11 @@ public class PlayerAIMove : MonoBehaviour
 
     public void AddMeToDictionary(AItableEat _aItableEat , int TableID)
     {
+        if (TableID > 3)
+        {
+            return;
+        }
+        
         waitingCustomers.Add(_aItableEat , TableID);
     }
 

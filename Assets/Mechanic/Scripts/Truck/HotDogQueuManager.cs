@@ -16,6 +16,9 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
 
     private int MaxQueu = 5;
     public MoneyCollectPlaces _moneyCollectPlaces;
+
+    public MoveAbleMeal.MealType _mealType;
+    
     private void Awake()
     {
         instance = this;
@@ -25,6 +28,11 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
     {
         aItruckEatsList.Add(_aItruckEat);
         _aItruckEat.CurrentQueuIndex = aItruckEatsList.Count - 1;
+    }
+
+    public HotDogQueuManager sendMeHotDogQueuManagerData()
+    {
+        return this;
     }
 
     public void NextOne()
@@ -60,7 +68,23 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
 
     public void SendData()
     {
-        AIcreator.instance.CreateTruckQueuAI(this.enterPath , this.exitPath , this);
+        int mealIndex = -1;
+        switch (_mealType)
+        {
+            case MoveAbleMeal.MealType.Hotdog:
+                mealIndex = 0;
+                break;
+            case MoveAbleMeal.MealType.Pizza:
+                mealIndex = 2;
+                break;
+            case MoveAbleMeal.MealType.Hamburger:
+                mealIndex = 1;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        
+        AIcreator.instance.CreateTruckQueuAI(this.enterPath , this.exitPath , this , mealIndex);
     }
 
     public void CustomerEatAlready()
