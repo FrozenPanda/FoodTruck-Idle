@@ -38,13 +38,19 @@ public class MoveAbleMeal : MonoBehaviour
     public float upDownPower;
     public float MoveSpeed;
 
-    public void StartMove(Transform _parent , moveEvent _event)
+    public void StartMove(Transform _parent , moveEvent _event , bool makeUpDownSpeedZero = false)
     {
         transform.parent = _parent;
         targetPos = _parent.position;
         defaultPos = transform.localPosition;
         MoveTimer = 0f;
         this._moveEvent = _event;
+
+        if (makeUpDownSpeedZero)
+        {
+            upDownPower = 0f;
+        }
+        
         MoveAble = true;
     }
     // Update is called once per frame

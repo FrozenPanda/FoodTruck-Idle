@@ -32,6 +32,8 @@ public class CharacterStackManager : MonoBehaviour
     public float[] chargeSpeedPerUpgrade;
 
     public bool RealPlayer;
+
+    private float CapacityFullTimer;
     
     private void Start()
     {
@@ -57,6 +59,8 @@ public class CharacterStackManager : MonoBehaviour
                 hotDogTakeCanvas.SetActive(false);
                 break;
             case StackEvent.Collecting:
+
+                
                 
                 if (_stackable == null)
                 {
@@ -88,8 +92,16 @@ public class CharacterStackManager : MonoBehaviour
                 if (currentStack >= totalStack)
                 {
                     Debug.Log("Idle a döndü");
-                    CommonFunctions.instance.CreateAnyUI(SceneReferences.instance.HandFullImage , transform , SceneReferences.instance.moneyMoveCanvas);
+                    if (RealPlayer)
+                    {
+                        if (CapacityFullTimer <= 0f)
+                        {
+                            CommonFunctions.instance.CreateAnyUI(SceneReferences.instance.HandFullImage , transform , SceneReferences.instance.moneyMoveCanvas);
+                            CapacityFullTimer = 1f;
+                        }
+                    }
                     _stackEvent = StackEvent.Idle;
+                    _stackable = null;
                     hotDogTakeCanvas.SetActive(false);
                     return;
                 }
@@ -158,6 +170,11 @@ public class CharacterStackManager : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        
+        if (CapacityFullTimer > 0f)
+        {
+            CapacityFullTimer -= Time.deltaTime;
+        }
     }
 
     private Transform IStackTransform;
@@ -171,7 +188,7 @@ public class CharacterStackManager : MonoBehaviour
             _stackable = other.GetComponent<IStackable>();
             collectTimer = defaultHotDogTime;
             _stackEvent = StackEvent.Collecting;
-            Debug.Log("Stackable var");
+            Debug.Log("Stackable var" + other.transform.name);
             
             IStackTransform = _stackable.sayMyTransform();
             hotDogTakeCanvas.SetActive(true);
@@ -248,7 +265,7 @@ public class CharacterStackManager : MonoBehaviour
                 {
                     if (stackMeals[j] != null)
                     {
-                        stackMeals[j].StartMove(StackPlaces[i] , MoveAbleMeal.moveEvent.ToPlayer);
+                        stackMeals[j].StartMove(StackPlaces[i] , MoveAbleMeal.moveEvent.ToPlayer , true);
                         stackMeals[i] = stackMeals[j];
                         stackMeals[j] = null;
                         break;

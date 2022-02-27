@@ -12,6 +12,8 @@ public class AIcontroller : MonoBehaviour
 
     private AItableEat _aItableEat;
     private AItruckEat _aItruckEat;
+
+    public GameObject[] CustomerWantsImage;
     
     public enum AIevent
     {
@@ -27,7 +29,7 @@ public class AIcontroller : MonoBehaviour
         //_aIpathFollower.afterPath = ActionTest;
     }
 
-    public void SetAIAgent(Transform enterPath , Transform exitPath , AIevent _ievent ,ICreatableAI _creatableAI = null , Transform sandwichPlace = null)
+    public void SetAIAgent(Transform enterPath , Transform exitPath , AIevent _ievent ,ICreatableAI _creatableAI = null , Transform sandwichPlace = null , int customerWantsImageIndex = 0)
     {
         this._creatableAI = _creatableAI;
         _aIpathFollower = GetComponent<AIpathFollower>();
@@ -35,7 +37,7 @@ public class AIcontroller : MonoBehaviour
         this.exitPath = exitPath;
         sandwichPos = sandwichPlace;
         _aIpathFollower.SetPathAndMove(this.enterPath);
-
+        CustomerWantsImage[customerWantsImageIndex].SetActive(true);
         if (_ievent == AIevent.TableEat)
         {
            _aItableEat = gameObject.AddComponent<AItableEat>();

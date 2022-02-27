@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SeatData : MonoBehaviour , ICreatableAI
 {
+    public MoveAbleMeal.MealType _mealType;
+    private int _mealTypeIndex;
     public int SeatID;
     public Transform enterPath;
     public Transform exitPath;
@@ -13,7 +16,23 @@ public class SeatData : MonoBehaviour , ICreatableAI
     
     public void SendData()
     {
-        AIcreator.instance.CreateTableAI(enterPath , exitPath , sandwichPlace , this , this);
+        _mealType = transform.parent.GetComponent<TableManager>()._mealType;
+        switch (_mealType)
+        {
+            case MoveAbleMeal.MealType.Hotdog:
+                _mealTypeIndex = 0;
+                break;
+            case MoveAbleMeal.MealType.Pizza:
+                _mealTypeIndex = 2;
+                break;
+            case MoveAbleMeal.MealType.Hamburger:
+                _mealTypeIndex = 1;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        
+        AIcreator.instance.CreateTableAI(enterPath , exitPath , sandwichPlace , this , this , _mealTypeIndex);
     }
 
     public void CustomerEatAlready()

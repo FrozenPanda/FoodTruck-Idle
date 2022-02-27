@@ -81,6 +81,10 @@ public class PlayerAIMove : MonoBehaviour
                 {
                     PickOneTable();
                 }
+                else
+                {
+                    _animationController.playAnim(0);
+                }
 
                 if (!_characterStackManager.isCharacterCarrying())
                 {

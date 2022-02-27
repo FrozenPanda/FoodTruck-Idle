@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerAITakeOrder : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PlayerAITakeOrder : MonoBehaviour
     private int CurrentPathIndex = 0;
     public float moveSpeed;
     private AnimationController _animationController;
+
+    private NavMeshAgent _navMeshAgent;
+    
     public enum TakeOrderEvents
     {
         Idle,
@@ -28,13 +32,14 @@ public class PlayerAITakeOrder : MonoBehaviour
     
     private void Start()
     {
+        _navMeshAgent = GetComponent<NavMeshAgent>();
         _characterStackManager = GetComponent<CharacterStackManager>();
         _animationController = GetComponent<AnimationController>();
     }
 
     public void SendAItoTakeOrder()
     {
-        transform.LookAt(MovePaths[0]);
+        //transform.LookAt(MovePaths[0]);
         _takeOrderEvents = TakeOrderEvents.MovingToMiddle;
     }
 
@@ -47,24 +52,28 @@ public class PlayerAITakeOrder : MonoBehaviour
                 break;
             case TakeOrderEvents.MovingToMiddle:
                 _animationController.playAnim(1, moveSpeed);
-                transform.position = Vector3.MoveTowards(transform.position , MovePaths[0].position , moveSpeed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position , MovePaths[0].position , moveSpeed * Time.deltaTime);
+
+                _navMeshAgent.SetDestination(MovePaths[0].position);
 
                 if (Vector3.Distance(transform.position , MovePaths[0].position) < 0.1f)
                 {
                     CurrentPathIndex = 0;
                     _takeOrderEvents = TakeOrderEvents.MovingToHotDog;
-                    transform.LookAt(MovePaths[1]);
+                    //transform.LookAt(MovePaths[1]);
                 }
 
                 
                 break;
             case TakeOrderEvents.MovingToHotDog:
                 _animationController.playAnim(1, moveSpeed);
-                transform.position = Vector3.MoveTowards(transform.position , MoveToHotDogPaths[CurrentPathIndex].position , moveSpeed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position , MoveToHotDogPaths[CurrentPathIndex].position , moveSpeed * Time.deltaTime);
 
-                if (Vector3.Distance(transform.position , MoveToHotDogPaths[CurrentPathIndex].position) < 0.1f)
+                _navMeshAgent.SetDestination(MoveToHotDogPaths[3].position);
+                
+                if (Vector3.Distance(transform.position , MoveToHotDogPaths[3].position) < 0.1f)
                 {
-                    CurrentPathIndex++;
+                    /*CurrentPathIndex++;
                     if (CurrentPathIndex >= MoveToHotDogPaths.Length)
                     {
                         _takeOrderEvents = TakeOrderEvents.TakingHotDog;
@@ -72,7 +81,9 @@ public class PlayerAITakeOrder : MonoBehaviour
                     else
                     {
                         transform.LookAt(MoveToHotDogPaths[CurrentPathIndex]);
-                    }
+                    }*/
+                    
+                    _takeOrderEvents = TakeOrderEvents.TakingHotDog;
                 }
                 
                 break;
@@ -82,17 +93,19 @@ public class PlayerAITakeOrder : MonoBehaviour
                 {
                     CurrentPathIndex = 0;
                     _takeOrderEvents = TakeOrderEvents.MovingMiddleWithOrder;
-                    transform.LookAt(MoveToMiddle[0]);
+                    //transform.LookAt(MoveToMiddle[0]);
                 }
                 
                 break;
             case TakeOrderEvents.MovingMiddleWithOrder:
+                /*_animationController.playAnim(1, moveSpeed);
+                transform.position = Vector3.MoveTowards(transform.position , MoveToMiddle[CurrentPathIndex].position , moveSpeed * Time.deltaTime);*/
                 _animationController.playAnim(1, moveSpeed);
-                transform.position = Vector3.MoveTowards(transform.position , MoveToMiddle[CurrentPathIndex].position , moveSpeed * Time.deltaTime);
+                _navMeshAgent.SetDestination(MoveToMiddle[3].position);
 
-                if (Vector3.Distance(transform.position , MoveToMiddle[CurrentPathIndex].position) < 0.1f)
+                if (Vector3.Distance(transform.position , MoveToMiddle[3].position) < 0.1f)
                 {
-                    CurrentPathIndex++;
+                    /*CurrentPathIndex++;
                     if (CurrentPathIndex >= MoveToMiddle.Length)
                     {
                         GetComponent<PlayerAIMove>().CharacterReadyWithOrder();
@@ -101,7 +114,10 @@ public class PlayerAITakeOrder : MonoBehaviour
                     else
                     {
                         transform.LookAt(MoveToMiddle[CurrentPathIndex]);
-                    }
+                    }*/
+                    
+                    GetComponent<PlayerAIMove>().CharacterReadyWithOrder();
+                    _takeOrderEvents = TakeOrderEvents.Idle;
                 }
                 
                 break;

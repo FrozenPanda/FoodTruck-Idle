@@ -63,11 +63,11 @@ public class AIcreator : MonoBehaviour
         
     }
 
-    public void CreateTableAI(Transform enterPath, Transform exitPath , Transform sandwichPlace , ICreatableAI _creatableAI , SeatData _seatData)
+    public void CreateTableAI(Transform enterPath, Transform exitPath , Transform sandwichPlace , ICreatableAI _creatableAI , SeatData _seatData , int _MealType)
     {
         GameObject go = Instantiate(pickRandomAI(), AIstartPos[0].position, Quaternion.identity);
         AIcontroller _aIcontroller = go.GetComponent<AIcontroller>();
-        _aIcontroller.SetAIAgent(enterPath , exitPath , AIcontroller.AIevent.TableEat ,_creatableAI ,sandwichPlace);
+        _aIcontroller.SetAIAgent(enterPath , exitPath , AIcontroller.AIevent.TableEat ,_creatableAI ,sandwichPlace ,_MealType );
         _seatData.currentAI = _aIcontroller;
     }
 

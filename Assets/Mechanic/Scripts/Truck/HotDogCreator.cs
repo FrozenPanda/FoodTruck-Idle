@@ -13,8 +13,8 @@ public class HotDogCreator : MonoBehaviour , IStackable
 
     public GameObject HotDog;
     private float hotDogCookTimer;
-    
-    
+
+    public MoveAbleMeal.MealType _mealType;
     void Update()
     {
         if (hotDogCookTimer > 0f)
@@ -39,6 +39,7 @@ public class HotDogCreator : MonoBehaviour , IStackable
         
         GameObject go = Instantiate(HotDog, hotDogCreatePos.position, Quaternion.identity);
         MoveAbleMeal _moveAbleMeal = go.GetComponent<MoveAbleMeal>();
+        _moveAbleMeal._mealType = this._mealType;
         _moveAbleMeal.StartMove(target, MoveAbleMeal.moveEvent.ToCookPlace);
         waitingMeals[currentPlace] = go.GetComponent<MoveAbleMeal>();
     }

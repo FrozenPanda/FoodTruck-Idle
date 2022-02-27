@@ -60,6 +60,11 @@ public class AIpathFollower : MonoBehaviour
         entranceBool = entrance;
         
         _aIanimController.playAnimWithName("walk");
+
+        if (entrance)
+        {
+            transform.position = pathes[currentPathIndex].position;
+        }
     }
 
     private void Update()
