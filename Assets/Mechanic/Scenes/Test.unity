@@ -4215,19 +4215,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: stuffMaxStack.Array.data[0]
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: stuffMaxStack.Array.data[1]
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: stuffMaxStack.Array.data[2]
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: stuffMaxStack.Array.data[3]
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: stuffMaxStack.Array.data[4]

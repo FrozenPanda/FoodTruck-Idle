@@ -205,26 +205,56 @@ public class CharacterStackManager : MonoBehaviour
         stackMeals[index] = _moveAbleMeal;
     }
 
-    public void mealGiven(Transform mealTarget)
+    public void mealGiven(Transform mealTarget , MoveAbleMeal.MealType _mealType , IDropable _dropable)
     {
         MoveAbleMeal _moveAbleMeal;
 
-        for (int i = stackMeals.Count - 1; i < stackMeals.Count; i--)
+        for (int i = stackMeals.Count - 1; i > -1 ; i--)
         {
             if (stackMeals[i] != null)
             {
-                _moveAbleMeal = stackMeals[i];
-                Destroy(_moveAbleMeal.gameObject, 2f);
-                stackMeals[i] = null;
-                currentStack--;
-                _moveAbleMeal.StartMove(mealTarget, MoveAbleMeal.moveEvent.ToTable);
-                break;
+                if (stackMeals[i]._mealType == _mealType)
+                {
+                    Debug.Log("TrueMealGiven");
+                    _moveAbleMeal = stackMeals[i];
+                    Destroy(_moveAbleMeal.gameObject, 2f);
+                    stackMeals[i] = null;
+                    currentStack--;
+                    _moveAbleMeal.StartMove(mealTarget, MoveAbleMeal.moveEvent.ToTable);
+                    _dropable.MealGiven();
+                    ReorderArray();
+                    break;
+                }
+                else
+                {
+                    Debug.Log("This is not true meal");
+                }
             }
         }
 
         if (currentStack == 0)
         {
             carryingBool = false;
+        }
+    }
+
+    private void ReorderArray()
+    {
+        for (int i = 0; i < stackMeals.Count; i++)
+        {
+            if (stackMeals[i] == null)
+            {
+                for (int j = i + 1; j < stackMeals.Count; j++)
+                {
+                    if (stackMeals[j] != null)
+                    {
+                        stackMeals[j].StartMove(StackPlaces[i] , MoveAbleMeal.moveEvent.ToPlayer);
+                        stackMeals[i] = stackMeals[j];
+                        stackMeals[j] = null;
+                        break;
+                    }
+                }
+            }
         }
     }
 

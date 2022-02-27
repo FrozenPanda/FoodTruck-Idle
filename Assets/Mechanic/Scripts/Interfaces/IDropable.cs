@@ -4,9 +4,11 @@ using UnityEngine;
 
 public interface IDropable
 {
-    public void VereyimAbime(CharacterStackManager _characterStackManager);
+    public void VereyimAbime(CharacterStackManager _characterStackManager );
 
     public Transform sayMyTransform();
 
     public bool isMealNeed();
+
+    public bool MealGiven();
 }

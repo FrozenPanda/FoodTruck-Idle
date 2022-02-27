@@ -14,6 +14,10 @@ public class TableManager : MonoBehaviour , IDropable
     public Transform[] sandwichPlace;
 
     public MoneyCollectPlaces _moneyCollectPlaces;
+
+
+    public MoveAbleMeal.MealType _mealType;
+    
     private void OnEnable()
     {
         StartFromSaveLoadSystem();
@@ -67,7 +71,24 @@ public class TableManager : MonoBehaviour , IDropable
 
     public void VereyimAbime(CharacterStackManager _characterStackManager)
     {
-        _characterStackManager.mealGiven(Seats[currentIndex].GetComponent<SeatData>().sandwichPlace);
+        _characterStackManager.mealGiven(Seats[currentIndex].GetComponent<SeatData>().sandwichPlace , _mealType , this);
+    }
+
+    public bool MealGiven()
+    {
+        currentIndex = -1;
+        for (int i = 0; i < seatsCondition.Length; i++)
+        {
+            if (seatsCondition[i] == 2)
+            {
+                currentIndex = i;
+                Seats[i].GetComponent<SeatData>().currentAI.GetComponent<AItableEat>().StartEating();
+                seatsCondition[i] = 3;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public Transform sayMyTransform()
@@ -84,8 +105,8 @@ public class TableManager : MonoBehaviour , IDropable
             if (seatsCondition[i] == 2)
             {
                 currentIndex = i;
-                Seats[i].GetComponent<SeatData>().currentAI.GetComponent<AItableEat>().StartEating();
-                seatsCondition[i] = 3;
+                //Seats[i].GetComponent<SeatData>().currentAI.GetComponent<AItableEat>().StartEating();
+                //seatsCondition[i] = 3;
                 return true;
             }
         }
