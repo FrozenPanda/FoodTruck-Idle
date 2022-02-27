@@ -16,14 +16,26 @@ public class MoneyCollectPlaces : MonoBehaviour
     public List<MoneyStackable> currentFillPlaces = new List<MoneyStackable>();
 
     private float timer;
-    
+
+    private void Start()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(0).gameObject);
+        }
+        
+        Spawn();
+        
+        CloseMeshRender();
+    }
+
     public enum MoneyStack
     {
         Idle,
         GivingMoney
     }
 
-    MoneyStack _moneyStackEvents;
+    public MoneyStack _moneyStackEvents;
     
     public void addMeToList(MoneyStackable _moneyStackable)
     {
