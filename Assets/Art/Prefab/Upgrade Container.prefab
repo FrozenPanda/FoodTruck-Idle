@@ -232,7 +232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117327, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2200003
+      value: 4.08
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117327, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117327, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.9200001
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117327, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -722,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: HireStuffCosts.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: allUpgrades.Array.data[0]
@@ -750,6 +750,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: HireStuffCosts.Array.data[2]
+      value: 785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: HireStuffCosts.Array.data[3]
+      value: 785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: HireStuffCosts.Array.data[4]
+      value: 785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
+      propertyPath: HireStuffCosts.Array.data[5]
       value: 785
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}

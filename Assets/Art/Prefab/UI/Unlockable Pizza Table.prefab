@@ -2564,7 +2564,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7150914314323533441, guid: c0e4e137f62f2ba4b8d0baee98cf7034, type: 3}
+  - {fileID: 2100000, guid: 7adcf496ee3b4bd488160c37678fb3a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17543,7 +17543,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -17555,7 +17555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3924588279563696558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.502, y: 0.448, z: 0.319}
+  m_LocalPosition: {x: -0.502, y: 0.75, z: 0.319}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4037784266870121387}
@@ -18114,7 +18114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4037784265627636716
 Transform:
   m_ObjectHideFlags: 0
@@ -18172,10 +18172,10 @@ MonoBehaviour:
   Seats:
   - {fileID: 4037784266469283710}
   - {fileID: 4037784266881244313}
-  TableID: 0
+  TableID: 6
   sandwichPlace: []
   _moneyCollectPlaces: {fileID: 5611888876852090257}
-  _mealType: 0
+  _mealType: 2
 --- !u!1 &4037784265701477647
 GameObject:
   m_ObjectHideFlags: 0
@@ -18365,7 +18365,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -18377,7 +18377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4037784266117732214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.399, y: 0.476, z: -0.478}
+  m_LocalPosition: {x: 0.399, y: 0.78, z: -0.478}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4037784266469283711}
@@ -18728,7 +18728,7 @@ GameObject:
   - component: {fileID: 4037784267293458933}
   - component: {fileID: 4037784267293458932}
   m_Layer: 0
-  m_Name: PizzaTableHolder
+  m_Name: HamburgerTableHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18775,7 +18775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d55168f6b36e5fb4eb9f8c308657780c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tableID: 2
+  tableID: 6
   moneyToUnlock: 250
   realTable: {fileID: 4037784265627636719}
   MoneyNeedUI: {fileID: 2362193876038603907}
@@ -20335,7 +20335,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -20347,7 +20347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4479359299247500698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.107, y: 0.464, z: -0.852}
+  m_LocalPosition: {x: -0.107, y: 0.77, z: -0.852}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4037784266881244294}
@@ -27895,6 +27895,7 @@ MonoBehaviour:
   - {fileID: 1890848649582449872}
   - {fileID: 4951349388568851364}
   currentFillPlaces: []
+  _moneyStackEvents: 0
 --- !u!65 &5611888876852090256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29749,7 +29750,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7150914314323533441, guid: c0e4e137f62f2ba4b8d0baee98cf7034, type: 3}
+  - {fileID: 2100000, guid: 7adcf496ee3b4bd488160c37678fb3a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33400,7 +33401,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6859735235545899296}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.8918023, y: 0, z: 5.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -35411,7 +35412,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1914121302112161266, guid: c0e4e137f62f2ba4b8d0baee98cf7034, type: 3}
+  - {fileID: 2100000, guid: 7adcf496ee3b4bd488160c37678fb3a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

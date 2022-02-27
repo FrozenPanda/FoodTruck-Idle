@@ -1596,7 +1596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7111848213760417065, guid: f0c9d1b57f3c26b4baf833a31a1c1508, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5045555
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 7111848213760417065, guid: f0c9d1b57f3c26b4baf833a31a1c1508, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1604,7 +1604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7111848213760417065, guid: f0c9d1b57f3c26b4baf833a31a1c1508, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.87
+      value: 15.81
       objectReference: {fileID: 0}
     - target: {fileID: 7111848213760417065, guid: f0c9d1b57f3c26b4baf833a31a1c1508, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2301,10 +2301,6 @@ PrefabInstance:
     - target: {fileID: 2074838579280365741, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_Name
       value: Unlockable Areas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5174977340732861811, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: _mealType
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6102367980554552419, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_RootOrder
@@ -3544,7 +3540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joystick: {fileID: 889772358}
-  moveSpeed: 5
+  moveSpeed: 3
   groundAndObstacles:
     serializedVersion: 2
     m_Bits: 192
@@ -4546,22 +4542,6 @@ PrefabInstance:
       propertyPath: HotDogAI
       value: 
       objectReference: {fileID: 1961385375285595907}
-    - target: {fileID: 1071955049, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
-      propertyPath: HireStuffCosts.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1071955049, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
-      propertyPath: HireStuffCosts.Array.data[3]
-      value: 785
-      objectReference: {fileID: 0}
-    - target: {fileID: 1071955049, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
-      propertyPath: HireStuffCosts.Array.data[4]
-      value: 785
-      objectReference: {fileID: 0}
-    - target: {fileID: 1071955049, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
-      propertyPath: HireStuffCosts.Array.data[5]
-      value: 785
-      objectReference: {fileID: 0}
     - target: {fileID: 3761131627917708626, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
       propertyPath: m_Name
       value: Upgrade Container
@@ -4741,61 +4721,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: allPlayerAI.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMaxStack.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: allPlayerAI.Array.data[0]
       value: 
       objectReference: {fileID: 1961385375285595908}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMoveSpeed.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMaxStack.Array.data[0]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMaxStack.Array.data[1]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMaxStack.Array.data[2]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMaxStack.Array.data[3]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMaxStack.Array.data[4]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMoveSpeed.Array.data[0]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMoveSpeed.Array.data[1]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMoveSpeed.Array.data[2]
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMoveSpeed.Array.data[3]
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: stuffMoveSpeed.Array.data[4]
-      value: 45
-      objectReference: {fileID: 0}
     - target: {fileID: 4130981878334747745, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: m_RootOrder
       value: 6

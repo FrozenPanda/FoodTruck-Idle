@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 3231462236662858378}
   - component: {fileID: 3231462236662858381}
   m_Layer: 0
-  m_Name: PizzaPlace 1
+  m_Name: HamburgerPlace
   m_TagString: CollectPlace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,6 +145,7 @@ Transform:
   - {fileID: 190920160786851368}
   - {fileID: 5210788772335974961}
   - {fileID: 8058036554750944216}
+  - {fileID: 1645104933343206188}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -251,6 +252,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   HotDog: {fileID: 9009143162714502517, guid: f89fe6b257d28294daf9685d6fd3c682, type: 3}
+  _mealType: 2
 --- !u!1 &3231462237025804628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,6 +1690,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6147748096835602341, guid: a7d9f758ba29ccf4eaa62cea452b7ac0, type: 3}
   m_PrefabInstance: {fileID: 2090022713569951124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4621826473092039696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3231462236662858377}
+    m_Modifications:
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.06999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896446, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: m_Name
+      value: HotDogQueuManager (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+--- !u!4 &1645104933343206188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6264665995798896444, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+  m_PrefabInstance: {fileID: 4621826473092039696}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6686801205132681475
 PrefabInstance:
