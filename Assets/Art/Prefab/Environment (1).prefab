@@ -879,6 +879,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4037784265627636719, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6859735235545899296, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_Name
       value: Unlockable Pizza Table
@@ -1073,10 +1077,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3021138098903047035}
     m_Modifications:
-    - target: {fileID: 2583223710337531153, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7adcf496ee3b4bd488160c37678fb3a7, type: 2}
     - target: {fileID: 2676181303001754197, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1121,57 +1121,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2849449181870493878, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7adcf496ee3b4bd488160c37678fb3a7, type: 2}
-    - target: {fileID: 3924588279563696558, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: TableID
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: _mealType
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4037784265627636719, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4037784266117732214, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 4037784266117732215, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 4037784267293458932, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: tableID
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4479359299247500698, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 5469322196559903547, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6026317298525880208, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7adcf496ee3b4bd488160c37678fb3a7, type: 2}
     - target: {fileID: 6859735235545899296, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_Name
       value: Unlockable Pizza Table (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7133579557423542599, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.77
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
