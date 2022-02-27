@@ -247,7 +247,7 @@ public class CharacterStackManager : MonoBehaviour
                 {
                     Debug.Log("TrueMealGiven");
                     _moveAbleMeal = stackMeals[i];
-                    Destroy(_moveAbleMeal.gameObject, 2f);
+                    Destroy(_moveAbleMeal.gameObject, SceneData.instance.tableEatTime - 0.2f);
                     stackMeals[i] = null;
                     currentStack--;
                     _moveAbleMeal.StartMove(mealTarget, MoveAbleMeal.moveEvent.ToTable);
