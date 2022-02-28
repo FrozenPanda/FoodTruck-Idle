@@ -48,4 +48,9 @@ public class PlayerMoneyData : MonoBehaviour
             TotalMoney += 1000;
         }
     }
+
+    public void IncreaseMoney()
+    {
+        TotalMoney += 1000;
+    }
 }

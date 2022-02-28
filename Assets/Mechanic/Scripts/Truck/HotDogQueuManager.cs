@@ -64,6 +64,8 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
         {
             AIcreator.instance.AddMeTolist(this);
         }
+        
+        SceneData.instance.AddMetoTruckList(this);
     }
 
     public void SendData()

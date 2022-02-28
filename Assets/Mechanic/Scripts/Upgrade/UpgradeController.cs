@@ -51,16 +51,18 @@ public class UpgradeController : MonoBehaviour
         }
         
         SaveLoadSystem.Load();
-        int requiredMoney = MaxCapacityCost[SaveLoadSystem.instance.HireStaffUpgrades];
+        int requiredMoney = MaxCapacityCost[SaveLoadSystem.instance.HireStaffCapacity];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney)
         {
             createDontEnoghMoneyText();
             return;
         }
 
+        PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.HireStaffCapacity++;
         SaveLoadSystem.Save();
         SceneData.instance.CheckUpgrades();
+        
         UpdateText();
         SaveLoadSystem.Load();
         for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades; i++)
@@ -79,16 +81,18 @@ public class UpgradeController : MonoBehaviour
         }
         
         SaveLoadSystem.Load();
-        int requiredMoney = StuffMoveSpeedCost[SaveLoadSystem.instance.HireStaffUpgrades];
+        int requiredMoney = StuffMoveSpeedCost[SaveLoadSystem.instance.HireStaffMoveSpeed];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney)
         {
             createDontEnoghMoneyText();
             return;
         }
         
+        PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.HireStaffMoveSpeed++;
         SaveLoadSystem.Save();
         SceneData.instance.CheckUpgrades();
+        
         UpdateText();
         SaveLoadSystem.Load();
         for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades; i++)

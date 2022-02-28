@@ -47,7 +47,10 @@ public class UpgradeController2 : MonoBehaviour
     {
         upgradeCanvas.SetActive(false);
         yield return new WaitForSeconds(_timer);
-        upgradeCanvas.SetActive(true);
+        if (player)
+        {
+            upgradeCanvas.SetActive(true);
+        }
     }
 
     private void CheckMaxOrNot()
@@ -225,7 +228,12 @@ public class UpgradeController2 : MonoBehaviour
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.upgrades2[2]++;
         SaveLoadSystem.Save();
-        HotDogQueuManager.instance.UpgradeOccured();
+
+        for (int i = 0; i < SceneData.instance.allTruck.Count; i++)
+        {
+            SceneData.instance.allTruck[i].UpgradeOccured();
+        }
+        
         updateText();
     }
 

@@ -8,6 +8,9 @@ public class SceneData : MonoBehaviour
     public static SceneData instance;
 
     public PlayerAIMove[] allPlayerAI;
+    public List<HotDogQueuManager> allTruck = new List<HotDogQueuManager>();
+
+    public void AddMetoTruckList(HotDogQueuManager _truck) => allTruck.Add(_truck); 
     
     private void Awake()
     {
