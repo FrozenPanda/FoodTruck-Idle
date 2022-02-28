@@ -4720,10 +4720,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: allPlayerAI.Array.data[0]
-      value: 
-      objectReference: {fileID: 1961385375285595908}
     - target: {fileID: 4130981878334747745, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4940,6 +4936,10 @@ PrefabInstance:
     - target: {fileID: 4461170925568185738, guid: b37056b68358f1145920c99867d54a30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461170925568185742, guid: b37056b68358f1145920c99867d54a30, type: 3}
+      propertyPath: moveSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4514762173481116310, guid: b37056b68358f1145920c99867d54a30, type: 3}
       propertyPath: hotDogLookPlace

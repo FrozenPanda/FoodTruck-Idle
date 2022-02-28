@@ -226,6 +226,150 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpgradeController2
       objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: characterCarryCapacityMoney.Array.data[0]
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: characterCarryCapacityMoney.Array.data[1]
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: characterCarryCapacityMoney.Array.data[2]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: characterCarryCapacityMoney.Array.data[3]
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: characterCarryCapacityMoney.Array.data[4]
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerEatSpeedIncreaseMoney.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerEatSpeedIncreaseMoney.Array.data[1]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerEatSpeedIncreaseMoney.Array.data[2]
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerEatSpeedIncreaseMoney.Array.data[3]
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerEatSpeedIncreaseMoney.Array.data[4]
+      value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerMoveSpeedIncreaseMoney.Array.data[0]
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerMoveSpeedIncreaseMoney.Array.data[1]
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerMoveSpeedIncreaseMoney.Array.data[2]
+      value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerMoveSpeedIncreaseMoney.Array.data[3]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CustomerMoveSpeedIncreaseMoney.Array.data[4]
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: PizzaLineCapacityIncreaseMoney.Array.data[0]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: PizzaLineCapacityIncreaseMoney.Array.data[1]
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: PizzaLineCapacityIncreaseMoney.Array.data[2]
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: PizzaLineCapacityIncreaseMoney.Array.data[3]
+      value: 3500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: PizzaLineCapacityIncreaseMoney.Array.data[4]
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CollectChargeSpeedIncreaseMoney.Array.data[3]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CollectChargeSpeedIncreaseMoney.Array.data[4]
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CollectChargeSpeedIncreaseMoney.Array.data[5]
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CollectChargeSpeedIncreaseMoney.Array.data[6]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CollectChargeSpeedIncreaseMoney.Array.data[7]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: CollectChargeSpeedIncreaseMoney.Array.data[8]
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HotDogLineCapacityIncreaseMoney.Array.data[0]
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HotDogLineCapacityIncreaseMoney.Array.data[1]
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HotDogLineCapacityIncreaseMoney.Array.data[2]
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HotDogLineCapacityIncreaseMoney.Array.data[3]
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HotDogLineCapacityIncreaseMoney.Array.data[4]
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HamburgerLineCapacityIncreaseMoney.Array.data[0]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HamburgerLineCapacityIncreaseMoney.Array.data[1]
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HamburgerLineCapacityIncreaseMoney.Array.data[2]
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HamburgerLineCapacityIncreaseMoney.Array.data[3]
+      value: 1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: HamburgerLineCapacityIncreaseMoney.Array.data[4]
+      value: 2500
+      objectReference: {fileID: 0}
     - target: {fileID: 27085365656117327, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -750,39 +894,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: HireStuffCosts.Array.data[2]
-      value: 785
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: HireStuffCosts.Array.data[3]
-      value: 785
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: HireStuffCosts.Array.data[4]
-      value: 785
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: HireStuffCosts.Array.data[5]
-      value: 785
+      value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: MaxCapacityCost.Array.data[0]
-      value: 20
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: MaxCapacityCost.Array.data[1]
-      value: 30
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: MaxCapacityCost.Array.data[2]
-      value: 52
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: MaxCapacityCost.Array.data[3]
-      value: 64
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: MaxCapacityCost.Array.data[4]
-      value: 55
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: StuffMoveSpeedCost.Array.size
@@ -790,23 +934,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: StuffMoveSpeedCost.Array.data[0]
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: StuffMoveSpeedCost.Array.data[1]
-      value: 30
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: StuffMoveSpeedCost.Array.data[2]
-      value: 40
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: StuffMoveSpeedCost.Array.data[3]
-      value: 50
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4459552293276535583, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: StuffMoveSpeedCost.Array.data[4]
-      value: 60
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 6448781448166655707, guid: 0b1f6a9ea2e3c034993aed4b0c52ec75, type: 3}
       propertyPath: m_fontSize
