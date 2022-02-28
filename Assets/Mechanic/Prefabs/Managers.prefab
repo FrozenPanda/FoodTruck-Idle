@@ -240,8 +240,13 @@ MonoBehaviour:
   standEatMoneyDropAmountVIP: 3
   sittingEatMoneyDropAmount: 1
   standEatMoneyDropAmount: 1
-  stuffMaxStack: 
-  stuffMoveSpeed: []
+  stuffMaxStack: 0100000002000000030000000400000005000000
+  stuffMoveSpeed:
+  - 2
+  - 2.5
+  - 3
+  - 4.5
+  - 5
 --- !u!114 &1759988110
 MonoBehaviour:
   m_ObjectHideFlags: 0
