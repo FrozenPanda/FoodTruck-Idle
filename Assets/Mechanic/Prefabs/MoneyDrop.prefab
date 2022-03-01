@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nullImage: {fileID: 0}
+  movespeed: 0
 --- !u!114 &9059971335326011295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwSpeedForward: 100
-  throwSpeedUp: 150
+  throwSpeedUp: 250
   YdegreeMin: 90
   YdegreeMax: 100
 --- !u!54 &7671386877238405488
