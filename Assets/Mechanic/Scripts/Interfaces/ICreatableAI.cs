@@ -14,7 +14,9 @@ public interface ICreatableAI
 
     public int GetSeatID();
 
-    
+    public int GetBotIndex();
 
     public HotDogQueuManager sendMeHotDogQueuManagerData();
+    
+    
 }

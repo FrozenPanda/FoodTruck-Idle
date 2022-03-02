@@ -16,19 +16,20 @@ public class MoneyMove : MonoBehaviour
     private GameObject go;
     public float movespeed;
     private Vector3 screenPos;
-    public void setParametersAndMove(Transform _target , IUnlockable _unlockable , Transform _canvasTransform)
+    public RectTransform imageRectTransform;
+    public void setParametersAndMove(Transform _target , IUnlockable _unlockable , Transform _canvasTransform , Camera _camera)
     {
         transform.localScale *= 0.8f;
-        
-        _camera = Camera.main;
+
+        this._camera = _camera;
         moveAble = true;
         this._unlockable = _unlockable;
         this.target = _target;
         canvasTransform = _canvasTransform;
         
-        go = Instantiate(nullImage, canvasTransform);
-        screenPos = _camera.WorldToScreenPoint(target.position);
-        go.GetComponent<Image>().rectTransform.position = screenPos;
+        //go = Instantiate(nullImage, canvasTransform);
+        screenPos = this._camera.WorldToScreenPoint(target.position);
+        //go.GetComponent<Image>().rectTransform.position = screenPos;
         float rnd = 50f;
         transform.position += new Vector3(Random.Range(-rnd, rnd), Random.Range(-rnd, rnd), Random.Range(-rnd, rnd));
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerAIMove : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PlayerAIMove : MonoBehaviour
     private AnimationController _animationController;
     public GameObject RealAI;
     private CharacterStackManager _characterStackManager;
+
+    public int botIndex;
+    
     private void Awake()
     {
         instance = this;
@@ -36,6 +40,7 @@ public class PlayerAIMove : MonoBehaviour
     {
         CheckUpgrades();
         _characterStackManager = GetComponent<CharacterStackManager>();
+        EnableAI();
     }
 
     public void EnableAI()
@@ -46,9 +51,9 @@ public class PlayerAIMove : MonoBehaviour
         RealAI.SetActive(true);
     }
 
-    public void AddMeToDictionary(AItableEat _aItableEat , int TableID)
+    public void AddMeToDictionary(AItableEat _aItableEat , int TableID , int _botIndex)
     {
-        if (TableID > 3)
+        if (botIndex != _botIndex)
         {
             return;
         }
@@ -56,8 +61,13 @@ public class PlayerAIMove : MonoBehaviour
         waitingCustomers.Add(_aItableEat , TableID);
     }
 
-    public void DeleteMeFromDictionary(AItableEat _aItableEat)
+    public void DeleteMeFromDictionary(AItableEat _aItableEat , int _botIndex)
     {
+        if (botIndex != _botIndex)
+        {
+            return;
+        }
+        
         waitingCustomers.Remove(_aItableEat);
         
         return;
@@ -114,15 +124,22 @@ public class PlayerAIMove : MonoBehaviour
 
     public PlayerAIevents _playerAIevents;
     private int selectedTable;
-    
+
+    private List<int> pickRandomTable = new List<int>();
     private void PickOneTable()
     {
         foreach (var _var in waitingCustomers)
         {
             selectedTable = _var.Value;
-            SendAItoGiveOrder();
-            break;
+            pickRandomTable.Add(selectedTable);
+            //SendAItoGiveOrder();
+            //break;
         }
+
+        int x = Random.Range(0, pickRandomTable.Count);
+        selectedTable = pickRandomTable[x];
+        SendAItoGiveOrder();
+        pickRandomTable.Clear();
     }
 
     private bool orderIsAvailable;

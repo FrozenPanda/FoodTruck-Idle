@@ -30,6 +30,11 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
         _aItruckEat.CurrentQueuIndex = aItruckEatsList.Count - 1;
     }
 
+    public int GetBotIndex()
+    {
+        return 0;
+    }
+
     public HotDogQueuManager sendMeHotDogQueuManagerData()
     {
         return this;

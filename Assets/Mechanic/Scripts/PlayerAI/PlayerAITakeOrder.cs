@@ -7,9 +7,9 @@ using UnityEngine.AI;
 public class PlayerAITakeOrder : MonoBehaviour
 {
     //0 middle , 1 hotDogPlace
-    public Transform[] MovePaths;
-    public Transform[] MoveToHotDogPaths;
-    public Transform[] MoveToMiddle;
+    public Transform MovePathMiddle;
+    public Transform MoveToHotDogPath;
+    //public Transform[] MoveToMiddle;
     private int CurrentPathIndex = 0;
     public float moveSpeed;
     private AnimationController _animationController;
@@ -54,9 +54,9 @@ public class PlayerAITakeOrder : MonoBehaviour
                 _animationController.playAnim(1, moveSpeed);
                 //transform.position = Vector3.MoveTowards(transform.position , MovePaths[0].position , moveSpeed * Time.deltaTime);
 
-                _navMeshAgent.SetDestination(MovePaths[0].position);
+                _navMeshAgent.SetDestination(MovePathMiddle.position);
 
-                if (Vector3.Distance(transform.position , MovePaths[0].position) < 0.1f)
+                if (Vector3.Distance(transform.position , MovePathMiddle.position) < 0.1f)
                 {
                     CurrentPathIndex = 0;
                     _takeOrderEvents = TakeOrderEvents.MovingToHotDog;
@@ -69,9 +69,9 @@ public class PlayerAITakeOrder : MonoBehaviour
                 _animationController.playAnim(1, moveSpeed);
                 //transform.position = Vector3.MoveTowards(transform.position , MoveToHotDogPaths[CurrentPathIndex].position , moveSpeed * Time.deltaTime);
 
-                _navMeshAgent.SetDestination(MoveToHotDogPaths[3].position);
+                _navMeshAgent.SetDestination(MoveToHotDogPath.position);
                 
-                if (Vector3.Distance(transform.position , MoveToHotDogPaths[3].position) < 0.1f)
+                if (Vector3.Distance(transform.position , MoveToHotDogPath.position) < 0.1f)
                 {
                     /*CurrentPathIndex++;
                     if (CurrentPathIndex >= MoveToHotDogPaths.Length)
@@ -101,9 +101,9 @@ public class PlayerAITakeOrder : MonoBehaviour
                 /*_animationController.playAnim(1, moveSpeed);
                 transform.position = Vector3.MoveTowards(transform.position , MoveToMiddle[CurrentPathIndex].position , moveSpeed * Time.deltaTime);*/
                 _animationController.playAnim(1, moveSpeed);
-                _navMeshAgent.SetDestination(MoveToMiddle[3].position);
+                _navMeshAgent.SetDestination(MovePathMiddle.position);
 
-                if (Vector3.Distance(transform.position , MoveToMiddle[3].position) < 0.1f)
+                if (Vector3.Distance(transform.position , MovePathMiddle.position) < 0.1f)
                 {
                     /*CurrentPathIndex++;
                     if (CurrentPathIndex >= MoveToMiddle.Length)

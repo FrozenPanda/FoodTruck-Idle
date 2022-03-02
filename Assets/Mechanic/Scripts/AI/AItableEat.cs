@@ -26,7 +26,13 @@ public class AItableEat : MonoBehaviour
 
     private float eatTime = 5f; //todo bunu save load systemden çek
     private int MyTableID;
-    
+    private int botIndex;
+
+    private void Start()
+    {
+        botIndex = transform.parent.GetComponent<TableManager>().botIndex;
+    }
+
     public void SetParameters(Transform lookPlace , ICreatableAI _creatableAI)
     {
         eatTime = SceneData.instance.tableEatTime;
@@ -40,10 +46,13 @@ public class AItableEat : MonoBehaviour
 
     public void StartEating()
     {
-        if (PlayerAIMove.instance)
+        /*if (PlayerAIMove.instance)
         {
             PlayerAIMove.instance.DeleteMeFromDictionary(this);
-        }
+        }*/
+        
+        PlayerAIdatabase.instance.DeleteMeFromDictionary(this , botIndex);
+        
         GetComponent<AIcontroller>().wantedCanvas.SetActive(false);
         StartCoroutine(StartEatingDelay());
     }
@@ -79,10 +88,13 @@ public class AItableEat : MonoBehaviour
                 break;
             case TableEvent.OrderRequested:
 
-                if (PlayerAIMove.instance)
+                /*if (PlayerAIMove.instance)
                 {
                     PlayerAIMove.instance.AddMeToDictionary(this , MySeatID());
-                }
+                }*/
+                
+                PlayerAIdatabase.instance.AddMeToDictionary(this , MySeatID(), botIndex);
+                
                 _creatableAI.CustomerOrderRequested();
                 _tableEvent = TableEvent.Idle;
                 
