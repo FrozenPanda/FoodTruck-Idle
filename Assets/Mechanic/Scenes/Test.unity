@@ -6175,10 +6175,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
-      propertyPath: allPlayerAI.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: allPlayerAI.Array.data[0]
       value: 
       objectReference: {fileID: 1961385375285595908}
@@ -6234,6 +6230,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6373757228408111730, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: AllPlayerAIlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 1961385375285595908}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
 --- !u!4 &4133949499482087586

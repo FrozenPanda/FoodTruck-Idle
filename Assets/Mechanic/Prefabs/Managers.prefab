@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 468536360}
   - component: {fileID: 597318777}
   - component: {fileID: 1759988110}
+  - component: {fileID: 6373757228408111730}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -209,7 +210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a5c3e78db69f54ebf1c59fb5882446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allPlayerAI: []
+  allPlayerAI:
+  - {fileID: 0}
+  allTruck: []
   hotDogQueuWaitTimer: 18
   hotDogQueuMaxCount: 1
   tableEatTimePerUpgrade:
@@ -260,6 +263,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalMoney: {fileID: 4749076828174262506}
+--- !u!114 &6373757228408111730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130981878334747747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484e7014a5327f64cb464b7ffe068bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllPlayerAIlist:
+  - {fileID: 0}
 --- !u!1001 &3908184073851592932
 PrefabInstance:
   m_ObjectHideFlags: 0

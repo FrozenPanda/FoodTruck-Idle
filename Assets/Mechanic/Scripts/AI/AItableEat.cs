@@ -30,11 +30,12 @@ public class AItableEat : MonoBehaviour
 
     private void Start()
     {
-        botIndex = transform.parent.GetComponent<TableManager>().botIndex;
+       // botIndex = transform.parent.GetComponent<TableManager>().botIndex;
     }
 
     public void SetParameters(Transform lookPlace , ICreatableAI _creatableAI)
     {
+        botIndex = _creatableAI.GetBotIndex();
         eatTime = SceneData.instance.tableEatTime;
         this._creatableAI = _creatableAI;
         MyTableID = _creatableAI.GetSeatID();
