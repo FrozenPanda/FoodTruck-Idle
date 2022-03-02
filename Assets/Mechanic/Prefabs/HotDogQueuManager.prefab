@@ -25258,6 +25258,7 @@ MonoBehaviour:
   - {fileID: 4665126677987791520}
   - {fileID: 4570807235572113921}
   currentFillPlaces: []
+  _moneyStackEvents: 0
 --- !u!65 &7455835387573401013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30279,7 +30280,8 @@ MonoBehaviour:
   enterPath: {fileID: 6264665996354786891}
   exitPath: {fileID: 6264665995844697570}
   _moneyCollectPlaces: {fileID: 7164547041359128232}
-  MaxQueuPerUpgrade: 030000000500000007000000090000000a000000
+  _mealType: 0
+  MaxQueuPerUpgrade: 0300000004000000050000000600000007000000
 --- !u!1 &6264665995837409976
 GameObject:
   m_ObjectHideFlags: 0

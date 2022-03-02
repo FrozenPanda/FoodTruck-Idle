@@ -1050,6 +1050,7 @@ MonoBehaviour:
   - {fileID: 6331159370096502523}
   - {fileID: 673241114616070543}
   currentFillPlaces: []
+  _moneyStackEvents: 0
 --- !u!65 &1529046971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40468,7 +40469,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8496173010296431044}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.6546268, y: 1, z: 2.6498656}
@@ -40489,8 +40490,10 @@ MonoBehaviour:
   - {fileID: 8496173010582988117}
   - {fileID: 8496173011546762930}
   TableID: 0
+  botIndex: 0
   sandwichPlace: []
   _moneyCollectPlaces: {fileID: 1529046970}
+  _mealType: 0
 --- !u!1 &8496173010493985212
 GameObject:
   m_ObjectHideFlags: 0
@@ -40618,6 +40621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff0845b148d3d24d8b90f4d48cd465d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mealType: 0
   SeatID: 0
   enterPath: {fileID: 8678361924035137008}
   exitPath: {fileID: 8678361923786410569}
@@ -40685,6 +40689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff0845b148d3d24d8b90f4d48cd465d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mealType: 0
   SeatID: 0
   enterPath: {fileID: 6404733710245017942}
   exitPath: {fileID: 4836182092460763791}
@@ -40752,6 +40757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff0845b148d3d24d8b90f4d48cd465d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mealType: 0
   SeatID: 0
   enterPath: {fileID: 3197552441072881065}
   exitPath: {fileID: 4969609048471903108}

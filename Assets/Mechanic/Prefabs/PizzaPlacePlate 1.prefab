@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3917354413219618009}
   - component: {fileID: 8699828447115562301}
   m_Layer: 0
-  m_Name: PizzaPlacePlate
+  m_Name: PizzaPlacePlate 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
