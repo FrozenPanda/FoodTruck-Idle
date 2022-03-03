@@ -58,6 +58,8 @@ public class PlayerAIMove : MonoBehaviour
             return;
         }
         
+        Debug.Log("Sipariş alındı" + _botIndex);
+        
         waitingCustomers.Add(_aItableEat , TableID);
     }
 

@@ -16,6 +16,8 @@ public class SceneData : MonoBehaviour
     {
         instance = this;
     }
+    
+    
 
     //HotDogTruck
     public float hotDogQueuWaitTimer;
@@ -30,6 +32,7 @@ public class SceneData : MonoBehaviour
     public float customerMoveSpeed;
     
     //VIPcustomer
+    public int[] VIPEatMoneyDropPerLevel;
     public int sittingEatMoneyDropAmountVIP;
     public int standEatMoneyDropAmountVIP;
     
@@ -51,10 +54,21 @@ public class SceneData : MonoBehaviour
         SaveLoadSystem.Load();
         tableEatTime = tableEatTimePerUpgrade[SaveLoadSystem.instance.upgrades2[8]];
         customerMoveSpeed = customerMoveSpeedPerUpgrade[SaveLoadSystem.instance.upgrades2[9]];
+        sittingEatMoneyDropAmountVIP = VIPEatMoneyDropPerLevel[SaveLoadSystem.instance.upgrades2[3]];
+        standEatMoneyDropAmountVIP = VIPEatMoneyDropPerLevel[SaveLoadSystem.instance.upgrades2[3]];
     }
     // Update is called once per frame
+    private float GameSpeed;
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Time.timeScale = 10f;
+        }
         
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Time.timeScale = 1f;
+        }
     }
 }

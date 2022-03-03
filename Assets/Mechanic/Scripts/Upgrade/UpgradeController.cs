@@ -65,9 +65,9 @@ public class UpgradeController : MonoBehaviour
         
         UpdateText();
         SaveLoadSystem.Load();
-        for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades; i++)
+        for (int i = 0; i < PlayerAIdatabase.instance.AllPlayerAIlist.Count; i++)
         {
-            SceneData.instance.allPlayerAI[i].CheckUpgrades();
+            PlayerAIdatabase.instance.AllPlayerAIlist[i].CheckUpgrades();
         }
 
     }

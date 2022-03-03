@@ -105,6 +105,9 @@ public class HotDogCreator : MonoBehaviour , IStackable
             case MoveAbleMeal.MealType.Hamburger:
                 return 1;
                 break;
+            case MoveAbleMeal.MealType.KFC:
+                return 3;
+            break;
             default:
                 throw new ArgumentOutOfRangeException();
         }

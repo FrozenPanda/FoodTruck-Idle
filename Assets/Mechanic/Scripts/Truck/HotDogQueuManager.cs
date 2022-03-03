@@ -87,6 +87,9 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
             case MoveAbleMeal.MealType.Hamburger:
                 mealIndex = 1;
                 break;
+            case MoveAbleMeal.MealType.KFC:
+                mealIndex = 3;
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }

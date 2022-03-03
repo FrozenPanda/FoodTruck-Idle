@@ -21,6 +21,7 @@ public class PlayerAISendTable : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animationController = GetComponent<AnimationController>();
+        HoldingWithOrderPlace = MovePaths[0];
     }
 
     public void GiveOrder(int tableID)

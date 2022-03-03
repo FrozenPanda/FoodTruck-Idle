@@ -28,6 +28,9 @@ public class SeatData : MonoBehaviour , ICreatableAI
             case MoveAbleMeal.MealType.Hamburger:
                 _mealTypeIndex = 1;
                 break;
+            case MoveAbleMeal.MealType.KFC:
+                _mealTypeIndex = 3;
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }

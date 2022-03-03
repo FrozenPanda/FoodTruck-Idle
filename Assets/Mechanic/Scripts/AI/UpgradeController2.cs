@@ -85,14 +85,14 @@ public class UpgradeController2 : MonoBehaviour
             allUpgrades[2].text = "$" + HotDogLineCapacityIncreaseMoney[SaveLoadSystem.instance.upgrades2[2]].ToString();
         }
         
-        if (HamburgerLineCapacityIncreaseMoney.Length <= SaveLoadSystem.instance.upgrades2[3])
+        if (VIPtipsMoney.Length <= SaveLoadSystem.instance.upgrades2[3])
         {
             allUpgrades[3].text = "MAX";
             pressable[3] = true;
         }
         else
         {
-            allUpgrades[3].text = "$" + HamburgerLineCapacityIncreaseMoney[SaveLoadSystem.instance.upgrades2[3]].ToString();
+            allUpgrades[3].text = "$" + VIPtipsMoney[SaveLoadSystem.instance.upgrades2[3]].ToString();
         }
         
         if (PizzaLineCapacityIncreaseMoney.Length <= SaveLoadSystem.instance.upgrades2[4])
@@ -198,6 +198,7 @@ public class UpgradeController2 : MonoBehaviour
         int requiredMoney = CollectChargeSpeedIncreaseMoney[SaveLoadSystem.instance.upgrades2[1]];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney )
         {
+            createDontEnoghMoneyText();
             return;
         }
         PlayerUpgradeController.instance.InstantiatePrefabsOnPlayer(1);
@@ -221,6 +222,7 @@ public class UpgradeController2 : MonoBehaviour
         int requiredMoney = HotDogLineCapacityIncreaseMoney[SaveLoadSystem.instance.upgrades2[2]];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney )
         {
+            createDontEnoghMoneyText();
             return;
         }
         CloseUIForShortAmountOftime(3);
@@ -237,8 +239,8 @@ public class UpgradeController2 : MonoBehaviour
         updateText();
     }
 
-    public int[] HamburgerLineCapacityIncreaseMoney;
-    public void HamburgerLineCapacityIncrease()
+    public int[] VIPtipsMoney;
+    public void VIPupgradeButton()
     {
         if (pressable[3])
         {
@@ -246,13 +248,19 @@ public class UpgradeController2 : MonoBehaviour
         }
         
         SaveLoadSystem.Load();
-        int requiredMoney = HamburgerLineCapacityIncreaseMoney[SaveLoadSystem.instance.upgrades2[3]];
+        int requiredMoney = VIPtipsMoney[SaveLoadSystem.instance.upgrades2[3]];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney )
         {
+            createDontEnoghMoneyText();
             return;
         }
         
-        //todo
+        PlayerMoneyData.instance.TotalMoney -= requiredMoney;
+        SaveLoadSystem.instance.upgrades2[3]++;
+        SaveLoadSystem.Save();
+        SceneData.instance.CheckUpgrades();
+        
+        updateText();
     }
 
     public int[] PizzaLineCapacityIncreaseMoney;
