@@ -17787,81 +17787,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 39555705763269160, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.487
-      objectReference: {fileID: 0}
-    - target: {fileID: 39555705763269160, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.458
-      objectReference: {fileID: 0}
     - target: {fileID: 2074838579280365741, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_Name
       value: Unlockable Areas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229882737555509133, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: TableID
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2229882737555509133, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: botIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3224203845659275186, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: TableID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3224203845659275186, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: botIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092817588037495338, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.044676
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092817588037495338, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.5000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092817588037495338, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.49432
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770033240440287075, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: TableID
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770033240440287075, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: botIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770033240440287075, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: Seats.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770033240440287076, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770033241329770514, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798361471526104242, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798361471918388777, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: sandwichPlace.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798361471918388782, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5174977340732861811, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: _mealType
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6102367980554552419, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_RootOrder
@@ -17906,18 +17834,6 @@ PrefabInstance:
     - target: {fileID: 6102367980554552419, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8161482080308363619, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: TableID
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8161482080308363619, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: botIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8878513813270144990, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
