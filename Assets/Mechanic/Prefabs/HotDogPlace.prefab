@@ -1790,6 +1790,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotDogQueuManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7164547041359128232, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: width
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164547041359128232, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: length
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
 --- !u!4 &2324459701649046902 stripped
