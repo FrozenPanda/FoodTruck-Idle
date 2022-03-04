@@ -103,5 +103,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nullImage: {fileID: 1906814672249559612, guid: a4bdcbb91d1177941999f78c604a5ca2, type: 3}
-  movespeed: 3000
+  movespeed: 5000
   imageRectTransform: {fileID: 145668559295303782}

@@ -2546,7 +2546,11 @@ PrefabInstance:
       objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: TableID
-      value: 8
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: botIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: _mealType
@@ -2596,6 +2600,10 @@ PrefabInstance:
       propertyPath: tableID
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4037784267293458932, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: moneyToUnlock
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4479359299247500698, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_Icon
       value: 
@@ -2619,6 +2627,14 @@ PrefabInstance:
     - target: {fileID: 5469322196559903547, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611888876852090257, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: width
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611888876852090257, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: length
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6026317298525880208, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3016,6 +3032,14 @@ PrefabInstance:
       value: -6.56
       objectReference: {fileID: 0}
     - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: TableID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: botIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: Seats.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3034,6 +3058,14 @@ PrefabInstance:
     - target: {fileID: 4704627733455647269, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611888876852090257, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: width
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611888876852090257, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: length
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6859735235545899296, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_Name
@@ -3089,6 +3121,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3021138098903047035}
     m_Modifications:
+    - target: {fileID: 1645104933343206191, guid: 526c8d8e33ea88046b3f95b18b69c217, type: 3}
+      propertyPath: _mealType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542725246229455544, guid: 526c8d8e33ea88046b3f95b18b69c217, type: 3}
+      propertyPath: width
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542725246229455544, guid: 526c8d8e33ea88046b3f95b18b69c217, type: 3}
+      propertyPath: length
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3231462236662858377, guid: 526c8d8e33ea88046b3f95b18b69c217, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3137,6 +3181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HamburgerPlace
       objectReference: {fileID: 0}
+    - target: {fileID: 5744960921527677489, guid: 526c8d8e33ea88046b3f95b18b69c217, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 099273577d54a4c4e8a1ff4c649ef365, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526c8d8e33ea88046b3f95b18b69c217, type: 3}
 --- !u!4 &7853278811132593540 stripped
@@ -3261,7 +3309,11 @@ PrefabInstance:
       objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: TableID
-      value: 9
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: botIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: _mealType
@@ -3269,7 +3321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: Seats.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: Seats.Array.data[2]
@@ -3339,6 +3391,10 @@ PrefabInstance:
       propertyPath: tableID
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4037784267293458932, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: moneyToUnlock
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 4479359299247500698, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_Icon
       value: 
@@ -3362,6 +3418,14 @@ PrefabInstance:
     - target: {fileID: 5469322196559903547, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611888876852090257, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: width
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611888876852090257, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: length
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5933700105588164980, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3559,6 +3623,14 @@ PrefabInstance:
       value: -6.39
       objectReference: {fileID: 0}
     - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: TableID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: botIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037784265627636712, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: Seats.Array.data[1]
       value: 
       objectReference: {fileID: 5986173429393370736}
@@ -3590,6 +3662,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4037784267293458932, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: moneyToUnlock
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4604110279428484262, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7
@@ -3605,6 +3681,14 @@ PrefabInstance:
     - target: {fileID: 4704627733455647269, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_LocalPosition.z
       value: -8.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611888876852090257, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: width
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611888876852090257, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
+      propertyPath: length
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5933700105588164980, guid: 3cd320a8a7e8cd547b226bb42ecd2088, type: 3}
       propertyPath: m_LocalPosition.x

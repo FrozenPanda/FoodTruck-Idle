@@ -73,7 +73,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 2070581585053126778}
     m_Modifications:
     - target: {fileID: 3626577888444936143, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: botIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626577888444936143, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
       propertyPath: _mealType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626577889118051764, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: botIndex
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3626577889118051764, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
@@ -81,7 +89,15 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3626577889136933820, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: botIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626577889136933820, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
       propertyPath: _mealType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626577889152162062, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: botIndex
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3626577889152162062, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
