@@ -99,7 +99,7 @@ public class Tutorial : MonoBehaviour
                 arrowIndicator.gameObject.SetActive(true);
                 arrows[3].SetActive(true);
                 
-                if (Vector3.Distance(transform.position , lookAtVector3) < 1.5f)
+                if (Vector3.Distance(transform.position , lookAtVector3) < 2f)
                 {
                     NextStage();
                 }
