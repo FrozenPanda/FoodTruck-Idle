@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableID: 19
-  moneyToUnlock: 100
+  moneyToUnlock: 2500
   realTable: {fileID: 7053380031580196311, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
   MoneyNeedUI: {fileID: 5108900865735832041}
   MoneyNeedText: {fileID: 6628188072268307922}
@@ -72,6 +72,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2070581585053126778}
     m_Modifications:
+    - target: {fileID: 3626577889618513832, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: moneyToUnlock
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626577889717570322, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: moneyToUnlock
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626577889729669536, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: moneyToUnlock
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626577890019016147, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: moneyToUnlock
+      value: 4000
+      objectReference: {fileID: 0}
     - target: {fileID: 7053380031580196310, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -119,6 +135,10 @@ PrefabInstance:
     - target: {fileID: 7053380031580196311, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
       propertyPath: m_Name
       value: KFCTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053380031580196311, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}

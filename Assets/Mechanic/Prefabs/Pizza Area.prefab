@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableID: 18
-  moneyToUnlock: 500
+  moneyToUnlock: 1500
   realTable: {fileID: 3576694732651786258}
   MoneyNeedUI: {fileID: 6128514910055346811}
   MoneyNeedText: {fileID: 5194515678553349696}
@@ -75,6 +75,10 @@ PrefabInstance:
     - target: {fileID: 283090398305737740, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
       propertyPath: m_Name
       value: PizzaTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 283090398305737740, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4618432188293698040, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
       propertyPath: m_RootOrder
@@ -119,6 +123,22 @@ PrefabInstance:
     - target: {fileID: 4618432188293698040, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898716098778002094, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
+      propertyPath: moneyToUnlock
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898716099149777442, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
+      propertyPath: moneyToUnlock
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898716099824280389, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
+      propertyPath: moneyToUnlock
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5898716100622079210, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
+      propertyPath: moneyToUnlock
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8bd66c747a51644b8a5660672f80e86, type: 3}
