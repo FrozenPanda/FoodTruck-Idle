@@ -18,6 +18,8 @@ public class MoneyCollectPlaces : MonoBehaviour
 
     private float timer;
 
+    public GameObject CloseForTutorial;
+
     private void Start()
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -143,6 +145,11 @@ public class MoneyCollectPlaces : MonoBehaviour
         if (other.tag == "Player")
         {
             _moneyStackEvents = MoneyStack.GivingMoney;
+
+            if (CloseForTutorial)
+            {
+                CloseForTutorial.SetActive(false);
+            }
         }
     }
 

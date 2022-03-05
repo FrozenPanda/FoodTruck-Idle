@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class PlayerAIMove : MonoBehaviour
@@ -211,6 +212,7 @@ public class PlayerAIMove : MonoBehaviour
             SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
         GetComponent<PlayerAITakeOrder>().moveSpeed =
             SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
+        GetComponent<NavMeshAgent>().speed = SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
         GetComponent<CharacterStackManager>().TotalStack =
             SceneData.instance.stuffMaxStack[SaveLoadSystem.instance.HireStaffCapacity];
         Debug.Log("<<" +SaveLoadSystem.instance.HireStaffCapacity );

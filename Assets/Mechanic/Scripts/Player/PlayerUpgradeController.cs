@@ -46,6 +46,12 @@ public class PlayerUpgradeController : MonoBehaviour
         }else if (id == 4)
         {
             _text = "VIP tip increased";
+        }else if (id == 5)
+        {
+            _text = "Stuff Capacity +1";
+        }else if (id == 6)
+        {
+            _text = "Stuff Speed +10%";
         }
 
         go.transform.GetChild(0).GetComponent<Text>().text = _text;

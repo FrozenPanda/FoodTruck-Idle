@@ -17,7 +17,8 @@ public class UpgradeController2 : MonoBehaviour
 
     public GameObject upgradeCanvas;
     public GameObject notEnoughMoneyText;
-    
+
+    public GameObject clickImage;
     
     public TextMeshProUGUI[] allUpgrades;
     private void updateText()
@@ -153,6 +154,22 @@ public class UpgradeController2 : MonoBehaviour
         else
         {
             allUpgrades[9].text = "$" + CustomerMoveSpeedIncreaseMoney[SaveLoadSystem.instance.upgrades2[9]].ToString();
+        }
+
+        if (SaveLoadSystem.instance.upgrades2[0] == 0)
+        {
+            allUpgrades[0].text = "FREE";
+            
+            clickImage.SetActive(true);
+
+            for (int i = 1; i < pressable.Length; i++)
+            {
+                pressable[i] = true;
+            }
+        }
+        else
+        {
+            clickImage.SetActive(false);
         }
     }
 

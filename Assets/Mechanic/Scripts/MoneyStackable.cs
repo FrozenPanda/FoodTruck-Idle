@@ -32,6 +32,15 @@ public class MoneyStackable : MonoBehaviour
         _moneyStackEvents = MoneyStackEvents.Move;
     }
 
+    public void StartMove(MoneyCollectPlaces _moneyCollectPlaces)
+    {
+        targetTransform = _moneyCollectPlaces.takeLastElement();
+        _moneyCollectPlaces.addMeToList(this);
+        defPos = transform.position;
+        defRot = transform.rotation;
+        _moneyStackEvents = MoneyStackEvents.Move;
+    }
+
     // Update is called once per frame
     void Update()
     {

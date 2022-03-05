@@ -46,6 +46,8 @@ public class UpgradeController : MonoBehaviour
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.Save();
         UpdateText();
+        CameraFollow.instance.LookAtStuff();
+        StartCoroutine(CloseAndOpenUI());
     }
 
     public int[] MaxCapacityCost;
@@ -75,6 +77,9 @@ public class UpgradeController : MonoBehaviour
         {
             PlayerAIdatabase.instance.AllPlayerAIlist[i].CheckUpgrades();
         }
+        
+        CameraFollow.instance.LookAtStuff(5);
+        StartCoroutine(CloseAndOpenUI());
 
     }
 
@@ -101,10 +106,12 @@ public class UpgradeController : MonoBehaviour
         
         UpdateText();
         SaveLoadSystem.Load();
-        for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades; i++)
+        for (int i = 0; i < PlayerAIdatabase.instance.AllPlayerAIlist.Count; i++)
         {
-            SceneData.instance.allPlayerAI[i].CheckUpgrades();
+            PlayerAIdatabase.instance.AllPlayerAIlist[i].CheckUpgrades();
         }
+        CameraFollow.instance.LookAtStuff(6);
+        StartCoroutine(CloseAndOpenUI());
     }
     
     void Start()
@@ -121,6 +128,15 @@ public class UpgradeController : MonoBehaviour
         {
             PlayerAIdatabase.instance.AllPlayerAIlist[i].EnableAI();
         }
+    }
+
+    IEnumerator CloseAndOpenUI(float timer = 3f)
+    {
+        UpgradeCanvas.SetActive(false);
+
+        yield return new WaitForSeconds(timer);
+        
+        UpgradeCanvas.SetActive(true);
     }
 
     private void UpdateText()

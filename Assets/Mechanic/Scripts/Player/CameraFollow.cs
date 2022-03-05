@@ -27,7 +27,8 @@ public class CameraFollow : MonoBehaviour
     {
         CharFollow,
         GoToCharacter,
-        GoToHogLine
+        GoToHogLine,
+        LookAtStuff
     }
 
     private CamEvent _camEvent;
@@ -37,6 +38,35 @@ public class CameraFollow : MonoBehaviour
         lastPos = _cam.position;
         lastRot = _cam.rotation;
         _camEvent = CamEvent.GoToHogLine;
+    }
+
+    private Transform currentStuff;
+    public void LookAtStuff()
+    {
+        LookTimer = 0f;
+        lastPos = _cam.position;
+        lastRot = _cam.rotation;
+        SaveLoadSystem.Load();
+        currentStuff = PlayerAIdatabase.instance.AllPlayerAIlist[SaveLoadSystem.instance.HireStaffUpgrades - 1].transform;
+        _camEvent = CamEvent.LookAtStuff;
+    }
+    
+    public void LookAtStuff(int _id)
+    {
+        LookTimer = 0f;
+        lastPos = _cam.position;
+        lastRot = _cam.rotation;
+        SaveLoadSystem.Load();
+        currentStuff = PlayerAIdatabase.instance.AllPlayerAIlist[0].transform;
+        _camEvent = CamEvent.LookAtStuff;
+        StartCoroutine(waitAndCreate(_id));
+    }
+
+    IEnumerator waitAndCreate(int id)
+    {
+        yield return new WaitForSeconds(1f);
+        
+        PlayerUpgradeController.instance.InstantiatePrefabsOnPlayer(id);
     }
 
     private void LookCharacter()
@@ -87,6 +117,18 @@ public class CameraFollow : MonoBehaviour
                 }
                 
                 break;
+            
+            case CamEvent.LookAtStuff:
+
+                LookTimer += Time.deltaTime *1.5f;
+                _cam.position = Vector3.Lerp(lastPos , currentStuff.position + offSet , LookTimer);
+
+                if (LookTimer > 3f)
+                {
+                    LookCharacter();
+                }
+                break;
+            
             default:
                 throw new ArgumentOutOfRangeException();
         }

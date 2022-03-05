@@ -16,19 +16,22 @@ public class SaveLoadSystem
    // public int Supporter  { get { return _Supporter; } set { _Supporter = value; UIManager.instance.UpdateSupporterText(); } }
      //int _Supporter = 0;
 
+     public bool MoneyCreateForTutorialBool;
+     public int CurrentTutorialStage;
+     
     public int[] UpgradeIndex = {-1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0};
     
     //Table
     public int[] TableUnlock = new[] {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
     private int tableSeatAmount = 1;
-
+    
     public int TableSeatAmount
     {
         get => tableSeatAmount;
         set => tableSeatAmount = value;
     }
 
-    public int TotalMoney = 100;
+    public int TotalMoney = 0;
 
     #region Update1
 
