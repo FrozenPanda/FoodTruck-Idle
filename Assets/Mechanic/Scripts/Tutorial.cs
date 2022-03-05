@@ -84,9 +84,12 @@ public class Tutorial : MonoBehaviour
             transform.LookAt(lookAtVector3);
         }
 
-        if (Vector3.Distance(transform.position , lookAtVector3) < 2f)
+        if (currentStage != 3)
         {
-            NextStage();
+            if (Vector3.Distance(transform.position , lookAtVector3) < 1.5f)
+            {
+                NextStage();
+            }
         }
 
         if (currentStage == 3)
@@ -95,6 +98,11 @@ public class Tutorial : MonoBehaviour
             {
                 arrowIndicator.gameObject.SetActive(true);
                 arrows[3].SetActive(true);
+                
+                if (Vector3.Distance(transform.position , lookAtVector3) < 1.5f)
+                {
+                    NextStage();
+                }
             }
             else
             {
