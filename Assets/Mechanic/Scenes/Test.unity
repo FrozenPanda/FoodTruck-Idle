@@ -5096,7 +5096,7 @@ GameObject:
   - component: {fileID: 669298981}
   - component: {fileID: 669298980}
   - component: {fileID: 669298979}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SM_Env_Ground_ParkingLines_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17787,6 +17787,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 892382551379452866, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: moneyToUnlock
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2074838579280365741, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_Name
       value: Unlockable Areas
@@ -19907,6 +19911,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3576694732651786258, guid: ba2aecfb840631342a7411cdecd10599, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5606416809396463368, guid: ba2aecfb840631342a7411cdecd10599, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -21037,7 +21045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6350949684840299127
 Transform:
   m_ObjectHideFlags: 0

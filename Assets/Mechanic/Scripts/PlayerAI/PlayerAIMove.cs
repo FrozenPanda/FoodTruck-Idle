@@ -40,7 +40,7 @@ public class PlayerAIMove : MonoBehaviour
     {
         CheckUpgrades();
         _characterStackManager = GetComponent<CharacterStackManager>();
-        EnableAI();
+       // EnableAI();
     }
 
     public void EnableAI()

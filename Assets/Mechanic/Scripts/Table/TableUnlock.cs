@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MoreMountains.NiceVibrations;
 
 public class TableUnlock : MonoBehaviour , IUnlockable
 {
@@ -17,7 +18,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
     public GameObject MoneyNeedUI;
     public Text MoneyNeedText;
 
-    private int moneyValue = 5;
+    private int moneyValue = 10;
     
     public enum MoneyState
     {
@@ -39,6 +40,19 @@ public class TableUnlock : MonoBehaviour , IUnlockable
             GetComponent<BoxCollider>().enabled = false;
             MoneyNeedUI.SetActive(false);
         }
+
+        if (moneyToUnlock > 900)
+        {
+            moneyValue = 20;
+        }else if (moneyToUnlock > 400)
+        {
+            moneyValue = 10;
+        }
+        else
+        {
+            moneyValue = 5;
+        }
+        
     }
 
     // Update is called once per frame
@@ -66,8 +80,9 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                 }
                 else
                 {
+                    MMVibrationManager.Haptic (HapticTypes.Success);
                     moneyRequest += moneyValue;
-                    moneyrequestTimerSave *= 0.9f;
+                    moneyrequestTimerSave *= 0.6f;
                     moneyRequestTimer = moneyrequestTimerSave;
                     MoneyController.instance.CreateMoneyToUnlock(transform , this);
                     PlayerMoneyData.instance.TotalMoney -= moneyValue;

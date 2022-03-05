@@ -255,6 +255,8 @@ public class UpgradeController2 : MonoBehaviour
             return;
         }
         
+        PlayerUpgradeController.instance.InstantiatePrefabsOnPlayer(4);
+        CloseUIForShortAmountOftime();
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.upgrades2[3]++;
         SaveLoadSystem.Save();

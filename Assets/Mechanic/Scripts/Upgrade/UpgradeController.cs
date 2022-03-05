@@ -15,6 +15,9 @@ public class UpgradeController : MonoBehaviour
 
     public int[] HireStuffCosts;
     //For All stuff hire things
+    
+    
+    //5 for 1. stuff -- 18 for 2 -- 19 3
     public void EnableHotDogAI()
     {
         if (pressable[0])
@@ -31,15 +34,18 @@ public class UpgradeController : MonoBehaviour
             return;
         }
         
-        if (SaveLoadSystem.instance.HireStaffUpgrades == 0)
+        /*if (SaveLoadSystem.instance.HireStaffUpgrades == 0)
         {
             PlayerAIMove.instance.EnableAI();
-            UpgradeCanvas.SetActive(false);
-            SaveLoadSystem.instance.HireStaffUpgrades++;
-            PlayerMoneyData.instance.TotalMoney -= requiredMoney;
-            SaveLoadSystem.Save();
-            UpdateText();
-        }
+            
+        }*/
+        
+        PlayerAIdatabase.instance.AllPlayerAIlist[SaveLoadSystem.instance.HireStaffUpgrades].EnableAI();
+        UpgradeCanvas.SetActive(false);
+        SaveLoadSystem.instance.HireStaffUpgrades++;
+        PlayerMoneyData.instance.TotalMoney -= requiredMoney;
+        SaveLoadSystem.Save();
+        UpdateText();
     }
 
     public int[] MaxCapacityCost;
@@ -111,9 +117,9 @@ public class UpgradeController : MonoBehaviour
     {
         SaveLoadSystem.Load();
 
-        for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades; i++)
+        for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades ; i++)
         {
-            SceneData.instance.allPlayerAI[i].EnableAI();
+            PlayerAIdatabase.instance.AllPlayerAIlist[i].EnableAI();
         }
     }
 
@@ -149,6 +155,45 @@ public class UpgradeController : MonoBehaviour
                     pressable[0] = false;
                 }
             }
+
+            if (SaveLoadSystem.instance.HireStaffUpgrades == 2)
+            {
+                if (SaveLoadSystem.instance.TableUnlock[18] == -1)
+                {
+                    allUpgrades[0].text = "NotUnlockedYet";
+                    
+                    pressable[0] = true;
+                }
+                else
+                {
+                    allUpgrades[0].text = "$" +HireStuffCosts[SaveLoadSystem.instance.HireStaffUpgrades];
+                    
+                    pressable[0] = false;
+                }
+            }
+            
+            if (SaveLoadSystem.instance.HireStaffUpgrades == 3)
+            {
+                if (SaveLoadSystem.instance.TableUnlock[19] == -1)
+                {
+                    allUpgrades[0].text = "NotUnlockedYet";
+                    
+                    pressable[0] = true;
+                }
+                else
+                {
+                    allUpgrades[0].text = "$" +HireStuffCosts[SaveLoadSystem.instance.HireStaffUpgrades];
+                    
+                    pressable[0] = false;
+                }
+            }
+
+            if (SaveLoadSystem.instance.HireStaffUpgrades == 4)
+            {
+                allUpgrades[0].text = "MAX";
+                    
+                pressable[0] = true;
+            }
         }
 
         if (MaxCapacityCost.Length < SaveLoadSystem.instance.HireStaffCapacity)
@@ -179,6 +224,8 @@ public class UpgradeController : MonoBehaviour
         if (other.tag == "Player")
         {
             UpgradeCanvas.SetActive(true);
+            
+            UpdateText();
         }
     }
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using MoreMountains.NiceVibrations;
 
 public class MoneyCollectPlaces : MonoBehaviour
 {
@@ -61,10 +62,11 @@ public class MoneyCollectPlaces : MonoBehaviour
                 }
                 else
                 {
+                    MMVibrationManager.Haptic (HapticTypes.Success);
                     CreateCoinImage(currentFillPlaces[currentFillPlaces.Count - 1].transform);
                     Destroy(currentFillPlaces[currentFillPlaces.Count - 1].gameObject);
                     currentFillPlaces.RemoveAt(currentFillPlaces.Count - 1);
-                    timer = 0.05f;
+                    timer = 0.03f;
                 }
                 
                 break;
