@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5693995161970903227}
   - component: {fileID: 2926354001209533536}
   - component: {fileID: 5225993579856009616}
-  - component: {fileID: 5706540576802785753}
+  - component: {fileID: 7564697898471930553}
   m_Layer: 5
-  m_Name: MoneyToMove 1
+  m_Name: MoneyToMove 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,9 +61,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b31d1db635104545892c2d95dbcd314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
---- !u!114 &5706540576802785753
+  moveSpeed: 10000
+--- !u!114 &7564697898471930553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,9 +99,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2630106153902614091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec0d365a72d4594f9989b191c5258d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 299edf4ce37118542b57a6e6532a6ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nullImage: {fileID: 1906814672249559612, guid: a4bdcbb91d1177941999f78c604a5ca2, type: 3}
-  movespeed: 5000
-  imageRectTransform: {fileID: 145668559295303782}
+  moveSpeed: 10000

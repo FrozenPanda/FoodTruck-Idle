@@ -19,6 +19,12 @@ public class TableUnlock : MonoBehaviour , IUnlockable
     public Text MoneyNeedText;
 
     private int moneyValue = 10;
+    private float vibratorTime = 0.5f;
+
+    private MoneyController _moneyController;
+    private PlayerMoneyData _playerMoneyData;
+
+    private float moneyTextUpdateTimer;
     
     public enum MoneyState
     {
@@ -28,9 +34,15 @@ public class TableUnlock : MonoBehaviour , IUnlockable
 
     public MoneyState _moneyState;
     
+    
+    
     void Start()
     {
         SaveLoadSystem.Load();
+        
+        _moneyController = MoneyController.instance;
+        _playerMoneyData = PlayerMoneyData.instance;
+        
 
         MoneyNeedText.text = "$" + moneyToUnlock;
 
@@ -43,14 +55,14 @@ public class TableUnlock : MonoBehaviour , IUnlockable
 
         if (moneyToUnlock > 900)
         {
-            moneyValue = 20;
+            moneyValue = 100;
         }else if (moneyToUnlock > 400)
         {
-            moneyValue = 10;
+            moneyValue = 25;
         }
         else
         {
-            moneyValue = 5;
+            moneyValue = 10;
         }
         
     }
@@ -64,7 +76,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                 break;
             case MoneyState.MoneyRequesting:
 
-                if (PlayerMoneyData.instance.TotalMoney < moneyValue)
+                if (_playerMoneyData.TotalMoney < moneyValue)
                 {
                     return;
                 }
@@ -72,7 +84,17 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                 if (moneyRequest >= moneyToUnlock)
                 {
                     return;
-                }                
+                }     
+                
+                if (vibratorTime > 0f)
+                {
+                    vibratorTime -= Time.deltaTime;
+                }
+                else
+                {
+                    MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+                    vibratorTime = 0.5f;
+                }
                 
                 if (moneyRequestTimer > 0f)
                 {
@@ -80,12 +102,18 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                 }
                 else
                 {
-                    MMVibrationManager.Haptic (HapticTypes.Success);
+                    
                     moneyRequest += moneyValue;
-                    moneyrequestTimerSave *= 0.6f;
-                    moneyRequestTimer = moneyrequestTimerSave;
-                    MoneyController.instance.CreateMoneyToUnlock(transform , this);
-                    PlayerMoneyData.instance.TotalMoney -= moneyValue;
+                    
+                   // moneyrequestTimerSave = 0.1f;
+                   moneyRequestTimer = 0.1f;
+                    moneyReached();
+                    _moneyController.CreateMoneyToUnlock(transform);
+                    _moneyController.CreateMoneyToUnlock(transform);
+                    _moneyController.CreateMoneyToUnlock(transform);
+                    //CreateCoinImage();
+                    _playerMoneyData.TotalMoney -= moneyValue;
+                    
                     if (moneyRequest >= moneyToUnlock)
                     {
                         _moneyState = MoneyState.Idle;
@@ -96,31 +124,49 @@ public class TableUnlock : MonoBehaviour , IUnlockable
             default:
                 throw new ArgumentOutOfRangeException();
         }
+
+       
     }
 
     public void startMoneyDrop()
     {
         _moneyState = MoneyState.MoneyRequesting;
+        SceneReferences.instance.moneyMoveImage2Target = Camera.main.WorldToScreenPoint(transform.position);
+        
     }
 
     public void stopMoneyDrop()
     {
         _moneyState = MoneyState.Idle;
-        moneyrequestTimerSave = 0.05f;
+        moneyrequestTimerSave = 0.1f;
+        int x = moneyToUnlock - currentMoneyTaken;
+        MoneyNeedText.text = "$" + x;
+        moneyTextUpdateTimer = 0.5f;
+       
+    }
+    
+    private void CreateCoinImage()
+    {
+        GameObject go = Instantiate(SceneReferences.instance.moneyMoveImage2, SceneReferences.instance.moneyMoveCanvas);
+        Debug.Log("Create Coin Image");
+        //Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+        //go.GetComponent<Image>().rectTransform.position = screenPos;
     }
 
     public void moneyReached()
     {
         currentMoneyTaken += moneyValue;
-        MoneyNeedText.text = "$" + (moneyToUnlock-currentMoneyTaken);
+        int x = moneyToUnlock - currentMoneyTaken;
+        MoneyNeedText.text = "$" + x;
 
         if (currentMoneyTaken >= moneyToUnlock)
         {
-            Debug.Log("TableEnabled");
+            //Debug.Log("TableEnabled");
             realTable.SetActive(true);
             SaveLoadSystem.instance.TableUnlock[tableID] = 1;
             SaveLoadSystem.Save();
             MoneyNeedUI.SetActive(false);
+            
         }
     }
 }

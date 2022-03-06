@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using MoreMountains.NiceVibrations;
 
 public class UpgradeController : MonoBehaviour
 {
@@ -40,14 +41,14 @@ public class UpgradeController : MonoBehaviour
             
         }*/
         
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
         PlayerAIdatabase.instance.AllPlayerAIlist[SaveLoadSystem.instance.HireStaffUpgrades].EnableAI();
         UpgradeCanvas.SetActive(false);
         SaveLoadSystem.instance.HireStaffUpgrades++;
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.Save();
         UpdateText();
-        CameraFollow.instance.LookAtStuff();
-        StartCoroutine(CloseAndOpenUI());
+        
     }
 
     public int[] MaxCapacityCost;
@@ -70,7 +71,7 @@ public class UpgradeController : MonoBehaviour
         SaveLoadSystem.instance.HireStaffCapacity++;
         SaveLoadSystem.Save();
         SceneData.instance.CheckUpgrades();
-        
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
         UpdateText();
         SaveLoadSystem.Load();
         for (int i = 0; i < PlayerAIdatabase.instance.AllPlayerAIlist.Count; i++)
@@ -78,8 +79,8 @@ public class UpgradeController : MonoBehaviour
             PlayerAIdatabase.instance.AllPlayerAIlist[i].CheckUpgrades();
         }
         
-        CameraFollow.instance.LookAtStuff(5);
-        StartCoroutine(CloseAndOpenUI());
+        
+        
 
     }
 
@@ -99,6 +100,7 @@ public class UpgradeController : MonoBehaviour
             return;
         }
         
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.HireStaffMoveSpeed++;
         SaveLoadSystem.Save();
@@ -110,8 +112,7 @@ public class UpgradeController : MonoBehaviour
         {
             PlayerAIdatabase.instance.AllPlayerAIlist[i].CheckUpgrades();
         }
-        CameraFollow.instance.LookAtStuff(6);
-        StartCoroutine(CloseAndOpenUI());
+        
     }
     
     void Start()
@@ -212,7 +213,7 @@ public class UpgradeController : MonoBehaviour
             }
         }
 
-        if (MaxCapacityCost.Length < SaveLoadSystem.instance.HireStaffCapacity)
+        if (MaxCapacityCost.Length <= SaveLoadSystem.instance.HireStaffCapacity)
         {
             allUpgrades[1].text = "MAX";
 
@@ -223,7 +224,7 @@ public class UpgradeController : MonoBehaviour
             allUpgrades[1].text = "$" + MaxCapacityCost[SaveLoadSystem.instance.HireStaffCapacity];
         }
 
-        if (StuffMoveSpeedCost.Length < SaveLoadSystem.instance.HireStaffMoveSpeed)
+        if (StuffMoveSpeedCost.Length <= SaveLoadSystem.instance.HireStaffMoveSpeed)
         {
             allUpgrades[2].text = "MAX";
 

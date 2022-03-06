@@ -46,6 +46,8 @@ public class SceneData : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 30;
+        
         CheckUpgrades();
     }
 

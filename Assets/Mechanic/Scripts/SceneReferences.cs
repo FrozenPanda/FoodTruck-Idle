@@ -16,6 +16,8 @@ public class SceneReferences : MonoBehaviour
     public Transform moneyMoveCanvas;
     public Transform moneyTargetMoveImage;
     public GameObject moneyMoveImage;
+    public GameObject moneyMoveImage2;
+    public Vector3 moneyMoveImage2Target;
     public Text TotalMoneyText;
     public int CurrentMoneyAmount;
 

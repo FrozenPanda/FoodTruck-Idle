@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using MoreMountains.NiceVibrations;
 
 public class UpgradeController2 : MonoBehaviour
 {
@@ -39,10 +40,7 @@ public class UpgradeController2 : MonoBehaviour
         CheckMaxOrNot();
     }
 
-    private void CloseUIForShortAmountOftime(float _timer = 1f)
-    {
-        StartCoroutine(CloseAndEnableUI(_timer));
-    }
+    
 
     IEnumerator CloseAndEnableUI(float _timer)
     {
@@ -56,6 +54,11 @@ public class UpgradeController2 : MonoBehaviour
 
     private void CheckMaxOrNot()
     {
+        for (int i = 0; i < pressable.Length; i++)
+        {
+            pressable[i] = false;
+        }
+        
         if (characterCarryCapacityMoney.Length <= SaveLoadSystem.instance.upgrades2[0])
         {
             allUpgrades[0].text = "MAX";
@@ -193,9 +196,8 @@ public class UpgradeController2 : MonoBehaviour
             createDontEnoghMoneyText();
             return;
         }
-
-        PlayerUpgradeController.instance.InstantiatePrefabsOnPlayer(0);
-        CloseUIForShortAmountOftime();
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+        
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.upgrades2[0]++;
         SaveLoadSystem.Save();
@@ -218,8 +220,8 @@ public class UpgradeController2 : MonoBehaviour
             createDontEnoghMoneyText();
             return;
         }
-        PlayerUpgradeController.instance.InstantiatePrefabsOnPlayer(1);
-        CloseUIForShortAmountOftime();
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+        
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.upgrades2[1]++;
         SaveLoadSystem.Save();
@@ -242,8 +244,8 @@ public class UpgradeController2 : MonoBehaviour
             createDontEnoghMoneyText();
             return;
         }
-        CloseUIForShortAmountOftime(3);
-        PlayerUpgradeController.instance.InstantiatePrefabsOnLine();
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+        
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.upgrades2[2]++;
         SaveLoadSystem.Save();
@@ -271,9 +273,8 @@ public class UpgradeController2 : MonoBehaviour
             createDontEnoghMoneyText();
             return;
         }
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
         
-        PlayerUpgradeController.instance.InstantiatePrefabsOnPlayer(4);
-        CloseUIForShortAmountOftime();
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.upgrades2[3]++;
         SaveLoadSystem.Save();
@@ -318,10 +319,11 @@ public class UpgradeController2 : MonoBehaviour
         int requiredMoney = CustomerEatSpeedIncreaseMoney[SaveLoadSystem.instance.upgrades2[8]];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney )
         {
+            createDontEnoghMoneyText();
             return;
         }
-        CloseUIForShortAmountOftime();
-        PlayerUpgradeController.instance.InstantiatePrefabsOnPlayer(2);
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+       
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.upgrades2[8]++;
         SaveLoadSystem.Save();
@@ -341,10 +343,11 @@ public class UpgradeController2 : MonoBehaviour
         int requiredMoney = CustomerMoveSpeedIncreaseMoney[SaveLoadSystem.instance.upgrades2[9]];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney )
         {
+            createDontEnoghMoneyText();
             return;
         }
-        CloseUIForShortAmountOftime();
-        PlayerUpgradeController.instance.InstantiatePrefabsOnPlayer(3);
+        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+       
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.instance.upgrades2[9]++;
         SaveLoadSystem.Save();

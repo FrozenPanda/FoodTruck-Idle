@@ -15,37 +15,49 @@ public class MoneyMove : MonoBehaviour
     public GameObject nullImage;
     private GameObject go;
     public float movespeed;
+    private float lerpMove;
     private Vector3 screenPos;
     public RectTransform imageRectTransform;
-    public void setParametersAndMove(Transform _target , IUnlockable _unlockable , Transform _canvasTransform , Camera _camera)
+    public RectTransform moneyStartPlace;
+    private void Start()
     {
-        transform.localScale *= 0.8f;
+        transform.localScale = Vector3.zero;
+        _camera = Camera.main;
+    }
 
-        this._camera = _camera;
-        moveAble = true;
-        this._unlockable = _unlockable;
-        this.target = _target;
-        canvasTransform = _canvasTransform;
+    public void setParametersAndMove(Transform _target)
+    {
+        transform.localScale = Vector3.one * 0.8f;
+        //transform.localScale *= 0.8f;
+        transform.position = moneyStartPlace.position;
         
+        moveAble = true;
+        
+       //canvasTransform = _canvasTransform;
+        lerpMove = 0f;
         //go = Instantiate(nullImage, canvasTransform);
-        screenPos = this._camera.WorldToScreenPoint(target.position);
+        screenPos = _camera.WorldToScreenPoint(_target.position);
         //go.GetComponent<Image>().rectTransform.position = screenPos;
-        float rnd = 50f;
-        transform.position += new Vector3(Random.Range(-rnd, rnd), Random.Range(-rnd, rnd), Random.Range(-rnd, rnd));
+         float rnd = 100f;
+        transform.position += new Vector3(Random.Range(-rnd, rnd), Random.Range(-rnd, rnd), 0f);
     }
 
     private void Update()
     {
-        
+        if (!moveAble)
+        {
+            return;
+        }
         /*Vector3 screenPos = _camera.WorldToScreenPoint(target.position);
         go.GetComponent<Image>().rectTransform.position = screenPos;*/
-        
-        transform.position = Vector3.MoveTowards(transform.position , screenPos , movespeed * Time.deltaTime);
+        lerpMove += Time.deltaTime*2f;
+        transform.position = Vector3.Lerp(transform.position , screenPos , lerpMove);
 
-        if (Vector3.Distance(transform.position , screenPos) < 0.1f)
+        if (lerpMove > 1f)
         {
-            this._unlockable.moneyReached();
-            Destroy(gameObject);
+            //this._unlockable.moneyReached();
+            moveAble = false;
+            transform.localScale = Vector3.zero;
         }
     }
 }

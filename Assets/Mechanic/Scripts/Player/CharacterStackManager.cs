@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MoreMountains.NiceVibrations;
 
 public class CharacterStackManager : MonoBehaviour
 {
@@ -120,6 +121,11 @@ public class CharacterStackManager : MonoBehaviour
                     if (currentStack < totalStack + 1)
                     {
                         _stackable.giveOnetoPlayer(this, currentStack , StackPlaces[currentStack]);
+
+                        if (RealPlayer)
+                        {
+                            MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+                        }
                         //currentStack++;
                         carryingBool = true;
                     }
@@ -160,10 +166,12 @@ public class CharacterStackManager : MonoBehaviour
 
                             if (RealPlayer)
                             {
-                                if (PlayerAIMove.instance)
+                                for (int i = 0; i < PlayerAIdatabase.instance.AllPlayerAIlist.Count; i++)
                                 {
-                                    PlayerAIMove.instance.CheckIfOrderStillNeed();
+                                    PlayerAIdatabase.instance.AllPlayerAIlist[i].CheckIfOrderStillNeed();
                                 }
+                                
+                                MMVibrationManager.Haptic (HapticTypes.MediumImpact);
                             }
                         }
                     }
@@ -253,6 +261,10 @@ public class CharacterStackManager : MonoBehaviour
                     _moveAbleMeal.StartMove(mealTarget, MoveAbleMeal.moveEvent.ToTable);
                     _dropable.MealGiven();
                     ReorderArray();
+                    if (RealPlayer)
+                    {
+                        MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+                    }
                     break;
                 }
                 else

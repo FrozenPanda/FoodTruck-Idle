@@ -29,6 +29,8 @@ public class CharacterMover : MonoBehaviour
             JoystickRotate(_joystick.Horizontal , _joystick.Vertical , transform );
             _animationController.playAnim(1 , Mathf.Pow(Mathf.Pow(_joystick.Horizontal,2)+ Mathf.Pow(_joystick.Vertical,2) ,0.5f ) * moveSpeed);
             _isMoving = true;
+            
+            RayForGround();
         }
         else
         {
@@ -38,7 +40,7 @@ public class CharacterMover : MonoBehaviour
         
         Debug.DrawRay(transform.position + transform.forward / 2f + Vector3.up *2f , Vector3.down *3f , Color.blue);
         
-        RayForGround();
+        
     }
 
     private RaycastHit Hit;

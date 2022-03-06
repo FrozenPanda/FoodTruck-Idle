@@ -17,7 +17,7 @@ public class MoneyCollectPlaces : MonoBehaviour
     public List<MoneyStackable> currentFillPlaces = new List<MoneyStackable>();
 
     private float timer;
-
+    private float vibratorTime = 0.1f;
     public GameObject CloseForTutorial;
 
     private void Start()
@@ -58,13 +58,24 @@ public class MoneyCollectPlaces : MonoBehaviour
                     return;
                 }
                 
+                if (vibratorTime > 0f)
+                {
+                    vibratorTime -= Time.deltaTime;
+                }
+                else
+                {
+                    MMVibrationManager.Haptic (HapticTypes.MediumImpact);
+                    vibratorTime = 0.1f;
+                }
+                
                 if (timer > 0f)
                 {
                     timer -= Time.deltaTime;
                 }
                 else
                 {
-                    MMVibrationManager.Haptic (HapticTypes.Success);
+                    
+                    
                     CreateCoinImage(currentFillPlaces[currentFillPlaces.Count - 1].transform);
                     Destroy(currentFillPlaces[currentFillPlaces.Count - 1].gameObject);
                     currentFillPlaces.RemoveAt(currentFillPlaces.Count - 1);

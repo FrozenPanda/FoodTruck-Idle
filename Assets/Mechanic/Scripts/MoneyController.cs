@@ -22,15 +22,25 @@ public class MoneyController : MonoBehaviour
     private void Start()
     {
         _camera = Camera.main;
+        
+        
     }
 
-    public void CreateMoneyToUnlock(Transform targetPoint , IUnlockable _unlockable  )
+    public List<MoneyMove> allMoneyMove = new List<MoneyMove>();
+    private int currentMoneyMove = 0;
+    public void CreateMoneyToUnlock(Transform targetPoint)
     {
-        GameObject go = Instantiate(moneyToDrop,
-            MoneyStartPos(),
-            Quaternion.identity,
-            moneyMoveCanvas);
-        go.GetComponent<MoneyMove>().setParametersAndMove(targetPoint , _unlockable , moneyMoveCanvas, _camera);
+        allMoneyMove[currentMoneyMove].setParametersAndMove(targetPoint );
+        
+        if (currentMoneyMove < allMoneyMove.Count - 1)
+        {
+            currentMoneyMove++;
+        }
+        else
+        {
+            currentMoneyMove = 0;
+        }
+        
     }
 
     private Vector3 MoneyStartPos()
