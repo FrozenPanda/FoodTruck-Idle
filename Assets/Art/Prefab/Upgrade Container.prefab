@@ -227,6 +227,10 @@ PrefabInstance:
       value: UpgradeController2
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: clickImage
+      value: 
+      objectReference: {fileID: 516848617563198932}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: VIPtipsMoney.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -553,6 +557,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &516848617563198932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 525811660323166914, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+  m_PrefabInstance: {fileID: 27085365627293462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3761131627100241470
 PrefabInstance:
   m_ObjectHideFlags: 0
