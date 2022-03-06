@@ -2858,7 +2858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606416809396463372, guid: ba2aecfb840631342a7411cdecd10599, type: 3}
       propertyPath: moneyToUnlock
-      value: 8000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 5606416809396463375, guid: ba2aecfb840631342a7411cdecd10599, type: 3}
       propertyPath: m_Name
