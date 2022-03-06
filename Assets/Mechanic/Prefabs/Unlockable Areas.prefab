@@ -2303,7 +2303,7 @@ PrefabInstance:
       objectReference: {fileID: 8878513813270144990}
     - target: {fileID: 6032169986385142758, guid: 469bffcfb3ca27745ab081afa30ed812, type: 3}
       propertyPath: moneyToUnlock
-      value: 500
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 6032169986385142759, guid: 469bffcfb3ca27745ab081afa30ed812, type: 3}
       propertyPath: m_Size.x
@@ -2858,7 +2858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606416809396463372, guid: ba2aecfb840631342a7411cdecd10599, type: 3}
       propertyPath: moneyToUnlock
-      value: 1500
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 5606416809396463375, guid: ba2aecfb840631342a7411cdecd10599, type: 3}
       propertyPath: m_Name
