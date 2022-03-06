@@ -5798,11 +5798,6 @@ Transform:
   m_Father: {fileID: 837056119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &737955903 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7554261204247681981, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
-  m_PrefabInstance: {fileID: 7554261205744518729}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &740069524 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8275232033985014979, guid: a39271f7773064ba1aa51c16df5bfed2, type: 3}
@@ -22934,18 +22929,6 @@ PrefabInstance:
     - target: {fileID: 3134971227497434734, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
       propertyPath: m_Name
       value: KFC Area
-      objectReference: {fileID: 0}
-    - target: {fileID: 4040689700993053671, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
-      propertyPath: realTable
-      value: 
-      objectReference: {fileID: 737955903}
-    - target: {fileID: 4478460406234052280, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
-      propertyPath: MaxQueuPerUpgrade.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4478460406234052280, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
-      propertyPath: MaxQueuPerUpgrade.Array.data[5]
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7554261204247681981, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
       propertyPath: m_IsActive
