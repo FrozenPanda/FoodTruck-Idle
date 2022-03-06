@@ -43,7 +43,7 @@ public class UpgradeController : MonoBehaviour
         
         MMVibrationManager.Haptic (HapticTypes.MediumImpact);
         PlayerAIdatabase.instance.AllPlayerAIlist[SaveLoadSystem.instance.HireStaffUpgrades].EnableAI();
-        UpgradeCanvas.SetActive(false);
+        
         SaveLoadSystem.instance.HireStaffUpgrades++;
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.Save();
@@ -161,7 +161,7 @@ public class UpgradeController : MonoBehaviour
             {
                 if (SaveLoadSystem.instance.TableUnlock[5] == -1)
                 {
-                    allUpgrades[0].text = "NotUnlockedYet";
+                    allUpgrades[0].text = "LOCKED";
                     
                     pressable[0] = true;
                 }
@@ -177,7 +177,7 @@ public class UpgradeController : MonoBehaviour
             {
                 if (SaveLoadSystem.instance.TableUnlock[18] == -1)
                 {
-                    allUpgrades[0].text = "NotUnlockedYet";
+                    allUpgrades[0].text = "LOCKED";
                     
                     pressable[0] = true;
                 }
@@ -193,7 +193,7 @@ public class UpgradeController : MonoBehaviour
             {
                 if (SaveLoadSystem.instance.TableUnlock[19] == -1)
                 {
-                    allUpgrades[0].text = "NotUnlockedYet";
+                    allUpgrades[0].text = "LOCKED";
                     
                     pressable[0] = true;
                 }

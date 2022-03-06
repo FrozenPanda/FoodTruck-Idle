@@ -110,7 +110,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
                     moneyReached();
                     _moneyController.CreateMoneyToUnlock(transform);
                     _moneyController.CreateMoneyToUnlock(transform);
-                    _moneyController.CreateMoneyToUnlock(transform);
+                    
                     //CreateCoinImage();
                     _playerMoneyData.TotalMoney -= moneyValue;
                     
