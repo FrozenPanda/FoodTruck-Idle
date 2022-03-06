@@ -77,7 +77,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeCanvas: {fileID: 4606235544919262147}
+  notEnoughMoneyText: {fileID: 0}
   HotDogAI: {fileID: 0}
+  allUpgrades: []
+  pressable: 000000
+  HireStuffCosts: 
+  MaxCapacityCost: 
+  StuffMoveSpeedCost: 
 --- !u!1001 &707551569772711626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -188,6 +194,10 @@ PrefabInstance:
     - target: {fileID: 3908307220888177933, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813890830528202769, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}
+      propertyPath: m_fontSize
+      value: 59.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c74d1f0e3b05342adf2a5e06316222, type: 3}

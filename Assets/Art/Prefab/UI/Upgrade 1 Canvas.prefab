@@ -110,6 +110,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3908307220888177933}
     m_Modifications:
+    - target: {fileID: 7390985734089893836, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
+      propertyPath: m_fontSize
+      value: 59.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7517311413593114093, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_Name
       value: HireUpgrade
@@ -212,13 +216,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3908307220888177933}
     m_Modifications:
+    - target: {fileID: 5690004678821862236, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7390985734089893836, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_text
-      value: HOTDOG STAFF
+      value: HIRE STAFF
       objectReference: {fileID: 0}
     - target: {fileID: 7390985734089893836, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_fontSize
-      value: 65.85
+      value: 71.3
       objectReference: {fileID: 0}
     - target: {fileID: 7517311413593114093, guid: f5eb0e814c5c4ab49a323d6f956dea88, type: 3}
       propertyPath: m_Name
