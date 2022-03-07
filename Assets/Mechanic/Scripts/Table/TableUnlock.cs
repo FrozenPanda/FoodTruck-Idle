@@ -44,14 +44,21 @@ public class TableUnlock : MonoBehaviour , IUnlockable
         _playerMoneyData = PlayerMoneyData.instance;
         
 
-        MoneyNeedText.text = "$" + moneyToUnlock;
-
         if (SaveLoadSystem.instance.TableUnlock[tableID] == 1)
         {
             realTable.SetActive(true);
             GetComponent<BoxCollider>().enabled = false;
             MoneyNeedUI.SetActive(false);
         }
+        else
+        {
+            if (SaveLoadSystem.instance.TableUnlockRemainMoney[tableID] > 0)
+            {
+                moneyToUnlock -= SaveLoadSystem.instance.TableUnlockRemainMoney[tableID];
+            }
+        }
+        
+        MoneyNeedText.text = "$" + moneyToUnlock;
 
         if (moneyToUnlock > 900)
         {
@@ -142,7 +149,9 @@ public class TableUnlock : MonoBehaviour , IUnlockable
         int x = moneyToUnlock - currentMoneyTaken;
         MoneyNeedText.text = "$" + x;
         moneyTextUpdateTimer = 0.5f;
-       
+        SaveLoadSystem.Load();
+        SaveLoadSystem.instance.TableUnlockRemainMoney[tableID] = currentMoneyTaken;
+        SaveLoadSystem.Save();
     }
     
     private void CreateCoinImage()

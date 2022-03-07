@@ -25,7 +25,7 @@ public class PlayerMoneyData : MonoBehaviour
             _totalMoney = value;
             totalMoney.text = _totalMoney.ToString();
             SaveLoadSystem.instance.TotalMoney = _totalMoney;
-            //SaveLoadSystem.Save();
+            SaveLoadSystem.Save();
         }
     }
 
