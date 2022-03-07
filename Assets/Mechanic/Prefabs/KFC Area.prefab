@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableID: 19
-  moneyToUnlock: 2500
+  moneyToUnlock: 10000
   realTable: {fileID: 7554261204247681981}
   MoneyNeedUI: {fileID: 5108900865735832041}
   MoneyNeedText: {fileID: 6628188072268307922}
@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7053380031580196311, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7053380031640975610, guid: 649047cf094e5d2429823eeec5cf923f, type: 3}
       propertyPath: m_LocalPosition.y

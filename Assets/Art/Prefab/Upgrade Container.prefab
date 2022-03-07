@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: characterCarryCapacityMoney.Array.data[0]
-      value: 150
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: characterCarryCapacityMoney.Array.data[1]
@@ -280,23 +280,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: characterCarryCapacityMoney.Array.data[3]
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
-      propertyPath: characterCarryCapacityMoney.Array.data[4]
       value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
+      propertyPath: characterCarryCapacityMoney.Array.data[4]
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: characterCarryCapacityMoney.Array.data[5]
-      value: 3500
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: characterCarryCapacityMoney.Array.data[6]
-      value: 4500
+      value: 6000
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: characterCarryCapacityMoney.Array.data[7]
-      value: 6000
+      value: 8000
       objectReference: {fileID: 0}
     - target: {fileID: 27085365656117326, guid: d3379fa35ba3cba42a094b78c01710d2, type: 3}
       propertyPath: CustomerEatSpeedIncreaseMoney.Array.data[0]

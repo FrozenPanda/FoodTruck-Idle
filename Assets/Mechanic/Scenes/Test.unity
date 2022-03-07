@@ -19290,14 +19290,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unlockable Areas
       objectReference: {fileID: 0}
-    - target: {fileID: 4798361470318945333, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: moneyToUnlock
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4798361471727911698, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6102367980554552419, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -19341,10 +19333,6 @@ PrefabInstance:
     - target: {fileID: 6102367980554552419, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7839074677391074439, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
-      propertyPath: moneyToUnlock
-      value: 3000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
@@ -21505,10 +21493,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 39382872, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
-      propertyPath: characterCarryCapacityMoney.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3647678476441037371, guid: 9b0df7efec04ec642b0a702215cd0e94, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -21703,6 +21687,98 @@ PrefabInstance:
       propertyPath: allPlayerAI.Array.data[0]
       value: 
       objectReference: {fileID: 1961385375285595908}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[1]
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[2]
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[3]
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[4]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[5]
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: stuffMoveSpeed.Array.data[6]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[0]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[1]
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[2]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[3]
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[4]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[5]
+      value: 5.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[6]
+      value: 5.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[7]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[8]
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[9]
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: tableEatTimePerUpgrade.Array.data[10]
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: customerMoveSpeedPerUpgrade.Array.data[0]
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: customerMoveSpeedPerUpgrade.Array.data[1]
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: customerMoveSpeedPerUpgrade.Array.data[2]
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: customerMoveSpeedPerUpgrade.Array.data[3]
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: customerMoveSpeedPerUpgrade.Array.data[4]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 597318777, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
+      propertyPath: customerMoveSpeedPerUpgrade.Array.data[5]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4130981878334747745, guid: 9cf9c58cf0af5a943b2b06676b981e04, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -22941,14 +23017,6 @@ PrefabInstance:
     - target: {fileID: 3134971227497434734, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
       propertyPath: m_Name
       value: KFC Area
-      objectReference: {fileID: 0}
-    - target: {fileID: 4040689700993053671, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
-      propertyPath: moneyToUnlock
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7554261204247681981, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
