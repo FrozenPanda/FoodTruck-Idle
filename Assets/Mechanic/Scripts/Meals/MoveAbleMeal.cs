@@ -18,7 +18,8 @@ public class MoveAbleMeal : MonoBehaviour
         Hotdog,
         Pizza,
         Hamburger,
-        KFC
+        KFC,
+        SupplyBox
     }
 
     public MealType _mealType;

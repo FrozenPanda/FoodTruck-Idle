@@ -112,7 +112,7 @@ public class CharacterStackManager : MonoBehaviour
                 
                 if (collectTimer > 0f)
                 {
-                    collectTimer -= Time.deltaTime;
+                    collectTimer -= Time.deltaTime * CollectSpeedMultiply;
                     SetCanvasFillBar(collectTimer);
                 }
                 else
@@ -191,6 +191,7 @@ public class CharacterStackManager : MonoBehaviour
     private Transform IStackTransform;
     private Transform IdropTransform;
     private Vector3 colliderHitPoint;
+    private float CollectSpeedMultiply;
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<IStackable>() != null)
@@ -200,11 +201,14 @@ public class CharacterStackManager : MonoBehaviour
             collectTimer = defaultHotDogTime;
             _stackEvent = StackEvent.Collecting;
             Debug.Log("Stackable var" + other.transform.name);
-            
+            CollectSpeedMultiply = _stackable.CollectTimeMultiply();
             IStackTransform = _stackable.sayMyTransform();
             hotDogTakeCanvas.SetActive(true);
 
-            FillBarInside[_stackable.MealIndex()].SetActive(true);
+            if (_stackable.MealIndex() != 4)
+            {
+                FillBarInside[_stackable.MealIndex()].SetActive(true);
+            }
         }
 
         if (other.GetComponent<IDropable>() != null)

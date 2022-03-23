@@ -9,4 +9,6 @@ public interface IStackable
     public Transform sayMyTransform();
 
     public int MealIndex();
+
+    public float CollectTimeMultiply();
 }

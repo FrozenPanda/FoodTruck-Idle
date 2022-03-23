@@ -16,11 +16,14 @@ public class HotDogCreator : MonoBehaviour , IStackable
     private float hotDogCookTimer;
 
     public MoveAbleMeal.MealType _mealType;
+
+    public float collectSpeedMultiply = 1f;
+    
     void Update()
     {
         if (hotDogCookTimer > 0f)
         {
-            hotDogCookTimer -= Time.deltaTime;
+            hotDogCookTimer -= Time.deltaTime * collectSpeedMultiply;
         }
         else
         {
@@ -108,8 +111,16 @@ public class HotDogCreator : MonoBehaviour , IStackable
             case MoveAbleMeal.MealType.KFC:
                 return 3;
             break;
+            case MoveAbleMeal.MealType.SupplyBox:
+                return 4;
+            break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    public float CollectTimeMultiply()
+    {
+        return collectSpeedMultiply;
     }
 }
