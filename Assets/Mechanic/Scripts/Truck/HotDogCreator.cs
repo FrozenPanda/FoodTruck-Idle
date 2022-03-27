@@ -18,6 +18,9 @@ public class HotDogCreator : MonoBehaviour , IStackable
     public MoveAbleMeal.MealType _mealType;
 
     public float collectSpeedMultiply = 1f;
+    public SupplyBoxContainer _supplyBoxContainer;
+    public int perBoxMealCount;
+    private int currentMealCount;
     
     void Update()
     {
@@ -51,6 +54,14 @@ public class HotDogCreator : MonoBehaviour , IStackable
     private int currentPlace;
     private Transform CheckForEmptySpace()
     {
+        if (_supplyBoxContainer)
+        {
+            if (!_supplyBoxContainer.IsThereBox())
+            {
+                return null;
+            }
+        }
+        
         bool empty = false;
 
         for (int i = 0; i < HotDogPlaceInfo.Count; i++)
@@ -59,11 +70,34 @@ public class HotDogCreator : MonoBehaviour , IStackable
             {
                 HotDogPlaceInfo[i] = 1;
                 currentPlace = i;
+                currentMealCount++;
+                if (_supplyBoxContainer)
+                {
+                    if (currentMealCount >= perBoxMealCount)
+                    {
+                        Debug.Log("Box Deleted");
+                        _supplyBoxContainer.DeleteOneBox();
+                        currentMealCount = 0;
+                    }
+                }
                 return HotDogPlaces[i];
             }
         }
 
         return null;
+    }
+
+    public bool IsThereMealAvaible()
+    {
+        for (int i = 0; i < HotDogPlaceInfo.Count; i++)
+        {
+            if (HotDogPlaceInfo[i] == 1)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void giveOnetoPlayer(CharacterStackManager _characterStackManager , int currentStack , Transform target)

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MoneyDrop
   - CollectPlace
+  - SupplyBoxContainer
   layers:
   - Default
   - TransparentFX

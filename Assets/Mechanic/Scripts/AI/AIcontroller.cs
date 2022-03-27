@@ -59,7 +59,7 @@ public class AIcontroller : MonoBehaviour
 
     public void SendAItoFinish()
     {
-        Debug.Log("SendAItoFinish");
+//        Debug.Log("SendAItoFinish");
         
         _aIpathFollower.SetPathAndMove(exitPath , false);
 
@@ -104,7 +104,7 @@ public class AIcontroller : MonoBehaviour
 
     public void AIfinished()
     {
-        Debug.Log("AI destroyed");
+//        Debug.Log("AI destroyed");
         Destroy(gameObject);
     }
 

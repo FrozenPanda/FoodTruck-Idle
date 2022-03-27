@@ -17,6 +17,6 @@ public interface ICreatableAI
     public int GetBotIndex();
 
     public HotDogQueuManager sendMeHotDogQueuManagerData();
-    
-    
+
+    public bool IsThereAnyMeal();
 }

@@ -43,13 +43,15 @@ public class CharacterStackManager : MonoBehaviour
         _characterMover = GetComponent<CharacterMover>();
         SaveLoadSystem.Load();
         CheckUpgrade();
+        SupplyBoxGivingTimerDefault = SupplyBoxGiving;
     }
 
     public enum StackEvent
     {
         Idle,
         Collecting,
-        Giving
+        Giving,
+        SupplyBoxGiving
     }
 
     public StackEvent _stackEvent;
@@ -82,7 +84,7 @@ public class CharacterStackManager : MonoBehaviour
                     hotDogTakeCanvas.SetActive(false);
                 }
 
-                if (_characterMover.isMoving)
+                if (_characterMover.isMoving && _stackable != null && _stackable.MealIndex() != 4)
                 {
                     collectTimer = defaultHotDogTime;
                     hotDogTakeCanvas.SetActive(false);
@@ -90,12 +92,16 @@ public class CharacterStackManager : MonoBehaviour
                 }
                 else
                 {
-                    hotDogTakeCanvas.SetActive(true);
+                    if (_stackable!= null)
+                    {
+                        if (_stackable.MealIndex() != 4)
+                            hotDogTakeCanvas.SetActive(true);
+                    }
                 }
 
                 if (currentStack >= totalStack)
                 {
-                    Debug.Log("Idle a döndü");
+//                    Debug.Log("Idle a döndü");
                     if (RealPlayer)
                     {
                         if (CapacityFullTimer <= 0f)
@@ -178,6 +184,26 @@ public class CharacterStackManager : MonoBehaviour
                 }
                 
                 break;
+            
+            case StackEvent.SupplyBoxGiving:
+
+                if (Vector3.Distance(SupplyBoxGivingPlace , transform.position ) > 2f)
+                {
+                    _stackEvent = StackEvent.Idle;
+                }
+                
+                if (SupplyBoxGiving > 0f)
+                {
+                    SupplyBoxGiving -= Time.deltaTime;
+                }
+                else
+                {
+                    mealGiven(_currentSupplyBoxContainer.EmptyPlace(), MoveAbleMeal.MealType.SupplyBox);
+                    SupplyBoxGiving = SupplyBoxGivingTimerDefault;
+                }
+                
+                break;
+                
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -192,6 +218,7 @@ public class CharacterStackManager : MonoBehaviour
     private Transform IdropTransform;
     private Vector3 colliderHitPoint;
     private float CollectSpeedMultiply;
+    private Vector3 SupplyBoxGivingPlace;
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<IStackable>() != null)
@@ -203,11 +230,12 @@ public class CharacterStackManager : MonoBehaviour
             Debug.Log("Stackable var" + other.transform.name);
             CollectSpeedMultiply = _stackable.CollectTimeMultiply();
             IStackTransform = _stackable.sayMyTransform();
-            hotDogTakeCanvas.SetActive(true);
+            
 
             if (_stackable.MealIndex() != 4)
             {
                 FillBarInside[_stackable.MealIndex()].SetActive(true);
+                hotDogTakeCanvas.SetActive(true);
             }
         }
 
@@ -217,6 +245,13 @@ public class CharacterStackManager : MonoBehaviour
             _stackEvent = StackEvent.Giving;
             IdropTransform = _dropable.sayMyTransform();
             Debug.Log("Droppable var");
+        }
+
+        if (other.tag == "SupplyBoxContainer")
+        {
+            _currentSupplyBoxContainer = other.GetComponent<SupplyBoxContainer>();
+            StartGivingSupplyBox();
+            SupplyBoxGivingPlace = transform.position;
         }
     }
 
@@ -233,6 +268,15 @@ public class CharacterStackManager : MonoBehaviour
         }
     }
 
+    public float SupplyBoxGiving;
+    private float SupplyBoxGivingTimerDefault;
+    private SupplyBoxContainer _currentSupplyBoxContainer;
+    
+    private void StartGivingSupplyBox()
+    {
+        _stackEvent = StackEvent.SupplyBoxGiving;
+    }
+
     private void CloseAllFillBar()
     {
         for (int i = 0; i < FillBarInside.Length; i++)
@@ -245,6 +289,40 @@ public class CharacterStackManager : MonoBehaviour
     public void mealTaken(int index , MoveAbleMeal _moveAbleMeal)
     {
         stackMeals[index] = _moveAbleMeal;
+    }
+
+    private void mealGiven(Transform target ,MoveAbleMeal.MealType _mealType )
+    {
+        MoveAbleMeal _moveAbleMeal;
+
+        for (int i = stackMeals.Count - 1; i > -1 ; i--)
+        {
+            if (stackMeals[i] != null)
+            {
+                if (stackMeals[i]._mealType == _mealType)
+                {
+                    
+                    _moveAbleMeal = stackMeals[i];
+                    
+                    stackMeals[i] = null;
+                    currentStack--;
+                    _moveAbleMeal.StartMove(target, MoveAbleMeal.moveEvent.ToSupplyContainer , false , _currentSupplyBoxContainer);
+                    _currentSupplyBoxContainer.BoxCount++;
+                    ReorderArray();
+                    
+                    break;
+                }
+                else
+                {
+                    Debug.Log("This is not true meal");
+                }
+            }
+        }
+        
+        if (currentStack == 0)
+        {
+            carryingBool = false;
+        }
     }
 
     public void mealGiven(Transform mealTarget , MoveAbleMeal.MealType _mealType , IDropable _dropable)

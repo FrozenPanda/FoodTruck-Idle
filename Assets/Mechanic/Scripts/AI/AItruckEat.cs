@@ -114,9 +114,14 @@ public class AItruckEat : MonoBehaviour
     {
         if (currentQueuIndex == 0)
         {
-            _aItruckEatEvents = AItruckEatEvents.Eating;
-            hotDogTakeCanvas.SetActive(true);
             GetComponent<AIanimController>().playAnimWithName("Idle");
+            
+            if (_creatableAI.IsThereAnyMeal())
+            {
+                _aItruckEatEvents = AItruckEatEvents.Eating;
+                hotDogTakeCanvas.SetActive(true);
+                
+            }
         }
         else
         {

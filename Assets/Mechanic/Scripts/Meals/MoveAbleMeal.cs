@@ -30,6 +30,7 @@ public class MoveAbleMeal : MonoBehaviour
         ToCookPlace,
         ToPlayer,
         ToTable,
+        ToSupplyContainer,
         End
     }
 
@@ -39,15 +40,19 @@ public class MoveAbleMeal : MonoBehaviour
     public Transform realHotDog;
     public float upDownPower;
     public float MoveSpeed;
-
-    public void StartMove(Transform _parent , moveEvent _event , bool makeUpDownSpeedZero = false)
+    private Quaternion defRot;
+    public void StartMove(Transform _parent , moveEvent _event , bool makeUpDownSpeedZero = false , SupplyBoxContainer _supplyBoxContainer = null)
     {
         transform.parent = _parent;
         targetPos = _parent.position;
         defaultPos = transform.localPosition;
         MoveTimer = 0f;
         this._moveEvent = _event;
-
+        defRot = transform.rotation;
+        if (_supplyBoxContainer)
+        {
+            _supplyBoxContainer.Boxes.Add(gameObject);
+        }
         if (makeUpDownSpeedZero)
         {
             upDownPower = 0f;
@@ -63,7 +68,7 @@ public class MoveAbleMeal : MonoBehaviour
             MoveTimer += Time.deltaTime * MoveSpeed;
             transform.localPosition = Vector3.Lerp(defaultPos , Vector3.zero , MoveTimer );
             realHotDog.transform.localPosition = new Vector3(0f, _animationCurve.Evaluate(MoveTimer) * upDownPower, 0f);
-            
+            transform.rotation = Quaternion.Lerp(defRot , transform.parent.rotation , MoveTimer);
             if (MoveTimer > 1f)
             {
                 MoveAble = false;
@@ -85,6 +90,8 @@ public class MoveAbleMeal : MonoBehaviour
             case moveEvent.ToTable:
                 break;
             case moveEvent.End:
+                break;
+            case moveEvent.ToSupplyContainer:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

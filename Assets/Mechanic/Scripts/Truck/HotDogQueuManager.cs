@@ -18,6 +18,7 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
     public MoneyCollectPlaces _moneyCollectPlaces;
 
     public MoveAbleMeal.MealType _mealType;
+    public HotDogCreator _hotDogCreator;
     
     private void Awake()
     {
@@ -38,6 +39,11 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
     public HotDogQueuManager sendMeHotDogQueuManagerData()
     {
         return this;
+    }
+
+    public bool IsThereAnyMeal()
+    {
+        return _hotDogCreator.IsThereMealAvaible();
     }
 
     public void NextOne()

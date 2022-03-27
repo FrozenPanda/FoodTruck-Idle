@@ -68,4 +68,9 @@ public class SeatData : MonoBehaviour , ICreatableAI
     {
         return null;
     }
+
+    public bool IsThereAnyMeal()
+    {
+        return false;
+    }
 }
