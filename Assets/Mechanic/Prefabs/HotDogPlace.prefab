@@ -1315,6 +1315,7 @@ Transform:
   - {fileID: 1025728758549242674}
   - {fileID: 4956816976883105579}
   - {fileID: 2324459701649046902}
+  - {fileID: 3569333483069058425}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1422,6 +1423,9 @@ MonoBehaviour:
   - {fileID: 0}
   HotDog: {fileID: 9009143162714502517, guid: c65a19bb796ea5a4cbe7e2fcbe354b39, type: 3}
   _mealType: 0
+  collectSpeedMultiply: 1
+  _supplyBoxContainer: {fileID: 0}
+  perBoxMealCount: 1
 --- !u!1 &6331908250050652300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1521,68 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1010923309994335039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2324459701664925587}
+    m_Modifications:
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.237
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0030593334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015355, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_Name
+      value: SupplyBoxContainer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+--- !u!4 &3569333483069058425 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+  m_PrefabInstance: {fileID: 1010923309994335039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1268632550780598414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1789,6 +1855,18 @@ PrefabInstance:
     - target: {fileID: 6264665995798896446, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
       propertyPath: m_Name
       value: HotDogQueuManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896447, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: _hotDogCreator
+      value: 
+      objectReference: {fileID: 2324459701664925591}
+    - target: {fileID: 6264665995798896447, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: MaxQueuPerUpgrade.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264665995798896447, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
+      propertyPath: MaxQueuPerUpgrade.Array.data[5]
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7164547041359128232, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
       propertyPath: width

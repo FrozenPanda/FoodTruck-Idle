@@ -155,8 +155,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   realHotDog: {fileID: 464389806473316466}
-  upDownPower: 4
-  MoveSpeed: 5
+  upDownPower: 1
+  MoveSpeed: 2.2
 --- !u!1001 &142814933746904985
 PrefabInstance:
   m_ObjectHideFlags: 0
