@@ -75,12 +75,11 @@ public class CharacterStackManager : MonoBehaviour
                     return;
                 }
                 
-                if(Vector3.Distance(transform.position , colliderHitPoint) > 1f)
+                if(Vector3.Distance(transform.position , colliderHitPoint) > 1f && _stackable.MealIndex() != 4)
                 {
                     _stackable = null;
                     IStackTransform = null;
                     _stackEvent = StackEvent.Idle;
-                    
                     hotDogTakeCanvas.SetActive(false);
                 }
 

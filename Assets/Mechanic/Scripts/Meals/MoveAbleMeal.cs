@@ -41,9 +41,11 @@ public class MoveAbleMeal : MonoBehaviour
     public float upDownPower;
     public float MoveSpeed;
     private Quaternion defRot;
+    private Transform parantingOBJ;
     public void StartMove(Transform _parent , moveEvent _event , bool makeUpDownSpeedZero = false , SupplyBoxContainer _supplyBoxContainer = null)
     {
-        transform.parent = _parent;
+        transform.parent = null;
+        parantingOBJ = _parent;
         targetPos = _parent.position;
         defaultPos = transform.localPosition;
         MoveTimer = 0f;
@@ -66,9 +68,9 @@ public class MoveAbleMeal : MonoBehaviour
         if (MoveAble)
         {
             MoveTimer += Time.deltaTime * MoveSpeed;
-            transform.localPosition = Vector3.Lerp(defaultPos , Vector3.zero , MoveTimer );
+            transform.position = Vector3.Lerp(defaultPos , parantingOBJ.position , MoveTimer );
             realHotDog.transform.localPosition = new Vector3(0f, _animationCurve.Evaluate(MoveTimer) * upDownPower, 0f);
-            transform.rotation = Quaternion.Lerp(defRot , transform.parent.rotation , MoveTimer);
+            transform.rotation = Quaternion.Lerp(defRot , parantingOBJ.rotation , MoveTimer);
             if (MoveTimer > 1f)
             {
                 MoveAble = false;
@@ -79,6 +81,8 @@ public class MoveAbleMeal : MonoBehaviour
 
     private void MoveEnd()
     {
+        transform.parent = parantingOBJ;
+        
         switch (_moveEvent)
         {
             case moveEvent.Idle:
