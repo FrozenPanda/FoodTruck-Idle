@@ -146,6 +146,7 @@ Transform:
   - {fileID: 5210788772335974961}
   - {fileID: 8058036554750944216}
   - {fileID: 1645104933343206188}
+  - {fileID: 2489946212660757451}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -253,6 +254,9 @@ MonoBehaviour:
   - {fileID: 0}
   HotDog: {fileID: 9009143162714502517, guid: f89fe6b257d28294daf9685d6fd3c682, type: 3}
   _mealType: 2
+  collectSpeedMultiply: 1
+  _supplyBoxContainer: {fileID: 2489946212660757495}
+  perBoxMealCount: 0
 --- !u!1 &3231462237025804628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,6 +1694,79 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6147748096835602341, guid: a7d9f758ba29ccf4eaa62cea452b7ac0, type: 3}
   m_PrefabInstance: {fileID: 2090022713569951124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2090026898080642445
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3231462236662858377}
+    m_Modifications:
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.522
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0030593334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579972257818015355, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+      propertyPath: m_Name
+      value: SupplyBoxContainer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+--- !u!114 &2489946212660757495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4579972257818015354, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+  m_PrefabInstance: {fileID: 2090026898080642445}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6ec9ffa6eaa354198de8a644bc4a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2489946212660757451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4579972257818015302, guid: 484ec9b906000a24281c608a036969a8, type: 3}
+  m_PrefabInstance: {fileID: 2090026898080642445}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4621826473092039696
 PrefabInstance:

@@ -25258,6 +25258,7 @@ MonoBehaviour:
   - {fileID: 4665126677987791520}
   - {fileID: 4570807235572113921}
   currentFillPlaces: []
+  CloseForTutorial: {fileID: 0}
   _moneyStackEvents: 0
 --- !u!65 &7455835387573401013
 BoxCollider:
@@ -30281,6 +30282,7 @@ MonoBehaviour:
   exitPath: {fileID: 6264665995844697570}
   _moneyCollectPlaces: {fileID: 7164547041359128232}
   _mealType: 0
+  _hotDogCreator: {fileID: 0}
   MaxQueuPerUpgrade: 0300000004000000050000000600000007000000
 --- !u!1 &6264665995837409976
 GameObject:

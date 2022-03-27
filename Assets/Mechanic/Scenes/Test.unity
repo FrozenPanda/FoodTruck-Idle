@@ -3537,6 +3537,17 @@ Transform:
   m_Father: {fileID: 972743650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393762662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 941004450683987098, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+  m_PrefabInstance: {fileID: 1234451327705154352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017819758b9ed7747aaf4196e4b012d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &404241496
 GameObject:
   m_ObjectHideFlags: 0
@@ -12856,6 +12867,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421725612}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1424255467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7554261204206541248, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
+  m_PrefabInstance: {fileID: 7554261205744518729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017819758b9ed7747aaf4196e4b012d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1426050334
 GameObject:
   m_ObjectHideFlags: 0
@@ -17083,6 +17105,17 @@ Transform:
   m_Father: {fileID: 1090290703}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1812281696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9069640009523983569, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+  m_PrefabInstance: {fileID: 1234451327705154352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017819758b9ed7747aaf4196e4b012d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1814230926
 GameObject:
   m_ObjectHideFlags: 0
@@ -20870,6 +20903,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1199921676847231897, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1684039848737854281, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_Camera
       value: 
@@ -20878,6 +20915,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unlockable Areas
       objectReference: {fileID: 0}
+    - target: {fileID: 3964290822884539704, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: _hotDogCreator
+      value: 
+      objectReference: {fileID: 393762662}
+    - target: {fileID: 4798361471727911698, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798361471918388782, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5174977340732861811, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: _hotDogCreator
+      value: 
+      objectReference: {fileID: 1812281696}
     - target: {fileID: 6102367980554552419, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -20921,6 +20974,18 @@ PrefabInstance:
     - target: {fileID: 6102367980554552419, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7839074677391074436, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878513813270144990, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069640009523983568, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bc89fd5a4c4bb24b986c2b95f2493c0, type: 3}
@@ -24779,6 +24844,14 @@ PrefabInstance:
     - target: {fileID: 3134971227497434734, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
       propertyPath: m_Name
       value: KFC Area
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478460406234052280, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
+      propertyPath: _hotDogCreator
+      value: 
+      objectReference: {fileID: 1424255467}
+    - target: {fileID: 7554261204247681981, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56aee0788a73f834b8b11879e2c6891d, type: 3}
