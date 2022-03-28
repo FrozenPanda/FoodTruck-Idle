@@ -44,7 +44,7 @@ public class AIcreator : MonoBehaviour
         }
         else
         {
-            tableAIcreateWaitTime = 1f;
+            tableAIcreateWaitTime = 1f / (AIcreateWaitingList.Count);
             AIcreateWaitingList[0].SendData();
             AIcreateWaitingList.RemoveAt(0);
         }
@@ -73,6 +73,11 @@ public class AIcreator : MonoBehaviour
 
     private GameObject pickRandomAI()
     {
+        if (VIPalways)
+        {
+            return allAI[1];  
+        }
+        
         if (currentVIPratio < VIPcustomerRatio)
         {
             currentVIPratio++;
@@ -83,5 +88,13 @@ public class AIcreator : MonoBehaviour
             currentVIPratio = 0;
             return allAI[1];   
         }
+    }
+
+    private bool VIPalways;
+
+    public bool ViPalways
+    {
+        get => VIPalways;
+        set => VIPalways = value;
     }
 }

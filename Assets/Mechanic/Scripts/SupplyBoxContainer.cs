@@ -19,6 +19,18 @@ public class SupplyBoxContainer : MonoBehaviour
         
     }
 
+    public bool BoxCapacityFull()
+    {
+        if (BoxCount >= boxPlaces.Count -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public Transform EmptyPlace()
     {
         return boxPlaces[BoxCount];

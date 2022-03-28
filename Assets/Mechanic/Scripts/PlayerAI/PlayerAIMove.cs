@@ -208,13 +208,9 @@ public class PlayerAIMove : MonoBehaviour
     public void CheckUpgrades()
     {
         SaveLoadSystem.Load();
-        GetComponent<PlayerAISendTable>().moveSpeed =
-            SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
-        GetComponent<PlayerAITakeOrder>().moveSpeed =
-            SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
-        GetComponent<NavMeshAgent>().speed = SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.HireStaffMoveSpeed];
+        GetComponent<NavMeshAgent>().speed = SceneData.instance.stuffMoveSpeed[SaveLoadSystem.instance.upgrades[2 + UpgradeController2.instance.SceneIndex * 10]];
         GetComponent<CharacterStackManager>().TotalStack =
-            SceneData.instance.stuffMaxStack[SaveLoadSystem.instance.HireStaffCapacity];
-        Debug.Log("<<" +SaveLoadSystem.instance.HireStaffCapacity );
+            SceneData.instance.stuffMaxStack[SaveLoadSystem.instance.upgrades[1 + UpgradeController2.instance.SceneIndex * 10]];
+       
     }
 }

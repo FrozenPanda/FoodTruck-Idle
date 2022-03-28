@@ -62,7 +62,7 @@ public class HotDogQueuManager : MonoBehaviour, ICreatableAI
     {
         SaveLoadSystem.Load();
         
-        MaxQueu = MaxQueuPerUpgrade[SaveLoadSystem.instance.upgrades2[2]];
+        MaxQueu = MaxQueuPerUpgrade[SaveLoadSystem.instance.upgrades2[2 + UpgradeController2.instance.SceneIndex * 10]];
         
         queuPlaces = new Transform[queuPlaceHolder.childCount];
 

@@ -27,7 +27,7 @@ public class UpgradeController : MonoBehaviour
         }
         
         SaveLoadSystem.Load();
-        int requiredMoney = HireStuffCosts[SaveLoadSystem.instance.HireStaffUpgrades];
+        int requiredMoney = HireStuffCosts[SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ]];
 
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney)
         {
@@ -35,16 +35,16 @@ public class UpgradeController : MonoBehaviour
             return;
         }
         
-        /*if (SaveLoadSystem.instance.HireStaffUpgrades == 0)
+        /*if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 0)
         {
             PlayerAIMove.instance.EnableAI();
             
         }*/
         
         MMVibrationManager.Haptic (HapticTypes.MediumImpact);
-        PlayerAIdatabase.instance.AllPlayerAIlist[SaveLoadSystem.instance.HireStaffUpgrades].EnableAI();
+        PlayerAIdatabase.instance.AllPlayerAIlist[SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ]].EnableAI();
         
-        SaveLoadSystem.instance.HireStaffUpgrades++;
+        SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ]++;
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
         SaveLoadSystem.Save();
         UpdateText();
@@ -60,7 +60,7 @@ public class UpgradeController : MonoBehaviour
         }
         
         SaveLoadSystem.Load();
-        int requiredMoney = MaxCapacityCost[SaveLoadSystem.instance.HireStaffCapacity];
+        int requiredMoney = MaxCapacityCost[SaveLoadSystem.instance.upgrades[1 +SceneIndex * 10 ]];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney)
         {
             createDontEnoghMoneyText();
@@ -68,7 +68,7 @@ public class UpgradeController : MonoBehaviour
         }
 
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
-        SaveLoadSystem.instance.HireStaffCapacity++;
+        SaveLoadSystem.instance.upgrades[1 +SceneIndex * 10 ]++;
         SaveLoadSystem.Save();
         SceneData.instance.CheckUpgrades();
         MMVibrationManager.Haptic (HapticTypes.MediumImpact);
@@ -93,7 +93,7 @@ public class UpgradeController : MonoBehaviour
         }
         
         SaveLoadSystem.Load();
-        int requiredMoney = StuffMoveSpeedCost[SaveLoadSystem.instance.HireStaffMoveSpeed];
+        int requiredMoney = StuffMoveSpeedCost[SaveLoadSystem.instance.upgrades[2 +SceneIndex * 10 ]];
         if (PlayerMoneyData.instance.TotalMoney < requiredMoney)
         {
             createDontEnoghMoneyText();
@@ -102,7 +102,7 @@ public class UpgradeController : MonoBehaviour
         
         MMVibrationManager.Haptic (HapticTypes.MediumImpact);
         PlayerMoneyData.instance.TotalMoney -= requiredMoney;
-        SaveLoadSystem.instance.HireStaffMoveSpeed++;
+        SaveLoadSystem.instance.upgrades[2 +SceneIndex * 10 ]++;
         SaveLoadSystem.Save();
         SceneData.instance.CheckUpgrades();
         
@@ -114,9 +114,16 @@ public class UpgradeController : MonoBehaviour
         }
         
     }
-    
+
+    private int SceneIndex;
+    private void Awake()
+    {
+        
+    }
+
     void Start()
     {
+        SceneIndex = UpgradeController2.instance.SceneIndex;
         UpdateText();
         CheckUpgrades();
     }
@@ -125,7 +132,7 @@ public class UpgradeController : MonoBehaviour
     {
         SaveLoadSystem.Load();
 
-        for (int i = 0; i < SaveLoadSystem.instance.HireStaffUpgrades ; i++)
+        for (int i = 0; i < SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] ; i++)
         {
             PlayerAIdatabase.instance.AllPlayerAIlist[i].EnableAI();
         }
@@ -142,7 +149,7 @@ public class UpgradeController : MonoBehaviour
 
     private void UpdateText()
     {
-        if (HireStuffCosts.Length <= SaveLoadSystem.instance.HireStaffUpgrades)
+        if (HireStuffCosts.Length <= SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ])
         {
             allUpgrades[0].text = "MAX";
 
@@ -150,14 +157,14 @@ public class UpgradeController : MonoBehaviour
         }
         else
         {
-            if (SaveLoadSystem.instance.HireStaffUpgrades == 0)
+            if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 0)
             {
-                allUpgrades[0].text = "$" + HireStuffCosts[SaveLoadSystem.instance.HireStaffUpgrades];
+                allUpgrades[0].text = "$" + HireStuffCosts[SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ]];
                 
                 pressable[0] = false;
             }
             
-            if (SaveLoadSystem.instance.HireStaffUpgrades == 1)
+            if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 1)
             {
                 if (SaveLoadSystem.instance.TableUnlock[5] == -1)
                 {
@@ -167,13 +174,13 @@ public class UpgradeController : MonoBehaviour
                 }
                 else
                 {
-                    allUpgrades[0].text = "$" +HireStuffCosts[SaveLoadSystem.instance.HireStaffUpgrades];
+                    allUpgrades[0].text = "$" +HireStuffCosts[SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ]];
                     
                     pressable[0] = false;
                 }
             }
 
-            if (SaveLoadSystem.instance.HireStaffUpgrades == 2)
+            if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 2)
             {
                 if (SaveLoadSystem.instance.TableUnlock[18] == -1)
                 {
@@ -183,13 +190,13 @@ public class UpgradeController : MonoBehaviour
                 }
                 else
                 {
-                    allUpgrades[0].text = "$" +HireStuffCosts[SaveLoadSystem.instance.HireStaffUpgrades];
+                    allUpgrades[0].text = "$" +HireStuffCosts[SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ]];
                     
                     pressable[0] = false;
                 }
             }
             
-            if (SaveLoadSystem.instance.HireStaffUpgrades == 3)
+            if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 3)
             {
                 if (SaveLoadSystem.instance.TableUnlock[19] == -1)
                 {
@@ -199,13 +206,13 @@ public class UpgradeController : MonoBehaviour
                 }
                 else
                 {
-                    allUpgrades[0].text = "$" +HireStuffCosts[SaveLoadSystem.instance.HireStaffUpgrades];
+                    allUpgrades[0].text = "$" +HireStuffCosts[SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ]];
                     
                     pressable[0] = false;
                 }
             }
 
-            if (SaveLoadSystem.instance.HireStaffUpgrades == 4)
+            if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 4)
             {
                 allUpgrades[0].text = "MAX";
                     
@@ -213,7 +220,7 @@ public class UpgradeController : MonoBehaviour
             }
         }
 
-        if (MaxCapacityCost.Length <= SaveLoadSystem.instance.HireStaffCapacity)
+        if (MaxCapacityCost.Length <= SaveLoadSystem.instance.upgrades[1 +SceneIndex * 10 ])
         {
             allUpgrades[1].text = "MAX";
 
@@ -221,10 +228,10 @@ public class UpgradeController : MonoBehaviour
         }
         else
         {
-            allUpgrades[1].text = "$" + MaxCapacityCost[SaveLoadSystem.instance.HireStaffCapacity];
+            allUpgrades[1].text = "$" + MaxCapacityCost[SaveLoadSystem.instance.upgrades[1 +SceneIndex * 10 ]];
         }
 
-        if (StuffMoveSpeedCost.Length <= SaveLoadSystem.instance.HireStaffMoveSpeed)
+        if (StuffMoveSpeedCost.Length <= SaveLoadSystem.instance.upgrades[2 +SceneIndex * 10 ])
         {
             allUpgrades[2].text = "MAX";
 
@@ -232,7 +239,7 @@ public class UpgradeController : MonoBehaviour
         }
         else
         {
-            allUpgrades[2].text = "$" + StuffMoveSpeedCost[SaveLoadSystem.instance.HireStaffMoveSpeed];
+            allUpgrades[2].text = "$" + StuffMoveSpeedCost[SaveLoadSystem.instance.upgrades[2 +SceneIndex * 10 ]];
         }
     }
 

@@ -186,6 +186,15 @@ public class CharacterStackManager : MonoBehaviour
             
             case StackEvent.SupplyBoxGiving:
 
+                if (_currentSupplyBoxContainer)
+                {
+                    if (_currentSupplyBoxContainer.BoxCapacityFull())
+                    {
+                        _stackEvent = StackEvent.Idle;
+                        return;
+                    }
+                }
+                
                 if (Vector3.Distance(SupplyBoxGivingPlace , transform.position ) > 2f)
                 {
                     _stackEvent = StackEvent.Idle;
@@ -249,8 +258,16 @@ public class CharacterStackManager : MonoBehaviour
         if (other.tag == "SupplyBoxContainer")
         {
             _currentSupplyBoxContainer = other.GetComponent<SupplyBoxContainer>();
-            StartGivingSupplyBox();
-            SupplyBoxGivingPlace = transform.position;
+
+            if (_currentSupplyBoxContainer.BoxCapacityFull())
+            {
+                _currentSupplyBoxContainer = null;
+            }
+            else
+            {
+                StartGivingSupplyBox();
+                SupplyBoxGivingPlace = transform.position;
+            }
         }
     }
 

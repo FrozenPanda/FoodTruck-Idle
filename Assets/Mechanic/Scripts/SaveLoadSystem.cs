@@ -39,7 +39,11 @@ public class SaveLoadSystem
     public int HireStaffUpgrades;
     public int HireStaffCapacity;
     public int HireStaffMoveSpeed;
-        
+    public int[] upgrades = new[]
+    {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    };
 
     #endregion
 
@@ -55,7 +59,11 @@ public class SaveLoadSystem
     public int PizzaTruckDecoration;
     public int CustomerEatSpeed;
     public int CustomerMoveSpeed;
-    public int[] upgrades2 = new[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    public int[] upgrades2 = new[]
+    {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    };
     
     #endregion
 

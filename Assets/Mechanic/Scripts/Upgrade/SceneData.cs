@@ -52,10 +52,10 @@ public class SceneData : MonoBehaviour
     public void CheckUpgrades()
     {
         SaveLoadSystem.Load();
-        tableEatTime = tableEatTimePerUpgrade[SaveLoadSystem.instance.upgrades2[8]];
-        customerMoveSpeed = customerMoveSpeedPerUpgrade[SaveLoadSystem.instance.upgrades2[9]];
-        sittingEatMoneyDropAmountVIP = VIPEatMoneyDropPerLevel[SaveLoadSystem.instance.upgrades2[3]];
-        standEatMoneyDropAmountVIP = VIPEatMoneyDropPerLevel[SaveLoadSystem.instance.upgrades2[3]];
+        tableEatTime = tableEatTimePerUpgrade[SaveLoadSystem.instance.upgrades2[8 + UpgradeController2.instance.SceneIndex * 10]];
+        customerMoveSpeed = customerMoveSpeedPerUpgrade[SaveLoadSystem.instance.upgrades2[9+ UpgradeController2.instance.SceneIndex * 10]];
+        sittingEatMoneyDropAmountVIP = VIPEatMoneyDropPerLevel[SaveLoadSystem.instance.upgrades2[3 + UpgradeController2.instance.SceneIndex * 10]];
+        standEatMoneyDropAmountVIP = VIPEatMoneyDropPerLevel[SaveLoadSystem.instance.upgrades2[3 + UpgradeController2.instance.SceneIndex * 10]];
     }
     // Update is called once per frame
     private float GameSpeed;
