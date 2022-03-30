@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CupCakeTile
       objectReference: {fileID: 0}
+    - target: {fileID: 7110664765459841780, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
 --- !u!4 &3857658731152815269 stripped
