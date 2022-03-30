@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &519362407307018182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519362407307018233}
+  m_Layer: 0
+  m_Name: Beach Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &519362407307018233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519362407307018182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.465674, y: -2.550686, z: 16.30501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8853372391366310122}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8853372391366310125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8853372391366310122}
+  - component: {fileID: 8853372391366310127}
+  - component: {fileID: 8853372391366310126}
+  m_Layer: 0
+  m_Name: Pizza Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8853372391366310122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853372391366310125}
+  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: -4.154544, y: 2.550686, z: 6.2188625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4992296735636103684}
+  m_Father: {fileID: 519362407307018233}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!65 &8853372391366310127
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853372391366310125}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8853372391366310126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853372391366310125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55168f6b36e5fb4eb9f8c308657780c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tableID: 18
+  moneyToUnlock: 5000
+  realTable: {fileID: 482581988251873264}
+  MoneyNeedUI: {fileID: 0}
+  MoneyNeedText: {fileID: 0}
+  _moneyState: 0
+--- !u!1001 &7213744249817263364
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8853372391366310122}
+    m_Modifications:
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.696662
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.251935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110664765459841780, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+      propertyPath: m_Name
+      value: PizzaTile
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+--- !u!1 &482581988251873264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7110664765459841780, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+  m_PrefabInstance: {fileID: 7213744249817263364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4992296735636103684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2401664633983291136, guid: 19483a69aa892024995da1c56149e7cc, type: 3}
+  m_PrefabInstance: {fileID: 7213744249817263364}
+  m_PrefabAsset: {fileID: 0}
