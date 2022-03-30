@@ -22,8 +22,8 @@ public class SaveLoadSystem
     public int[] UpgradeIndex = {-1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0};
     
     //Table
-    public int[] TableUnlock = new[] {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
-    public int[] TableUnlockRemainMoney = new[] {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+    public int[] TableUnlock = new[] {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+    public int[] TableUnlockRemainMoney = new[] {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
     private int tableSeatAmount = 1;
     
     public int TableSeatAmount
