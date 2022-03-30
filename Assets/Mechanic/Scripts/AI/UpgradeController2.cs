@@ -385,19 +385,22 @@ public class UpgradeController2 : MonoBehaviour
             return;
         }
         
-        if (Vector3.Distance(transform.position , player.position) > 1f)
+        if (Vector3.Distance(LastIntersactionPos , player.position) > 1f)
         {
             upgradeCanvas.SetActive(false);
             player = null;
         }
     }
 
+    private Vector3 LastIntersactionPos;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             upgradeCanvas.SetActive(true);
             player = other.transform;
+            LastIntersactionPos = other.transform.position;
+            Debug.Log("PlayerCame");
         }
     }
 

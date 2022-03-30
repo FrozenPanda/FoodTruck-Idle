@@ -401,7 +401,14 @@ public class CharacterStackManager : MonoBehaviour
     private bool carryingBool;
     public bool isCharacterCarrying()
     {
-        return carryingBool;
+        if (currentStack < 1)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public bool IsCharacterCarryAtMax()
