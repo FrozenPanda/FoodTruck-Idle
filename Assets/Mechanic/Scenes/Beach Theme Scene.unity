@@ -1252,7 +1252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6264665995798896447, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
       propertyPath: _mealType
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6264665995798896447, guid: 59974ab4fe02f8f4fa4b72eefcad64d7, type: 3}
       propertyPath: _hotDogCreator
@@ -24263,6 +24263,10 @@ PrefabInstance:
     - target: {fileID: 4777558672285817474, guid: 0172f2ffb55f37141b6b2898b61ea433, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5699878050315530240, guid: 0172f2ffb55f37141b6b2898b61ea433, type: 3}
+      propertyPath: _mealType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6670965328731562003, guid: 0172f2ffb55f37141b6b2898b61ea433, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54919,6 +54923,10 @@ PrefabInstance:
       propertyPath: moneyToUnlock
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1487412874587917828, guid: 1c40440c604d3ff49b12c281c68a17f4, type: 3}
+      propertyPath: _mealType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2564417867965134042, guid: 1c40440c604d3ff49b12c281c68a17f4, type: 3}
       propertyPath: m_Size.x
       value: 3.5
@@ -78723,6 +78731,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3494039328773057447, guid: 7800dfdf802d712409a1c21b956f8217, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5897012458580162544, guid: 7800dfdf802d712409a1c21b956f8217, type: 3}
+      propertyPath: _mealType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7771671881218928210, guid: 7800dfdf802d712409a1c21b956f8217, type: 3}
