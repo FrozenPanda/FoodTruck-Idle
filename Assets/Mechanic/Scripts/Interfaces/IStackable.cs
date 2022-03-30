@@ -11,4 +11,6 @@ public interface IStackable
     public int MealIndex();
 
     public float CollectTimeMultiply();
+
+    public bool IsThereAnyMeal();
 }

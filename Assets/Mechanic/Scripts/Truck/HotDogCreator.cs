@@ -157,4 +157,9 @@ public class HotDogCreator : MonoBehaviour , IStackable
     {
         return collectSpeedMultiply;
     }
+
+    public bool IsThereAnyMeal()
+    {
+        return IsThereMealAvaible();
+    }
 }

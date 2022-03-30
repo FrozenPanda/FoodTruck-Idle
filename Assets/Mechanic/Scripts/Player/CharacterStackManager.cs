@@ -65,8 +65,6 @@ public class CharacterStackManager : MonoBehaviour
                 CloseAllFillBar();
                 break;
             case StackEvent.Collecting:
-
-                
                 
                 if (_stackable == null)
                 {
@@ -81,6 +79,16 @@ public class CharacterStackManager : MonoBehaviour
                     IStackTransform = null;
                     _stackEvent = StackEvent.Idle;
                     hotDogTakeCanvas.SetActive(false);
+                }
+
+                if (_stackable != null)
+                {
+                    if (!_stackable.IsThereAnyMeal())
+                    {
+                        Debug.Log("No meal");
+                        hotDogTakeCanvas.SetActive(false);
+                        return;
+                    }
                 }
 
                 if (_characterMover.isMoving && _stackable != null && _stackable.MealIndex() != 4)
