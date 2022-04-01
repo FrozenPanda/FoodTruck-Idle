@@ -85,7 +85,7 @@ public class CharacterStackManager : MonoBehaviour
                 {
                     if (!_stackable.IsThereAnyMeal())
                     {
-                        Debug.Log("No meal");
+//                        Debug.Log("No meal");
                         hotDogTakeCanvas.SetActive(false);
                         return;
                     }
@@ -243,7 +243,7 @@ public class CharacterStackManager : MonoBehaviour
             _stackable = other.GetComponent<IStackable>();
             collectTimer = defaultHotDogTime;
             _stackEvent = StackEvent.Collecting;
-            Debug.Log("Stackable var" + other.transform.name);
+//            Debug.Log("Stackable var" + other.transform.name);
             CollectSpeedMultiply = _stackable.CollectTimeMultiply();
             IStackTransform = _stackable.sayMyTransform();
             
@@ -260,7 +260,7 @@ public class CharacterStackManager : MonoBehaviour
             _dropable = other.GetComponent<IDropable>();
             _stackEvent = StackEvent.Giving;
             IdropTransform = _dropable.sayMyTransform();
-            Debug.Log("Droppable var");
+           // Debug.Log("Droppable var");
         }
 
         if (other.tag == "SupplyBoxContainer")
@@ -359,7 +359,7 @@ public class CharacterStackManager : MonoBehaviour
             {
                 if (stackMeals[i]._mealType == _mealType)
                 {
-                    Debug.Log("TrueMealGiven");
+//                    Debug.Log("TrueMealGiven");
                     _moveAbleMeal = stackMeals[i];
                     Destroy(_moveAbleMeal.gameObject, SceneData.instance.tableEatTime - 0.2f);
                     stackMeals[i] = null;

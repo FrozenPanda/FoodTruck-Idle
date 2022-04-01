@@ -21,7 +21,12 @@ public class HotDogCreator : MonoBehaviour , IStackable
     public SupplyBoxContainer _supplyBoxContainer;
     public int perBoxMealCount;
     private int currentMealCount;
-    
+
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
         if (hotDogCookTimer > 0f)

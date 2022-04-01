@@ -126,6 +126,11 @@ public class UpgradeController : MonoBehaviour
         SceneIndex = UpgradeController2.instance.SceneIndex;
         UpdateText();
         CheckUpgrades();
+
+        for (int i = 0; i < 40; i++)
+        {
+            Debug.Log("Table ID:" + i + " " + SaveLoadSystem.instance.TableUnlock[i] );
+        }
     }
 
     private void CheckUpgrades()
@@ -166,7 +171,7 @@ public class UpgradeController : MonoBehaviour
             
             if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 1)
             {
-                if (SaveLoadSystem.instance.TableUnlock[5] == -1)
+                if (SaveLoadSystem.instance.TableUnlock[5 + SceneIndex * 20] == -1)
                 {
                     allUpgrades[0].text = "LOCKED";
                     
@@ -182,7 +187,7 @@ public class UpgradeController : MonoBehaviour
 
             if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 2)
             {
-                if (SaveLoadSystem.instance.TableUnlock[18] == -1)
+                if (SaveLoadSystem.instance.TableUnlock[10  + SceneIndex * 20 ] == -1)
                 {
                     allUpgrades[0].text = "LOCKED";
                     
@@ -198,7 +203,7 @@ public class UpgradeController : MonoBehaviour
             
             if (SaveLoadSystem.instance.upgrades[0 +SceneIndex * 10 ] == 3)
             {
-                if (SaveLoadSystem.instance.TableUnlock[19] == -1)
+                if (SaveLoadSystem.instance.TableUnlock[19  + SceneIndex * 20] == -1)
                 {
                     allUpgrades[0].text = "LOCKED";
                     

@@ -94,7 +94,7 @@ public class PlayerAIMove : MonoBehaviour
                 break;
             case PlayerAIevents.WaitingCustomer:
                 
-                Debug.Log("Waiting Customer");
+//                Debug.Log("Waiting Customer");
                 if (waitingCustomers.Count > 0)
                 {
                     PickOneTable();

@@ -26,7 +26,7 @@ public class PlayerAISendTable : MonoBehaviour
 
     public void GiveOrder(int tableID)
     {
-        Debug.Log("TAbleID:" + tableID + " requestedORder");
+//        Debug.Log("TAbleID:" + tableID + " requestedORder");
         //transform.LookAt(MovePaths[0]);
         CurrentTableID = tableID + 1;
         _sendTableEvent = SendTableEvent.MovingToTable;
