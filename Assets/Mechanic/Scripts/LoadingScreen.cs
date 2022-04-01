@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadingScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Text LoadingText;
     void Start()
     {
         StartCoroutine(waitAndClose());
@@ -12,8 +13,30 @@ public class LoadingScreen : MonoBehaviour
 
     IEnumerator waitAndClose()
     {
-        yield return new WaitForSeconds(1f);
+        LoadingText.text = "Loading.";
+
+        yield return new WaitForSeconds(0.2f);
         
+        LoadingText.text = "Loading..";
+
+        yield return new WaitForSeconds(0.2f);
+        
+        LoadingText.text = "Loading...";
+
+        yield return new WaitForSeconds(0.2f);
+        
+        LoadingText.text = "Loading.";
+
+        yield return new WaitForSeconds(0.2f);
+        
+        LoadingText.text = "Loading..";
+
+        yield return new WaitForSeconds(0.2f);
+        
+        LoadingText.text = "Loading...";
+
+        yield return new WaitForSeconds(0.2f);
+
         gameObject.SetActive(false);
     }
 }
