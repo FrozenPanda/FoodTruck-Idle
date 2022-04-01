@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyToDrop: {fileID: 1632014603661826707, guid: 63f6971f271f760408dac84266ad2b04, type: 3}
   moneyStackable: {fileID: 1632014603661826707, guid: 0eed1ec534c44f84bb6a4b50e6992a1f, type: 3}
-  dropAmount: 2
+  dropAmount: 4
   VIP: 1
 --- !u!1 &689628168898674358
 GameObject:
