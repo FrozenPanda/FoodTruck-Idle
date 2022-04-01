@@ -16,6 +16,9 @@ public class Tutorial : MonoBehaviour
 
     private CharacterStackManager _characterStackManager;
     public MoneyCreateForTutorial _moneyCreateForTutorial;
+    
+    
+    
     public void SetForCurrentStage(int _id , Transform lookAT = null)
     {
         currentLookAt = null;
@@ -38,13 +41,24 @@ public class Tutorial : MonoBehaviour
             lookAtVector3 = new Vector3(currentLookAt.position.x, transform.position.y, currentLookAt.position.z);
         }else if (_id == 3)
         {
-            _characterStackManager = PlayerUpgradeController.instance.GetComponent<CharacterStackManager>();
+            
             arrows[3].SetActive(true);
             currentLookAt = arrows[_id].transform;
             lookAtVector3 = new Vector3(currentLookAt.position.x, transform.position.y, currentLookAt.position.z);
         }else if (_id == 4)
         {
             arrows[4].SetActive(true);
+            currentLookAt = arrows[_id].transform;
+            lookAtVector3 = new Vector3(currentLookAt.position.x, transform.position.y, currentLookAt.position.z);
+        }
+        else if(_id == 5)
+        {
+            arrows[5].SetActive(true);
+            currentLookAt = arrows[_id].transform;
+            lookAtVector3 = new Vector3(currentLookAt.position.x, transform.position.y, currentLookAt.position.z);
+        }else if(_id == 6)
+        {
+            arrows[6].SetActive(true);
             currentLookAt = arrows[_id].transform;
             lookAtVector3 = new Vector3(currentLookAt.position.x, transform.position.y, currentLookAt.position.z);
         }
@@ -59,6 +73,7 @@ public class Tutorial : MonoBehaviour
         SaveLoadSystem.Load();
         currentStage = SaveLoadSystem.instance.CurrentTutorialStage;
         SetForCurrentStage(currentStage);
+        _characterStackManager = PlayerUpgradeController.instance.GetComponent<CharacterStackManager>();
     }
 
     private void NextStage()
