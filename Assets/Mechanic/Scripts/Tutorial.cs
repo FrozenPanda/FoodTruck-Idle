@@ -15,6 +15,7 @@ public class Tutorial : MonoBehaviour
     public Transform arrowIndicator;
 
     private CharacterStackManager _characterStackManager;
+    public MoneyCreateForTutorial _moneyCreateForTutorial;
     public void SetForCurrentStage(int _id , Transform lookAT = null)
     {
         currentLookAt = null;
@@ -31,6 +32,7 @@ public class Tutorial : MonoBehaviour
             lookAtVector3 = new Vector3(currentLookAt.position.x, transform.position.y, currentLookAt.position.z);
         }else if (_id == 2)
         {
+            _moneyCreateForTutorial.EnableMoney();
             arrows[2].SetActive(true);
             currentLookAt = arrows[_id].transform;
             lookAtVector3 = new Vector3(currentLookAt.position.x, transform.position.y, currentLookAt.position.z);
@@ -84,7 +86,9 @@ public class Tutorial : MonoBehaviour
             transform.LookAt(lookAtVector3);
         }
 
-        if (currentStage != 3)
+        
+        
+        if (currentStage != 4)
         {
             if (Vector3.Distance(transform.position , lookAtVector3) < 1.5f)
             {
@@ -92,12 +96,12 @@ public class Tutorial : MonoBehaviour
             }
         }
 
-        if (currentStage == 3)
+        if (currentStage == 4)
         {
             if (_characterStackManager.IsCharacterCarryAtMax())
             {
                 arrowIndicator.gameObject.SetActive(true);
-                arrows[3].SetActive(true);
+                arrows[5].SetActive(true);
                 
                 if (Vector3.Distance(transform.position , lookAtVector3) < 2f)
                 {
@@ -107,7 +111,7 @@ public class Tutorial : MonoBehaviour
             else
             {
                 arrowIndicator.gameObject.SetActive(false);
-                arrows[3].SetActive(false);
+                arrows[5].SetActive(false);
             }
         }
     }

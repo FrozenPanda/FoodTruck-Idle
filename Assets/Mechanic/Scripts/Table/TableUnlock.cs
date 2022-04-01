@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using MoreMountains.NiceVibrations;
+using TMPro;
 
 public class TableUnlock : MonoBehaviour , IUnlockable
 {
@@ -16,7 +17,7 @@ public class TableUnlock : MonoBehaviour , IUnlockable
     public GameObject realTable;
 
     public GameObject MoneyNeedUI;
-    public Text MoneyNeedText;
+    public TextMeshProUGUI MoneyNeedText;
 
     private int moneyValue = 10;
     private float vibratorTime = 0.5f;

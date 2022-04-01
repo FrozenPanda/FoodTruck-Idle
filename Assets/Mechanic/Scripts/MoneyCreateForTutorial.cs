@@ -18,7 +18,16 @@ public class MoneyCreateForTutorial : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
+    }
 
+    public void EnableMoney()
+    {
+        if (SaveLoadSystem.instance.TotalMoney > 0)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+        
         StartCoroutine(wait());
     }
 
