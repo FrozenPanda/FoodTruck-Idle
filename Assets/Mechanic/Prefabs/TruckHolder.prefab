@@ -64,7 +64,7 @@ MonoBehaviour:
   moneyToUnlock: 100
   realTable: {fileID: 4757021179700171342}
   MoneyNeedUI: {fileID: 4907863569422925228}
-  MoneyNeedText: {fileID: 6414885371907051927}
+  MoneyNeedText: {fileID: 2735367912851630483}
   _moneyState: 0
 --- !u!1001 &5059661890817337889
 PrefabInstance:
@@ -200,15 +200,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4028822618947723845, guid: b9858d7bf1a6d6d488d5ae8e9332e1f6, type: 3}
   m_PrefabInstance: {fileID: 6558754108113088639}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6414885371907051927 stripped
+--- !u!114 &2735367912851630483 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 144995203594871272, guid: b9858d7bf1a6d6d488d5ae8e9332e1f6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9146980731840567788, guid: b9858d7bf1a6d6d488d5ae8e9332e1f6, type: 3}
   m_PrefabInstance: {fileID: 6558754108113088639}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7244862592656858450
