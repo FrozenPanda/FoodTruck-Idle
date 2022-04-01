@@ -13,11 +13,11 @@ public class LoadingScreen : MonoBehaviour
 
     IEnumerator waitAndClose()
     {
-        LoadingText.text = "Loading.";
+        LoadingText.text = "Loading.  ";
 
         yield return new WaitForSeconds(0.2f);
         
-        LoadingText.text = "Loading..";
+        LoadingText.text = "Loading.. ";
 
         yield return new WaitForSeconds(0.2f);
         
@@ -25,11 +25,11 @@ public class LoadingScreen : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
         
-        LoadingText.text = "Loading.";
+        LoadingText.text = "Loading.  ";
 
         yield return new WaitForSeconds(0.2f);
         
-        LoadingText.text = "Loading..";
+        LoadingText.text = "Loading.. ";
 
         yield return new WaitForSeconds(0.2f);
         
