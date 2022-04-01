@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -78,4 +79,6 @@ public class CharacterMover : MonoBehaviour
     {
         player.eulerAngles = new Vector3(0, Mathf.Atan2(_ver, -_hor) * 180 / Mathf.PI -90f, 0f);
     }
+
+    
 }

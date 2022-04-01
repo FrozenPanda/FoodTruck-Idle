@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Mechanic/Scenes/Test.unity
     guid: 9f6b5ac676d8a3f4ab5ec6e9dec8ba73
+  - enabled: 1
+    path: Assets/Mechanic/Scenes/Beach Theme Scene.unity
+    guid: 55ac438d37815eb48a6b2ccf97b0a258
   m_configObjects: {}
