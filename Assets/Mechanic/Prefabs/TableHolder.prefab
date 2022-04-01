@@ -1050,6 +1050,7 @@ MonoBehaviour:
   - {fileID: 6331159370096502523}
   - {fileID: 673241114616070543}
   currentFillPlaces: []
+  CloseForTutorial: {fileID: 0}
   _moneyStackEvents: 0
 --- !u!65 &1529046971
 BoxCollider:
@@ -40827,7 +40828,7 @@ MonoBehaviour:
   moneyToUnlock: 100
   realTable: {fileID: 8496173010296431044}
   MoneyNeedUI: {fileID: 7865921455924258472}
-  MoneyNeedText: {fileID: 8084847848042728083}
+  MoneyNeedText: {fileID: 918906490187707031}
   _moneyState: 0
 --- !u!1 &8515814654084961394
 GameObject:
@@ -44748,15 +44749,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9858d7bf1a6d6d488d5ae8e9332e1f6, type: 3}
---- !u!114 &8084847848042728083 stripped
+--- !u!114 &918906490187707031 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 144995203594871272, guid: b9858d7bf1a6d6d488d5ae8e9332e1f6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9146980731840567788, guid: b9858d7bf1a6d6d488d5ae8e9332e1f6, type: 3}
   m_PrefabInstance: {fileID: 8228083214418406267}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7865921455924258472 stripped
